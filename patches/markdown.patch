@@ -1,0 +1,142 @@
+diff --git a/doc/releases/v1.0.0.mkd b/doc/releases/v1.0.0.mkd
+deleted file mode 100644
+index f273938..0000000
+--- a/doc/releases/v1.0.0.mkd
++++ /dev/null
+@@ -1,10 +0,0 @@
+-Vim-Markdown v1.0.0
+-===================
+-
+-This release include new features.
+-
+-* Syntax file renamed to `markdown.vim`.
+-* Added snippets.
+-* Added Vimball package support.
+-* Versioning.
+-
+diff --git a/doc/releases/v1.0.1.mkd b/doc/releases/v1.0.1.mkd
+deleted file mode 100644
+index 30f4186..0000000
+--- a/doc/releases/v1.0.1.mkd
++++ /dev/null
+@@ -1,10 +0,0 @@
+-Vim-Markdown v1.0.1
+-===================
+-
+-Improvements and fixes in plugin.
+-
+-*  Fix in task pool file.
+-*  Change file name of the package content.
+-*  New tasks in pool.
+-*  Small improvements in syntax and doc updates.
+-
+diff --git a/doc/releases/v1.0.2.mkd b/doc/releases/v1.0.2.mkd
+deleted file mode 100644
+index e9dbf80..0000000
+--- a/doc/releases/v1.0.2.mkd
++++ /dev/null
+@@ -1,8 +0,0 @@
+-Vim-Markdown v1.0.2
+-===================
+-
+-Small updates.
+-
+-* Updates in documentation.
+-* Renamed build file.
+-
+diff --git a/doc/releases/v1.0.3.mkd b/doc/releases/v1.0.3.mkd
+deleted file mode 100644
+index 1dadb99..0000000
+--- a/doc/releases/v1.0.3.mkd
++++ /dev/null
+@@ -1,9 +0,0 @@
+-Vim-Markdown v1.0.3
+-===================
+-
+-* Added auto-detection for file type.
+-* Updates in documentation.
+-* Updates in package list.
+-
+-For more information about this version, please visit the repository hosted
+-on <http://github.com/hallison/vim-markdown>.
+diff --git a/doc/releases/v1.1.0.mkd b/doc/releases/v1.1.0.mkd
+deleted file mode 100644
+index 895efae..0000000
+--- a/doc/releases/v1.1.0.mkd
++++ /dev/null
+@@ -1,14 +0,0 @@
+-Vim-Markdown v1.1.0
+-===================
+-
+-* Enhancements.
+-  * Added build using Bakefile (Bash-Toolbox).
+-  * Manifest file for VBA package.
+-
+-* Fixes.
+-  * Fixes in the file detection.
+-  * Fixes in link snippets.
+-
+-For more information about this version, please visit the repository hosted
+-on <http://github.com/hallison/vim-markdown>.
+-
+diff --git a/doc/releases/v1.2.0.mkd b/doc/releases/v1.2.0.mkd
+deleted file mode 100644
+index e868a18..0000000
+--- a/doc/releases/v1.2.0.mkd
++++ /dev/null
+@@ -1,16 +0,0 @@
+-Vim-Markdown v1.2.0
+-===================
+-
+-* Fixes.
+-  * The italics has been fixed. Thanks to Ian Smith-Heisters.
+-  * Fix in gzip package extension.
+-
+-* Improvements.
+-  * Support multi-line captioned images and links. This feature is supported
+-    by Pandoc and others parsers. Thanks to Bryan Silverthorn.
+-  * You can install Markdown using vim-addon-manager. More details see
+-    <http://github.com/MarcWeber/vim-addon-manager>.
+-
+-For more information about this version, please visit the repository hosted
+-on <http://github.com/hallison/vim-markdown>.
+-
+diff --git a/doc/releases/v1.2.1.mkd b/doc/releases/v1.2.1.mkd
+deleted file mode 100644
+index dfa70a1..0000000
+--- a/doc/releases/v1.2.1.mkd
++++ /dev/null
+@@ -1,12 +0,0 @@
+-Vim-Markdown v1.2.1
+-===================
+-
+-* Fixes.
+-  * The backtick trigger has been fixed.
+-
+-* Improvements.
+-  * Adding of task for creating a package for tests.
+-
+-For more information about this version, please visit the repository hosted
+-on <http://github.com/hallison/vim-markdown>.
+-
+diff --git a/doc/releases/v1.2.2.mkd b/doc/releases/v1.2.2.mkd
+deleted file mode 100644
+index b1703cf..0000000
+--- a/doc/releases/v1.2.2.mkd
++++ /dev/null
+@@ -1,15 +0,0 @@
+-Vim-Markdown v1.2.2
+-===================
+-
+-Several fixes. Thanks to [Dustin Ingram][].
+-
+-* Fixes.
+-  * Multi-paragraph list items.
+-  * Code block in list.
+-
+-For more information about this version, please visit the repository hosted
+-on <http://github.com/hallison/vim-markdown>.
+-
+-[Dustin Ingram]: http://github.com/dustingram
+-  "Dustin Ingram"
+-
