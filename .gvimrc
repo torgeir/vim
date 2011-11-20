@@ -1,5 +1,5 @@
+let g:molokai_original=1
 colorscheme molokai                         " wombat, solarized, ir_black - cool default ones: macvim, slate, desert
-let g:molokai_original=0
 
 set antialias
 
@@ -16,9 +16,9 @@ if has('mac')
   set guifont=Monaco:h16
   set transparency=0
 
-  au WinLeave * set nocursorline
-  au WinEnter * set cursorline
-  set cursorline 
+  "au WinLeave * set nocursorline
+  "au WinEnter * set cursorline
+  "set cursorline 
   
 
 elseif has("unix")

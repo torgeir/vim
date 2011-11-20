@@ -44,6 +44,14 @@ function! CloseIfOnlySidebarsLeft()
   endif
 endfunction
 
+" toggle molokai bg
+function! ToggleMolokaiBg()
+  "let g:molokai_original = g:molokai_original ? 0 : 1
+  "syntax reset
+  "syntax on
+endfunction
+
+
 " NERDTree utility function
 function! RefreshTree(...)
   let stay = 0
@@ -74,13 +82,22 @@ function! CurDir()
   return curdir
 endfunction
 
-" returns paste for status line
-function! HasPaste()
+" returns paste for status line (colors from molokai theme)
+function! ShowPaste()
   if &paste
-    return 'PASTE '
+    hi StatusLine guifg=#F92672
   else
-    return ''
+    hi StatusLine guifg=#455354 guibg=fg
   endif
+  redrawstatus
+  return ''
+endfunction
+
+" toggle molokai bg
+function! ToggleMolokaiBg()
+  let g:molokai_original = g:molokai_original ? 0 : 1
+  syntax reset
+  syntax on
 endfunction
 
 " custom nerdtreetoggle ensures only ONE nerd_tree window

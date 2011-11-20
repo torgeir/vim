@@ -123,7 +123,7 @@ set statusline+=\ "
 set statusline+=%{CurDir()}
 set statusline+=%=	                                            " right align
 set statusline+=%h\ \ \ 
-set statusline+=%{strlen(HasPaste())?'[\ '.HasPaste().']\ -\ ':''}
+set statusline+=%{strlen(ShowPaste())?ShowPaste():''}
 set statusline+=Position:\ %c:%l/%L
 
 " tab labels

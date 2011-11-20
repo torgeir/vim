@@ -14,11 +14,12 @@ noremap <silent> <f2> :YRShow<cr>
 " toggle gundo 
 noremap <silent> <f3> :GundoToggle<cr>
 
-" toggle bg
-call togglebg#map("<f4>")
-
 " toggle paste
-noremap <silent> <f5> :setlocal paste!<cr>
+noremap <silent> <f4> :setlocal paste!<cr>
+
+" toggle bg
+noremap <silent> <f5> :call ToggleMolokaiBg()<cr>
+"call togglebg#map("<f4>")
 
 " toggle nerdtree
 noremap <silent> <f6> :call CustomNerdTreeToggle()<cr>
@@ -101,10 +102,11 @@ nnoremap <leader>m :make!<cr><cr>:cc<cr>
 nnoremap <leader>mn :cn<cr>
 nnoremap <leader>n :! node %<cr>
 nnoremap <leader>b :! npm install<cr>
-nnoremap <leader>a :! NODE_ENV=development node app.js<cr>
 nnoremap <leader>i :set list!<cr>
 nnoremap <leader>ev :tabe ~/.vim/.vimrc<cr>
 nnoremap <leader>egv :tabe ~/.vim/.gvimrc<cr>
+nnoremap <leader>ek :tabe ~/.vim/keybindings.vim<cr>
+nnoremap <leader>ef :tabe ~/.vim/functions.vim<cr>
 nnoremap <leader>es :tabe ~/.vim/snippets/<cr>
 
 " insert semicolon, comma, dot at line end
@@ -123,9 +125,9 @@ vnoremap <leader>. :s/$/./g<cr>.
 nnoremap <leader>w :%s/\s\+$//<cr>:%s/ / /<cr>:let @/=''<cr>
 
 " change filetypes
-nnoremap <silent> <leader>fth :set filetype=html
-nnoremap <silent> <leader>ftj :set filetype=javascript
-nnoremap <silent> <leader>ftc :set filetype=css
+nnoremap <silent> <leader>fth :set filetype=html<cr>
+nnoremap <silent> <leader>ftj :set filetype=javascript<cr>
+nnoremap <silent> <leader>ftc :set filetype=css<cr>
 
 " clear highligted search
 nnoremap <silent> <leader><space> :set hlsearch!<cr>
