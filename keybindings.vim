@@ -108,6 +108,7 @@ nnoremap <leader>egv :tabe ~/.vim/.gvimrc<cr>
 nnoremap <leader>ek :tabe ~/.vim/keybindings.vim<cr>
 nnoremap <leader>ef :tabe ~/.vim/functions.vim<cr>
 nnoremap <leader>es :tabe ~/.vim/snippets/<cr>
+nnoremap <leader>c :Bclose<cr>
 
 " insert semicolon, comma, dot at line end
 nnoremap <leader>} mzA}<esc>`z

@@ -1,4 +1,8 @@
 # --- My own --- 
+snippet isnode
+	if (typeof module !== 'undefined' && "exports" in module) {
+	  module.exports = ${1}
+	}
 snippet isbrowser
 	(isBrowser ? window : module)[isBrowser ? '${1}' : 'exports'] = {${2}};
 snippet log
@@ -6,7 +10,7 @@ snippet log
 snippet :
 	'${1}' : ${2}
 snippet req
-	var ${1:lib} = require('$1');
+	var $1 = require('${1:lib}');
 snippet pack
 	{
 	    "name": "${1}"
@@ -74,6 +78,8 @@ snippet before
 	before(function () {${1}});
 snippet after
 	after(function () {${1}});
+snippet ex
+	expect(${1:what}).to${2:Equal}(${3});
 # --- / My own ---
 # Prototype
 snippet proto

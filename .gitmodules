@@ -94,3 +94,15 @@
 [submodule "bundle/vim-node"]
 	path = bundle/vim-node
 	url = https://github.com/mmalecki/vim-node.js.git
+[submodule "bundle/vim-stylus"]
+	path = bundle/vim-stylus
+	url = https://github.com/wavded/vim-stylus.git
+[submodule "bundle/vim-jade"]
+	path = bundle/vim-jade
+	url = https://github.com/digitaltoad/vim-jade.git
+[submodule "bundle/snipmate-snippets"]
+	path = bundle/snipmate-snippets
+	url = https://github.com/honza/snipmate-snippets.git
+[submodule "bundle/netrw"]
+	path = bundle/netrw
+	url = https://github.com/vim-scripts/netrw.vim
