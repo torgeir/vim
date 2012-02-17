@@ -7,9 +7,6 @@
 [submodule "bundle/tasklist"]
 	path = bundle/tasklist
 	url = https://github.com/vim-scripts/TaskList.vim.git
-[submodule "bundle/snipmate"]
-	path = bundle/snipmate
-	url = https://github.com/msanders/snipmate.vim
 [submodule "bundle/tagbar"]
 	path = bundle/tagbar
 	url = https://github.com/majutsushi/tagbar.git
@@ -67,9 +64,6 @@
 ;[submodule "bundle/minibufexpl"]
 	;path = bundle/minibufexpl
 	;url = https://github.com/fholgado/minibufexpl.vim.git
-[submodule "bundle/scala"]
-	path = bundle/scala
-	url = https://github.com/ewiplayer/vim-scala
 [submodule "bundle/clojure"]
 	path = bundle/clojure
 	url = https://github.com/jondistad/vimclojure.git
@@ -79,9 +73,6 @@
 [submodule "bundle/slime"]
 	path = bundle/slime
 	url = https://github.com/jpalardy/vim-slime
-[submodule "colors/getafe"]
-	path = colors/getafe
-	url = git://github.com/larssmit/getafe.git
 [submodule "colors/molokai"]
 	path = colors/molokai
 	url = git://github.com/vim-scripts/molokai.git
@@ -118,3 +109,9 @@
 [submodule "bundle/genutils"]
 	path = bundle/genutils
 	url = https://github.com/vim-scripts/genutils.git
+[submodule "bundle/scala"]
+	path = bundle/scala
+	url = https://github.com/bdd/vim-scala.git
+[submodule "bundle/snipmate"]
+	path = bundle/snipmate
+	url = https://github.com/msanders/snipmate.vim.git
