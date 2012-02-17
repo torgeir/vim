@@ -1,3 +1,6 @@
+" 256 colors
+set t_Co=256
+
 let mapleader = ","
 
 " remove all auto commands
@@ -47,7 +50,7 @@ source ~/.vim/config/yankring.vim
 """"""""""""""""""""""""""""""""""""""""
 " Settings
 """"""""""""""""""""""""""""""""""""""""
-colorscheme default 
+colorscheme solarized
 syntax on			  " highlight
 set background=dark		  " adjust colors
 set backspace=indent,eol,start	  " intuitive backspacing in insert mode

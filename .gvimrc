@@ -1,4 +1,4 @@
-let g:molokai_original=1
+let g:molokai_original=0
 colorscheme molokai                         " wombat, solarized, ir_black - cool default ones: macvim, slate, desert
 
 set antialias
@@ -19,11 +19,14 @@ if has('mac')
   "au WinLeave * set nocursorline
   "au WinEnter * set cursorline
   "set cursorline 
-  
 
 elseif has("unix")
 
   source ~/.vim/keybindings.gvim.vim
+
+  set guifont=Inconsolata\ 10
+  set lines=30 columns=100                " set window size
+
 endif
 
 " hightlight current word

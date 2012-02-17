@@ -4,6 +4,9 @@ autocmd VimEnter * NERDTree .
 " hide it
 autocmd VimEnter * NERDTreeToggle
 
+" update CWD
+let NERDTreeChDirMode = 2
+
 " enable nice colors
 let NERDChristmasTree = 1
 
@@ -17,5 +20,5 @@ let NERDTreeShowBookmarks = 1
 let NERDTreeShowHidden = 1
 
 " don't hijack NETRW
-let NERDTreeHijackNetrw = 0
+let NERDTreeHijackNetrw = 1
 let NERDTreeIgnore=['\.$', '\~$']

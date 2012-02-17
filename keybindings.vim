@@ -1,12 +1,16 @@
 if has("unix")
+
+  colorscheme solarized
+  
   " load vim-in-unix-shell shortcuts
   source ~/.vim/keybindings.vim.vim
+
 endif
 
 " project tree
 autocmd VimEnter * call CdIfDirectory(expand("<amatch>"))
 autocmd FocusGained,BufWritePost * call RefreshTree()
-autocmd WinEnter * call CloseIfOnlySidebarsLeft()
+"autocmd WinEnter * call CloseIfOnlySidebarsLeft()
 
 " toggle yankring 
 noremap <silent> <f2> :YRShow<cr>
@@ -47,8 +51,8 @@ inoremap <left>  <nop>
 inoremap <right> <nop>
 
 " navigate wraps
-nnoremap j gj
-nnoremap k gk
+" nnoremap j gj
+" nnoremap k gk
 
 " tab movement
 nnoremap <silent> <c-tab> :tabnext<cr>
@@ -78,7 +82,7 @@ nnoremap <leader>hof :%!xxd -r<cr>
 nnoremap <leader>q gqip
 
 " keep search matches in window center
-nnoremap * *zzzv
+nnoremap * *zzzv 
 nnoremap # #zzzv
 nnoremap n nzzzv
 nnoremap N Nzzzv
@@ -98,17 +102,17 @@ cnoremap <c-n> j
 cnoremap <c-p> k
 
 " general leader bindings
-nnoremap <leader>m :make!<cr><cr>:cc<cr>
+nnoremap <leader>m  :make!<cr><cr>:cc<cr>
 nnoremap <leader>mn :cn<cr>
-nnoremap <leader>n :! node %<cr>
-nnoremap <leader>b :! npm install<cr>
-nnoremap <leader>i :set list!<cr>
+nnoremap <leader>n  :! node %<cr>
+nnoremap <leader>b  :! npm install<cr>
+nnoremap <leader>i  :set list!<cr>
 nnoremap <leader>ev :tabe ~/.vim/.vimrc<cr>
-nnoremap <leader>egv :tabe ~/.vim/.gvimrc<cr>
+nnoremap <leader>eg :tabe ~/.vim/.gvimrc<cr>
 nnoremap <leader>ek :tabe ~/.vim/keybindings.vim<cr>
 nnoremap <leader>ef :tabe ~/.vim/functions.vim<cr>
 nnoremap <leader>es :tabe ~/.vim/snippets/<cr>
-nnoremap <leader>c :Bclose<cr>
+nnoremap <leader>c  :Bclose<cr>
 
 " insert semicolon, comma, dot at line end
 nnoremap <leader>} mzA}<esc>`z
@@ -123,7 +127,7 @@ vnoremap <leader>, :s/$/,/g<cr>,
 vnoremap <leader>. :s/$/./g<cr>.
 
 " clean up whitespace file wide
-nnoremap <leader>w :%s/\s\+$//<cr>:%s/ / /<cr>:let @/=''<cr>
+nnoremap <leader>W :%s/\s\+$//<cr>:%s/ / /<cr>:let @/=''<cr>
 
 " change filetypes
 nnoremap <silent> <leader>fth :set filetype=html<cr>
@@ -143,7 +147,7 @@ nnoremap <silent> <leader>/ :execute 'vimgrep /'.@/.'/g %'<cr>:copen<cr>
 " sort css properties
 command! SortCSSBraceContents :g#\({\n\)\@<=#.,/}/sort
 
-command! Lorem exe "normal iSed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+ab loremm Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
 
 " store sessions on exit, reload on enter
 " autocmd VimEnter * nested :call LoadSession()

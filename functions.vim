@@ -26,31 +26,23 @@ endfunction
 
 " Close all open buffers on entering a window if the only
 " buffer that's left is the NERDTree buffer or tagbar buffer
-function! CloseIfOnlySidebarsLeft()
-  if exists("t:NERDTreeBufName")
-    if bufwinnr(t:NERDTreeBufName) != -1
-      if winnr("$") == 1
-        q
-      endif
-    endif
-  endif
-
-  if exists("__Tagbar__")
-    if bufwinnr("__Tagbar__") != -1
-      if winnr("$") == 1
-        q
-      endif
-    endif
-  endif
-endfunction
-
-" toggle molokai bg
-function! ToggleMolokaiBg()
-  "let g:molokai_original = g:molokai_original ? 0 : 1
-  "syntax reset
-  "syntax on
-endfunction
-
+" function! CloseIfOnlySidebarsLeft()
+"   if exists("t:NERDTreeBufName")
+"     if bufwinnr(t:NERDTreeBufName) != -1
+"       if winnr("$") == 1
+"         q
+"       endif
+"     endif
+"   endif
+" 
+"   if exists("__Tagbar__")
+"     if bufwinnr("__Tagbar__") != -1
+"       if winnr("$") == 1
+"         q
+"       endif
+"     endif
+"   endif
+" endfunction
 
 " NERDTree utility function
 function! RefreshTree(...)

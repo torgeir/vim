@@ -6,7 +6,7 @@ snippet isnode
 snippet isbrowser
 	(isBrowser ? window : module)[isBrowser ? '${1}' : 'exports'] = {${2}};
 snippet log
-	console.log('${1:text}');${2}
+	console.log(${1:what});${2}
 snippet :
 	'${1}' : ${2}
 snippet req
@@ -19,7 +19,7 @@ snippet pack
 	  , "keywords": []
 	  , "author": "torgeir thoresen <@torgeir>"
 	  , "dependencies": {
-	  	"${3}": ""
+	      "${3}": ""
 	  }
 	  , "engines": { "node": "0.4.x" }
 	  , "main": "index"

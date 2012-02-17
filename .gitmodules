@@ -106,3 +106,15 @@
 [submodule "bundle/netrw"]
 	path = bundle/netrw
 	url = https://github.com/vim-scripts/netrw.vim
+[submodule "bundle/applescript"]
+	path = bundle/applescript
+	url = git://github.com/vim-scripts/applescript.vim.git
+[submodule "bundle/coffee-script"]
+	path = bundle/coffee-script
+	url = https://github.com/kchmck/vim-coffee-script.git
+[submodule "bundle/multiselect"]
+	path = bundle/multiselect
+	url = https://github.com/vim-scripts/multiselect.git
+[submodule "bundle/genutils"]
+	path = bundle/genutils
+	url = https://github.com/vim-scripts/genutils.git

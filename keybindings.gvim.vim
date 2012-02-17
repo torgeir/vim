@@ -35,6 +35,7 @@ if has("unix")
   " tab navigation
   for i in [1,2,3,4,5,6,7,8,9]
     " windows/unix gui
+    exec "nnoremap <leader-" . i . "> :silent call GoToTab(" . i . ")<cr>"
     exec "nnoremap <m-" . i . "> :silent call GoToTab(" . i . ")<cr>"
     exec "inoremap <m-" . i . "> <esc>:silent call GoToTab(" . i . ")<cr>a"
   endfor
