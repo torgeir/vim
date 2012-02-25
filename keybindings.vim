@@ -22,8 +22,8 @@ noremap <silent> <f3> :GundoToggle<cr>
 noremap <silent> <f4> :setlocal paste!<cr>
 
 " toggle bg
-noremap <silent> <f5> :call ToggleMolokaiBg()<cr>
-"call togglebg#map("<f4>")
+"noremap <silent> <f5> :call ToggleMolokaiBg()<cr>
+call togglebg#map("<f5>")
 
 " toggle nerdtree
 noremap <silent> <f6> :call CustomNerdTreeToggle()<cr>
