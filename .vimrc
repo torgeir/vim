@@ -52,7 +52,7 @@ source ~/.vim/config/yankring.vim
 """"""""""""""""""""""""""""""""""""""""
 colorscheme solarized
 syntax on			  " highlight
-set background=dark		  " adjust colors
+set background=light		  " adjust colors
 set backspace=indent,eol,start	  " intuitive backspacing in insert mode
 set encoding=utf-8		  " encoding
 set hidden			  " allow unsaved buffer switches

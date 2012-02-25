@@ -1,5 +1,5 @@
 let g:molokai_original=0
-colorscheme molokai                         " wombat, solarized, ir_black - cool default ones: macvim, slate, desert
+colorscheme molokai                       " wombat, solarized, ir_black - cool default ones: macvim, slate, desert
 
 set antialias
 
