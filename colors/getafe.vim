@@ -1,1 +1,0 @@
-getafe/colors/getafe.vim

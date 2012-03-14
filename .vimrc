@@ -4,18 +4,24 @@ set t_Co=256
 let mapleader = ","
 
 " remove all auto commands
-autocmd! 
+augroup MyAu
+  autocmd!
+augroup END
 
 if has("gui_running")
   " reload vimrc and gvimrc on save
-  autocmd BufWritePost .*imrc so ~/.vim/.vimrc
-  autocmd BufWritePost .*imrc so ~/.vim/.gvimrc
-  autocmd BufWritePost *.vim so ~/.vim/.vimrc
-  autocmd BufWritePost *.vim so ~/.vim/.gvimrc
+  augroup MyAu
+    autocmd BufWritePost .*imrc so ~/.vim/.vimrc
+    autocmd BufWritePost .*imrc so ~/.vim/.gvimrc
+    autocmd BufWritePost *.vim so ~/.vim/.vimrc
+    autocmd BufWritePost *.vim so ~/.vim/.gvimrc
+  augroup END
 else
   " reload vimrc on save
-  autocmd BufWritePost .vimrc so ~/.vim/.vimrc
-  autocmd BufWritePost *.vim so ~/.vim/.vimrc
+  augroup MyAu
+    autocmd BufWritePost .vimrc so ~/.vim/.vimrc
+    autocmd BufWritePost *.vim so ~/.vim/.vimrc
+  augroup END
 endif
 
 " disabled plugins
@@ -37,6 +43,7 @@ filetype indent on
 filetype plugin on
 
 " plugin config
+source ~/.vim/config/colorizer.vim
 source ~/.vim/config/nerdtree.vim
 source ~/.vim/config/omnicomplete.vim
 source ~/.vim/config/commandt.vim

@@ -20,9 +20,6 @@ if !has("gui_running") " modifier commands screws up when in gvim
   vnoremap <silent> <leader>w <esc>:q<cr>:wincmd p<cr>
   inoremap <silent> <leader>w <esc>:q<cr>:wincmd p<cr>
 
-  " alt-w to close
-  "noremap w <esc>:q<cr>:wincmd p<cr>
-
   " tab navigation
   for i in [1,2,3,4,5,6,7,8,9]
     " os x
@@ -30,8 +27,15 @@ if !has("gui_running") " modifier commands screws up when in gvim
     exec "inoremap <d-" . i . "> <esc>:silent call GoToTab(" . i . ")<cr>a"
 
     " unix terminal
-    exec "nnoremap " . i . " :silent call GoToTab(" . i . ")<cr>"
-    exec "inoremap " . i . " :silent call GoToTab(" . i . ")<cr>"
+    exec "nnoremap <leader>" . i . " :silent call GoToTab(" . i . ")<cr>"
   endfor
+
+
+  " tab next/previous
+  noremap  <leader><tab> :tabn<cr>
+  inoremap <leader><tab> <esc>:tabn<cr>a
+
+  noremap  <leader><s-tab> :tabp<cr>
+  inoremap <leader><s-tab> <esc>:tabp<cr>a
 
 endif

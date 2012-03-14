@@ -7,10 +7,12 @@ if has("unix")
 
 endif
 
-" project tree
-autocmd VimEnter * call CdIfDirectory(expand("<amatch>"))
-autocmd FocusGained,BufWritePost * call RefreshTree()
-"autocmd WinEnter * call CloseIfOnlySidebarsLeft()
+augroup MyAu
+  " project tree
+  autocmd VimEnter * call CdIfDirectory(expand("<amatch>"))
+  autocmd FocusGained,BufWritePost * call RefreshTree()
+  "autocmd WinEnter * call CloseIfOnlySidebarsLeft()
+augroup END
 
 " toggle yankring 
 noremap <silent> <f2> :YRShow<cr>
@@ -38,7 +40,10 @@ noremap <silent> <leader>t :CommandT<cr>
 noremap <leader>f :Ack!<space>
 
 " scratch pad
-noremap <silent> <leader><tab> :Scratch<cr>
+noremap <silent> <leader><enter> :Scratch<cr>
+
+" highlight colors
+noremap <leader>C <Plug>Colorizer<cr>
 
 " disable arrows
 nnoremap <up>    <nop>
@@ -104,8 +109,8 @@ cnoremap <c-p> k
 " general leader bindings
 nnoremap <leader>m  :make!<cr><cr>:cc<cr>
 nnoremap <leader>mn :cn<cr>
-nnoremap <leader>n  :! node %<cr>
-nnoremap <leader>b  :! npm install<cr>
+nnoremap <leader>nn  :! node %<cr>
+nnoremap <leader>nb  :! npm install<cr>
 nnoremap <leader>i  :set list!<cr>
 nnoremap <leader>ev :tabe ~/.vim/.vimrc<cr>
 nnoremap <leader>eg :tabe ~/.vim/.gvimrc<cr>

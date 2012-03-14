@@ -77,20 +77,20 @@ endfunction
 " returns paste for status line (colors from molokai theme)
 function! ShowPaste()
   if &paste
-    hi StatusLine guifg=#F92672
+    hi StatusLine guifg=#F92672 ctermfg=5
   else
-    hi StatusLine guifg=#455354 guibg=fg
+    hi StatusLine guifg=#455354 ctermfg=7 guibg=fg
   endif
   redrawstatus
   return ''
 endfunction
 
 " toggle molokai bg
-function! ToggleMolokaiBg()
-  let g:molokai_original = g:molokai_original ? 0 : 1
-  syntax reset
-  syntax on
-endfunction
+"function! ToggleMolokaiBg()
+  "let g:molokai_original = g:molokai_original ? 0 : 1
+  "syntax reset
+  "syntax on
+"endfunction
 
 " custom nerdtreetoggle ensures only ONE nerd_tree window
 function! CustomNerdTreeToggle()
@@ -154,14 +154,14 @@ function! GuiTabLabel()
     endif
   endfor
 
-  " Append the number of windows in the tab page if more than one
-  let wincount = tabpagewinnr(v:lnum, '$')
-  if wincount > 1
-    let label .= wincount
-  endif
-  if label != ''
-    let label .= ' '
-  endif
+   Append the number of windows in the tab page if more than one
+  "let wincount = tabpagewinnr(v:lnum, '$')
+  "if wincount > 1
+    "let label .= wincount
+  "endif
+  "if label != ''
+    "let label .= ' '
+  "endif
 
   " Append the buffer name
   return label . bufname(bufnrlist[tabpagewinnr(v:lnum) - 1])
