@@ -4,24 +4,18 @@ set t_Co=256
 let mapleader = ","
 
 " remove all auto commands
-augroup MyAu
-  autocmd!
-augroup END
+autocmd!
 
 if has("gui_running")
   " reload vimrc and gvimrc on save
-  augroup MyAu
-    autocmd BufWritePost .*imrc so ~/.vim/.vimrc
-    autocmd BufWritePost .*imrc so ~/.vim/.gvimrc
-    autocmd BufWritePost *.vim so ~/.vim/.vimrc
-    autocmd BufWritePost *.vim so ~/.vim/.gvimrc
-  augroup END
+  autocmd BufWritePost .*imrc so ~/.vim/.vimrc
+  autocmd BufWritePost .*imrc so ~/.vim/.gvimrc
+  autocmd BufWritePost *.vim so ~/.vim/.vimrc
+  autocmd BufWritePost *.vim so ~/.vim/.gvimrc
 else
   " reload vimrc on save
-  augroup MyAu
-    autocmd BufWritePost .vimrc so ~/.vim/.vimrc
-    autocmd BufWritePost *.vim so ~/.vim/.vimrc
-  augroup END
+  autocmd BufWritePost .vimrc so ~/.vim/.vimrc
+  autocmd BufWritePost *.vim so ~/.vim/.vimrc
 endif
 
 " disabled plugins

@@ -7,12 +7,10 @@ if has("unix")
 
 endif
 
-augroup MyAu
-  " project tree
-  autocmd VimEnter * call CdIfDirectory(expand("<amatch>"))
-  autocmd FocusGained,BufWritePost * call RefreshTree()
-  "autocmd WinEnter * call CloseIfOnlySidebarsLeft()
-augroup END
+" project tree
+autocmd VimEnter * call CdIfDirectory(expand("<amatch>"))
+autocmd FocusGained,BufWritePost * call RefreshTree()
+"autocmd WinEnter * call CloseIfOnlySidebarsLeft()
 
 " toggle yankring 
 noremap <silent> <f2> :YRShow<cr>
@@ -42,8 +40,14 @@ noremap <leader>f :Ack!<space>
 " scratch pad
 noremap <silent> <leader><enter> :Scratch<cr>
 
-" highlight colors
-noremap <leader>C <Plug>Colorizer<cr>
+" Replace word under cursor, 
+map <leader>r :%s/\<<c-r><c-w>\>//gc
+
+" colorize hex
+noremap <leader>C :ColorToggle<cr>
+
+" rainbow parenthesis
+noremap <leader>R :RainbowParenthesesToggle<cr>
 
 " disable arrows
 nnoremap <up>    <nop>
@@ -54,10 +58,6 @@ inoremap <up>    <nop>
 inoremap <down>  <nop>
 inoremap <left>  <nop>
 inoremap <right> <nop>
-
-" navigate wraps
-" nnoremap j gj
-" nnoremap k gk
 
 " tab movement
 nnoremap <silent> <c-tab> :tabnext<cr>
