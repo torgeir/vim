@@ -1,3 +1,38 @@
+" Extract variable refactoring
+function! Extract_variable()
+  let name = input('Enter variable name: ')
+  exe 'normal gv'
+  exe 'normal c' . name
+  exe 'normal Ovar ' . name . ' = ;'
+  exe 'normal P'
+endfunction
+
+" Extract variable refactoring
+function! Inline_variable()
+  exe 'normal \<esc>'
+  let name = expand('<cword>')
+  exe 'normal k$'
+  " go to end of previous line
+  call search(name, 'b')
+  " step over 'var variable = '
+  exe 'normal 2f w'
+  " select everything to ;
+  exe 'normal vt;'
+  " delete to register k
+  exe 'normal "kd'
+  " delete line
+  exe 'normal dd'
+  " move back to variable
+  call search(name)
+  " select the variable
+  exe 'normal viw'
+  " replace it with the contents from register k
+  exe 'normal "kp'
+endfunction
+
+vnoremap ev <esc>:call Extract_variable()<cr>
+vnoremap ei <esc>:call Inline_variable()<cr>
+
 " If the parameter is a directory, cd into it
 function! CdIfDirectory(directory)
   let explicitDirectory = isdirectory(a:directory)

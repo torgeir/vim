@@ -40,7 +40,7 @@ filetype plugin on
 source ~/.vim/config/colorizer.vim
 source ~/.vim/config/nerdtree.vim
 source ~/.vim/config/omnicomplete.vim
-source ~/.vim/config/commandt.vim
+source ~/.vim/config/ctrlp.vim
 source ~/.vim/config/jshint.vim
 source ~/.vim/config/tasklist.vim
 source ~/.vim/config/filetypes.vim
@@ -75,6 +75,8 @@ set expandtab			  " tabs are spaces
 set linebreak			  " break lines
 set breakat=" "                   " where to insert line breaks
 let &showbreak = " ↪ "            " character to visualize breaks
+
+set iskeyword+=-                  " quotes are also keywords, so e.g. vi' works
 
 " set columns=84	            " 84 - 4 = 80 char width
 set numberwidth=6		  " linenumber width
@@ -125,7 +127,7 @@ set statusline+=\ %r
 set statusline+=\ "
 set statusline+=\ "
 set statusline+=%{CurDir()}
-set statusline+=%=	                                            " right align
+set statusline+=%=	                              " right align
 set statusline+=%h\ \ \ 
 set statusline+=%{strlen(ShowPaste())?ShowPaste():''}
 set statusline+=Position:\ %c:%l/%L

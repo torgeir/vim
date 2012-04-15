@@ -32,7 +32,7 @@ noremap <silent> <f6> :call CustomNerdTreeToggle()<cr>
 noremap <silent> <f7> :TagbarToggle<cr>:wincmd p<cr>
 
 " command-t
-noremap <silent> <leader>t :CommandT<cr>
+noremap <silent> <leader>t :CtrlP<cr>
 
 " ack search
 noremap <leader>f :Ack!<space>

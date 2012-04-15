@@ -115,3 +115,9 @@
 [submodule "bundle/rainbow"]
 	path = bundle/rainbow
 	url = https://github.com/kien/rainbow_parentheses.vim
+[submodule "bundle/ctrlp"]
+	path = bundle/ctrlp
+	url = https://github.com/kien/ctrlp.vim.git
+[submodule "bundle/syntastic"]
+	path = bundle/syntastic
+	url = https://github.com/scrooloose/syntastic.git
