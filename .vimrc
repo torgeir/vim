@@ -41,7 +41,6 @@ source ~/.vim/config/colorizer.vim
 source ~/.vim/config/nerdtree.vim
 source ~/.vim/config/omnicomplete.vim
 source ~/.vim/config/ctrlp.vim
-source ~/.vim/config/jshint.vim
 source ~/.vim/config/tasklist.vim
 source ~/.vim/config/filetypes.vim
 source ~/.vim/config/tagbar.vim
