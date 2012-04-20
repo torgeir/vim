@@ -98,6 +98,10 @@ function! RefreshTree(...)
     endif
   endif
 
+  if exists(":CtrlPClearCache") == 2
+    CtrlPClearCache
+  endif
+
   if exists(":CommandTFlush") == 2
     CommandTFlush
   endif

@@ -65,6 +65,7 @@ set autoread			  " automatically re-read file on outside change
 set magic			  " set magic on, for regular expressions
 set nocompatible                  " dont bother being compatible with vi
 set modelines=0                   " prevent security exploits in modelines
+set lazyredraw                    " dont redraw until macro is complete
 
 set autoindent			  " keep indent on newline
 set smartindent			  " auto-indent (block/language)
@@ -113,6 +114,7 @@ set noswapfile
 " improve menu on :e <tab>
 set wildmenu
 set wildmode=list:longest
+set wildignore+=.git,node_modules
 
 " status line
 set laststatus=2
