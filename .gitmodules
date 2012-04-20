@@ -121,3 +121,6 @@
 [submodule "bundle/syntastic"]
 	path = bundle/syntastic
 	url = https://github.com/scrooloose/syntastic.git
+[submodule "bundle/buster"]
+	path = bundle/buster
+	url = https://github.com/malclocke/vim-buster.git
