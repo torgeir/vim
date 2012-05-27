@@ -124,3 +124,6 @@
 [submodule "bundle/buster"]
 	path = bundle/buster
 	url = https://github.com/malclocke/vim-buster.git
+[submodule "bundle/js-mask"]
+	path = bundle/js-mask
+	url = https://github.com/tyok/js-mask
