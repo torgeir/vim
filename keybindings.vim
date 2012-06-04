@@ -49,6 +49,10 @@ noremap <leader>C :ColorToggle<cr>
 " rainbow parenthesis
 noremap <leader>R :RainbowParenthesesToggle<cr>
 
+" multipurpose tab
+inoremap <tab> <c-r>=InsertTabWrapper()<cr>
+inoremap <s-tab> <c-n>
+
 " disable arrows
 nnoremap <up>    <nop>
 nnoremap <down>  <nop>
@@ -132,7 +136,7 @@ vnoremap <leader>, :s/$/,/g<cr>,
 vnoremap <leader>. :s/$/./g<cr>.
 
 " clean up whitespace file wide
-nnoremap <leader>W :%s/\s\+$//<cr>:%s/ / /<cr>:let @/=''<cr>
+nnoremap <leader>W :%s/\s\+$//e<cr>:%s/ / /e<cr>let @/=''<cr>
 
 " change filetypes
 nnoremap <silent> <leader>fth :set filetype=html<cr>

@@ -1,3 +1,14 @@
+" multipurpose tab
+" indend if at line start, else autocomplete
+function! InsertTabWrapper()
+  let col = col('.') - 1
+  if !col || getline('.')[col - 1] !~ '\k'
+    return "\<tab>"
+  else
+    return "\<c-p>"
+  endif
+endfunction
+
 " Extract variable refactoring
 function! Extract_variable()
   let name = input('Enter variable name: ')
@@ -13,7 +24,7 @@ function! Inline_variable()
   let name = expand('<cword>')
   exe 'normal k$'
   " go to end of previous line
-  call search(name, 'b')
+  call search('\<' . name . '\>', 'b')
   " step over 'var variable = '
   exe 'normal 2f w'
   " select everything to ;
@@ -59,26 +70,6 @@ function! CdIfDirectory(directory)
   endif
 endfunction
 
-" Close all open buffers on entering a window if the only
-" buffer that's left is the NERDTree buffer or tagbar buffer
-" function! CloseIfOnlySidebarsLeft()
-"   if exists("t:NERDTreeBufName")
-"     if bufwinnr(t:NERDTreeBufName) != -1
-"       if winnr("$") == 1
-"         q
-"       endif
-"     endif
-"   endif
-" 
-"   if exists("__Tagbar__")
-"     if bufwinnr("__Tagbar__") != -1
-"       if winnr("$") == 1
-"         q
-"       endif
-"     endif
-"   endif
-" endfunction
-
 " NERDTree utility function
 function! RefreshTree(...)
   let stay = 0
@@ -101,10 +92,6 @@ function! RefreshTree(...)
   if exists(":CtrlPClearCache") == 2
     CtrlPClearCache
   endif
-
-  if exists(":CommandTFlush") == 2
-    CommandTFlush
-  endif
 endfunction
 
 " return current dir for statusline
@@ -112,24 +99,6 @@ function! CurDir()
   let curdir = substitute(getcwd(), '/Users/torgeir/', "~/", "g")
   return curdir
 endfunction
-
-" returns paste for status line (colors from molokai theme)
-function! ShowPaste()
-  if &paste
-    hi StatusLine guifg=#F92672 ctermfg=5
-  else
-    hi StatusLine guifg=#455354 ctermfg=7 guibg=fg
-  endif
-  redrawstatus
-  return ''
-endfunction
-
-" toggle molokai bg
-"function! ToggleMolokaiBg()
-  "let g:molokai_original = g:molokai_original ? 0 : 1
-  "syntax reset
-  "syntax on
-"endfunction
 
 " custom nerdtreetoggle ensures only ONE nerd_tree window
 function! CustomNerdTreeToggle()
@@ -143,7 +112,7 @@ function! GoToTab(tab)
     exe "normal \<esc>:TagbarClose\<cr>"
   endif
 
-  let nerdtreewinnr = bufwinnr("NERD_tree_1") 
+  let nerdtreewinnr = bufwinnr("NERD_tree_1")
   if nerdtreewinnr != -1
     exe "normal \<esc>:NERDTreeToggle\<cr>"
   endif
@@ -193,19 +162,18 @@ function! GuiTabLabel()
     endif
   endfor
 
-   Append the number of windows in the tab page if more than one
-  "let wincount = tabpagewinnr(v:lnum, '$')
-  "if wincount > 1
-    "let label .= wincount
-  "endif
-  "if label != ''
-    "let label .= ' '
-  "endif
+  " Append the number of windows in the tab page if more than one
+  let wincount = tabpagewinnr(v:lnum, '$')
+  if wincount > 1
+    let label .= wincount
+  endif
+  if label != ''
+    let label .= ' '
+  endif
 
   " Append the buffer name
   return label . bufname(bufnrlist[tabpagewinnr(v:lnum) - 1])
 endfunction
-
 
 " remember sessions
 function! MakeSession()
@@ -227,73 +195,4 @@ function! LoadSession()
     echo "No session loaded."
   endif
 endfunction
-
-" ConqueTerm wrapper
-" function! StartTerm()
-"   execute 'ConqueTerm ' . $SHELL
-"   setlocal listchars=tab:\ \
-" endfunction
-
-" completes block 
-"function! CompleteBlock(char, ...)
-"  let col = col('.') - 1
-"  let charBeforeCol = getline('.')[col-1]
-"  let charAtCol = getline('.')[col]
-"
-"  if charAtCol == a:char
-"    call cursor(0, col + 2)
-"    return ""
-"  end
-"
-"  if a:0 > 0 && charAtCol !~ "[a-zA-Z_0-9!]"
-"    if a:0 == 2 && a:2 == "1"
-"      if charBeforeCol !~ "[a-zA-Z_0-9!]" && charBeforeCol != a:char
-"        return a:char . a:1 . "\<left>"
-"      endif
-"    else
-"      return a:char . a:1 . "\<left>"
-"    endif
-"  endif
-"
-"  return a:char
-"endfunction
-
-" removes outer block on backspace when cursor is inside/after
-"function! RemoveEmptyBlock(blocks)
-"  let col = col('.') - 1
-"  let charBeforeBeforeCol = getline('.')[col-2]
-"  let charBeforeCol = getline('.')[col-1]
-"  let charAtCol = getline('.')[col]
-"
-"  for block in a:blocks
-"    let openingChar = block[0]
-"    let closingChar = block[1]
-"
-"    if openingChar == charBeforeCol && closingChar == charAtCol
-"      return "\<right>\<bs>\<bs>"
-"    elseif openingChar == charBeforeBeforeCol && closingChar == charBeforeCol
-"      return "\<bs>\<bs>"
-"    endif
-"  endfor
-"
-"  return "\<bs>"
-"endfunction
-
-" toggles comments on selected lines 
-" let g:comments = { 'vim' : '" ', 'javascript' : '// ', 'ruby' : '# ' }
-" function! Comment()
-"   let line = getline('.')
-"   let comment = g:comments[&filetype]
-"   if match(line, '^'.comment) >= 0
-"     let line_wo_comment = substitute(line, '^'.comment, '', '')
-"     call setline('.', line_wo_comment)
-"   else
-"     let line_w_comment = substitute(line, '^', comment, '')
-"     call setline('.', line_w_comment)
-"   endif
-" endfunction
-
-" function! RunScalaTest()
-  " exe silent !make install
-" endfunction
 

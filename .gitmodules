@@ -123,3 +123,6 @@
 [submodule "bundle/nginx"]
 	path = bundle/nginx
 	url = https://github.com/vim-scripts/nginx.vim.git
+[submodule "bundle/io"]
+	path = bundle/io
+	url = https://github.com/davidbalbert/vim-io.git

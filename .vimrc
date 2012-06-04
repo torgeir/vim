@@ -118,26 +118,26 @@ set wildignore+=.git,node_modules
 " status line
 set laststatus=2
 
+
 " format the status line
-set statusline=[%{strlen(&ft)?&ft:'none'}]
+set statusline=%y
 set statusline+=\ "
+set statusline+=%#error#%{&paste?'[paste]':''}%*
 set statusline+=\ "
-set statusline+=%F%m%r%h
+set statusline+=%F\ %m\ %r\ %h
 set statusline+=\ %w
 set statusline+=\ %r
 set statusline+=\ "
-set statusline+=\ "
 set statusline+=%{CurDir()}
-set statusline+=%=	                              " right align
-set statusline+=%h\ \ \ 
-set statusline+=%{strlen(ShowPaste())?ShowPaste():''}
-set statusline+=Position:\ %c:%l/%L
+set statusline+=%=	                              " left-right separator
+set statusline+=%h\ \ 
+set statusline+=%c,%l/%L\ %P
 
 " tab labels
 set guitablabel=%{GuiTabLabel()}
 
 " splitting windows in equal sizes below and right
-set equalalways 
+set equalalways
 set splitbelow splitright
 
 " more tips
