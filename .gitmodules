@@ -61,9 +61,6 @@
 [submodule "bundle/netrw"]
 	path = bundle/netrw
 	url = https://github.com/vim-scripts/netrw.vim
-[submodule "bundle/multiselect"]
-	path = bundle/multiselect
-	url = https://github.com/vim-scripts/multiselect.git
 [submodule "bundle/genutils"]
 	path = bundle/genutils
 	url = https://github.com/vim-scripts/genutils.git
