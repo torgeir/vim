@@ -1,33 +1,28 @@
-let g:molokai_original=1
-colorscheme molokai                       " wombat, solarized, ir_black - cool default ones: macvim, slate, desert
+let g:molokai_original=0
+colorscheme molokai
 
 set antialias
-
 set guioptions-=rL                          " no scrollbar
 set guioptions-=T                           " hide toolbar
 set guioptions-=m                           " hide menus
-" set guioptions=aegitcm                      " disable menu in gui mode
 
 if has('mac')
+  set guifont=Monaco:h19
+  set fuoptions=maxhorz,maxvert             " fullscreen takes up whole screen"
 
   source ~/.vim/keybindings.macvim.vim
-
-  set fuoptions=maxhorz,maxvert             " fullscreen takes up whole screen"
-  set guifont=Monaco:h19
-  set transparency=0
 
   "au WinLeave * set nocursorline
   "au WinEnter * set cursorline
   "set cursorline 
 
 elseif has("unix")
-
-  source ~/.vim/keybindings.gvim.vim
-
   set guifont=Inconsolata\ 10
   set lines=30 columns=100                " set window size
-
 endif
+
+" other cool ones: molokai, getafe, wombat, solarized, ir_black
+" cool default ones: macvim, slate, desert
 
 " hightlight current word
 " highlight flicker gui=bold

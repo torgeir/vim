@@ -1,41 +1,32 @@
-if !has("gui_running") " modifier commands screws up when in gvim
+" move line of text using alt-[jk]
+nnoremap <silent> <leader>j mz:m+<cr>`z
+nnoremap <silent> <leader>k mz:m-2<cr>`z
+vnoremap <silent> <leader>j :m'>+<cr>`<my`>mzgv`yo`z
+vnoremap <silent> <leader>k :m'<-2<cr>`>my`<mzgv`yo`z
 
-  " move line of text using alt-[jk]
-  "nnoremap <silent> j mz:m+<cr>`z
-  "nnoremap <silent> k mz:m-2<cr>`z
-  "vnoremap <silent> j :m'>+<cr>`<my`>mzgv`yo`z
-  "vnoremap <silent> k :m'<-2<cr>`>my`<mzgv`yo`z
-  nnoremap <silent> <leader>j mz:m+<cr>`z
-  nnoremap <silent> <leader>k mz:m-2<cr>`z
-  vnoremap <silent> <leader>j :m'>+<cr>`<my`>mzgv`yo`z
-  vnoremap <silent> <leader>k :m'<-2<cr>`>my`<mzgv`yo`z
+" leader-s save
+noremap  <leader>s <esc>:w<cr>
+inoremap <leader>s <esc>:w<cr>
+vnoremap <leader>s <esc>:w<cr>
 
-  " leader-s save
-  noremap  <leader>s <esc>:w<cr>
-  inoremap <leader>s <esc>:w<cr>
-  vnoremap <leader>s <esc>:w<cr>
+" leader-w to close
+noremap  <silent> <leader>w <esc>:q<cr>:wincmd p<cr>
+vnoremap <silent> <leader>w <esc>:q<cr>:wincmd p<cr>
+inoremap <silent> <leader>w <esc>:q<cr>:wincmd p<cr>
 
-  " leader-w to close 
-  noremap  <silent> <leader>w <esc>:q<cr>:wincmd p<cr>
-  vnoremap <silent> <leader>w <esc>:q<cr>:wincmd p<cr>
-  inoremap <silent> <leader>w <esc>:q<cr>:wincmd p<cr>
+" tab navigation
+for i in [1,2,3,4,5,6,7,8,9]
+  " os x
+  exec "nnoremap <d-" . i . "> :silent call GoToTab(" . i . ")<cr>"
+  exec "inoremap <d-" . i . "> <esc>:silent call GoToTab(" . i . ")<cr>a"
 
-  " tab navigation
-  for i in [1,2,3,4,5,6,7,8,9]
-    " os x
-    exec "nnoremap <d-" . i . "> :silent call GoToTab(" . i . ")<cr>"
-    exec "inoremap <d-" . i . "> <esc>:silent call GoToTab(" . i . ")<cr>a"
+  " unix terminal
+  exec "nnoremap <leader>" . i . " :silent call GoToTab(" . i . ")<cr>"
+endfor
 
-    " unix terminal
-    exec "nnoremap <leader>" . i . " :silent call GoToTab(" . i . ")<cr>"
-  endfor
+" tab next/previous
+noremap  <leader><tab> :tabn<cr>
+inoremap <leader><tab> <esc>:tabn<cr>a
 
-
-  " tab next/previous
-  noremap  <leader><tab> :tabn<cr>
-  inoremap <leader><tab> <esc>:tabn<cr>a
-
-  noremap  <leader><s-tab> :tabp<cr>
-  inoremap <leader><s-tab> <esc>:tabp<cr>a
-
-endif
+noremap  <leader><s-tab> :tabp<cr>
+inoremap <leader><s-tab> <esc>:tabp<cr>a

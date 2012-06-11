@@ -29,7 +29,6 @@ call pathogen#helptags()
 " config
 source ~/.vim/keybindings.vim
 source ~/.vim/functions.vim
-source ~/.vim/testrunner.vim
 
 " plugins
 filetype on
@@ -50,7 +49,7 @@ source ~/.vim/config/yankring.vim
 """"""""""""""""""""""""""""""""""""""""
 " Settings
 """"""""""""""""""""""""""""""""""""""""
-colorscheme solarized
+colorscheme molokai
 syntax on			  " highlight
 set background=light		  " adjust colors
 set backspace=indent,eol,start	  " intuitive backspacing in insert mode
@@ -117,7 +116,6 @@ set wildignore+=.git,node_modules
 
 " status line
 set laststatus=2
-
 
 " format the status line
 set statusline=%y

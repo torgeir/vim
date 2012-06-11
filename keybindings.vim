@@ -1,15 +1,10 @@
-if has("unix")
-
-  colorscheme solarized
-  
-  " load vim-in-unix-shell shortcuts
+if !has("gui_gtk2") " gvim can't handle the truth!
   source ~/.vim/keybindings.vim.vim
-
 endif
 
 " project tree
 autocmd VimEnter * call CdIfDirectory(expand("<amatch>"))
-autocmd FocusGained,BufWritePost * call RefreshTree()
+autocmd FocusGained,BufWritePost * call RefreshFileBrowser()
 "autocmd WinEnter * call CloseIfOnlySidebarsLeft()
 
 " toggle yankring 
@@ -26,7 +21,7 @@ noremap <silent> <f4> :setlocal paste!<cr>
 call togglebg#map("<f5>")
 
 " toggle nerdtree
-noremap <silent> <f6> :call CustomNerdTreeToggle()<cr>
+noremap <silent> <f6> :call CustomFileBrowserToggle()<cr>
 
 " toggle tagbar
 noremap <silent> <f7> :TagbarToggle<cr>:wincmd p<cr>
@@ -34,13 +29,10 @@ noremap <silent> <f7> :TagbarToggle<cr>:wincmd p<cr>
 " command-t
 noremap <silent> <leader>t :CtrlP<cr>
 
-" ack search
-noremap <leader>f :Ack!<space>
-
 " scratch pad
 noremap <silent> <leader><enter> :Scratch<cr>
 
-" Replace word under cursor, 
+" Replace word under cursor
 map <leader>r :%s/\<<c-r><c-w>\>//gc
 
 " colorize hex
