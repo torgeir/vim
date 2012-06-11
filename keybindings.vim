@@ -1,4 +1,4 @@
-if !has("gui_gtk2") " gvim can't handle the truth!
+if !has('gui_running') && has("gui_gtk2") " gvim can't handle the truth!
   source ~/.vim/keybindings.vim.vim
 endif
 
