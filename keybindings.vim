@@ -75,13 +75,18 @@ nnoremap <leader>hon :%!xxd<cr>
 nnoremap <leader>hof :%!xxd -r<cr>
 
 " textmate like formatting
-nnoremap <leader>q gqip
+nnoremap <leader>q gqap
+vnoremap <leader>q gq
 
 " keep search matches in window center
 nnoremap * *zzzv 
 nnoremap # #zzzv
 nnoremap n nzzzv
 nnoremap N Nzzzv
+
+" Also center the screen when jumping through the changelist
+nnoremap g; g;zz
+nnoremap g, g,zz
 
 " expand blocks on <cr> inside
 inoremap <cr> <c-r>=ExpandBlock(["[]", "{}"])<cr>
