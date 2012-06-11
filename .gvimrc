@@ -1,4 +1,4 @@
-let g:molokai_original=0
+let g:molokai_original=1
 colorscheme molokai                       " wombat, solarized, ir_black - cool default ones: macvim, slate, desert
 
 set antialias
@@ -13,7 +13,7 @@ if has('mac')
   source ~/.vim/keybindings.macvim.vim
 
   set fuoptions=maxhorz,maxvert             " fullscreen takes up whole screen"
-  set guifont=Monaco:h16
+  set guifont=Monaco:h18
   set transparency=0
 
   "au WinLeave * set nocursorline
