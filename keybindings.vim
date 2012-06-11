@@ -1,6 +1,5 @@
-if !has('gui_running') && has("gui_gtk2") " gvim can't handle the truth!
-  source ~/.vim/keybindings.vim.vim
-endif
+" gvim cant handle the truth!
+source ~/.vim/keybindings.vim.vim
 
 " project tree
 autocmd VimEnter * call CdIfDirectory(expand("<amatch>"))
