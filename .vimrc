@@ -19,7 +19,7 @@ else
 endif
 
 " disabled plugins
-let g:pathogen_disabled = []
+let g:pathogen_disabled = ['gundo']
 
 " load plugins
 filetype off
