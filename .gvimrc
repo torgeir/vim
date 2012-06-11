@@ -13,7 +13,7 @@ if has('mac')
   source ~/.vim/keybindings.macvim.vim
 
   set fuoptions=maxhorz,maxvert             " fullscreen takes up whole screen"
-  set guifont=Monaco:h18
+  set guifont=Monaco:h19
   set transparency=0
 
   "au WinLeave * set nocursorline
