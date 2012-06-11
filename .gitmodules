@@ -126,3 +126,6 @@
 [submodule "bundle/io"]
 	path = bundle/io
 	url = https://github.com/davidbalbert/vim-io.git
+[submodule "bundle/supertab"]
+	path = bundle/supertab
+	url = https://github.com/ervandew/supertab.git
