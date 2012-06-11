@@ -16,9 +16,6 @@
 [submodule "bundle/nerdcommenter"]
 	path = bundle/nerdcommenter
 	url = https://github.com/scrooloose/nerdcommenter.git
-[submodule "bundle/ack"]
-	path = bundle/ack
-	url = https://github.com/mileszs/ack.vim.git
 [submodule "bundle/gundo"]
 	path = bundle/gundo
 	url = https://github.com/sjl/gundo.vim.git
@@ -55,21 +52,12 @@
 [submodule "bundle/slime"]
 	path = bundle/slime
 	url = https://github.com/jpalardy/vim-slime
-[submodule "colors/molokai"]
-	path = colors/molokai
-	url = git://github.com/vim-scripts/molokai.git
 [submodule "bundle/snipmate-snippets"]
 	path = bundle/snipmate-snippets
 	url = https://github.com/honza/snipmate-snippets.git
-[submodule "bundle/netrw"]
-	path = bundle/netrw
-	url = https://github.com/vim-scripts/netrw.vim
-[submodule "bundle/multiselect"]
-	path = bundle/multiselect
-	url = https://github.com/vim-scripts/multiselect.git
-[submodule "bundle/genutils"]
-	path = bundle/genutils
-	url = https://github.com/vim-scripts/genutils.git
+;[submodule "bundle/netrw"]
+	;path = bundle/netrw
+	;url = https://github.com/vim-scripts/netrw.vim
 [submodule "bundle/snipmate"]
 	path = bundle/snipmate
 	url = https://github.com/garbas/vim-snipmate.git
@@ -90,6 +78,9 @@
 [submodule "bundle/buster"]
 	path = bundle/buster
 	url = https://github.com/malclocke/vim-buster.git
+[submodule "bundle/js-mask"]
+	path = bundle/js-mask
+	url = https://github.com/tyok/js-mask
 [submodule "bundle/markdown"]
 	path = bundle/markdown
 	url = https://github.com/hallison/vim-markdown.git
@@ -129,3 +120,6 @@
 [submodule "bundle/supertab"]
 	path = bundle/supertab
 	url = https://github.com/ervandew/supertab.git
+[submodule "bundle/getafe"]
+	path = bundle/getafe
+	url = https://github.com/larssmit/vim-getafe.git

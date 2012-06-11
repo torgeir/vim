@@ -1,14 +1,3 @@
-" multipurpose tab
-" indend if at line start, else autocomplete
-function! InsertTabWrapper()
-  let col = col('.') - 1
-  if !col || getline('.')[col - 1] !~ '\k'
-    return "\<tab>"
-  else
-    return "\<c-p>"
-  endif
-endfunction
-
 " Extract variable refactoring
 function! Extract_variable()
   let name = input('Enter variable name: ')
@@ -71,7 +60,7 @@ function! CdIfDirectory(directory)
 endfunction
 
 " NERDTree utility function
-function! RefreshTree(...)
+function! RefreshFileBrowser(...)
   let stay = 0
 
   if(exists("a:1"))
@@ -101,8 +90,12 @@ function! CurDir()
 endfunction
 
 " custom nerdtreetoggle ensures only ONE nerd_tree window
-function! CustomNerdTreeToggle()
+function! CustomFileBrowserToggle()
+  if has('gui_running') && has("mac")
+    exe "normal \<esc>:maca toggleFileBrowser:\<cr>"
+  else
     exe "normal \<esc>:NERDTreeToggle \| :silent NERDTreeMirror\<cr>"
+  endif
 endfunction
 
 " changes tab
@@ -124,7 +117,7 @@ function! GoToTab(tab)
   endif
 
   if nerdtreewinnr != -1
-    call CustomNerdTreeToggle()
+    call CustomFileBrowserToggle()
   endif
 
   wincmd p
@@ -194,5 +187,12 @@ function! LoadSession()
   else
     echo "No session loaded."
   endif
+endfunction
+
+" toggle molokai bg
+function! ToggleMolokaiBg()
+  let g:molokai_original = g:molokai_original ? 0 : 1
+  syntax reset
+  syntax on
 endfunction
 

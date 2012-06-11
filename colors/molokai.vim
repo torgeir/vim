@@ -1,4 +1,5 @@
 " torgeir: custom molokai.vim based on the below
+" modda versjon av git://github.com/vim-scripts/molokai.git
 
 " Vim color file
 "
@@ -61,7 +62,7 @@ hi Label           guifg=#E6DB74               gui=none
 hi Macro           guifg=#C4BE89               gui=italic
 hi SpecialKey      guifg=#66D9EF               gui=italic
 
-"torgeir replaced this one
+" torgeir: replaced this one
 "hi MatchParen      guifg=#000000 guibg=#272822 gui=bold
 hi MatchParen      guifg=#E4E400 guibg=#3E3D32 gui=bold
 
