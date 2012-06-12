@@ -1,3 +1,6 @@
+" include custom snippets
+"rtp += '/ftplugin/php/your_snippets.xpt.vim'
+
 " avoid key conflict
 let g:SuperTabMappingForward = '<Plug>supertabKey'
 
@@ -8,4 +11,4 @@ let g:xptemplate_fallback = '<Plug>supertabKey'
 let g:xptemplate_key = '<Tab>'
 
 " show matches, if several
-let g:xptemplate_always_show_pum = 1
+"let g:xptemplate_always_show_pum = 1

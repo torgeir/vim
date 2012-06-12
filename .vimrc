@@ -18,6 +18,8 @@ else
   autocmd BufWritePost *.vim so ~/.vim/.vimrc
 endif
 
+autocmd BufWritePost *.xpt.vim :XPTreload
+
 " disabled plugins
 let g:pathogen_disabled = ['snipmate', 'gundo']
 
