@@ -49,7 +49,11 @@ source ~/.vim/config/yankring.vim
 """"""""""""""""""""""""""""""""""""""""
 " Settings
 """"""""""""""""""""""""""""""""""""""""
-colorscheme molokai
+if has('mac')
+  colorscheme molokai
+else
+  colorscheme solarized
+endif
 syntax on			  " highlight
 set background=light		  " adjust colors
 set backspace=indent,eol,start	  " intuitive backspacing in insert mode
