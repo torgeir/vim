@@ -19,7 +19,7 @@ else
 endif
 
 " disabled plugins
-let g:pathogen_disabled = ['gundo']
+let g:pathogen_disabled = ['snipmate', 'gundo']
 
 " load plugins
 filetype off
@@ -45,6 +45,7 @@ source ~/.vim/config/filetypes.vim
 source ~/.vim/config/tagbar.vim
 source ~/.vim/config/gundo.vim
 source ~/.vim/config/yankring.vim
+source ~/.vim/config/xptemplate.vim
 
 """"""""""""""""""""""""""""""""""""""""
 " Settings

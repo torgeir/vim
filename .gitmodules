@@ -123,3 +123,6 @@
 [submodule "bundle/getafe"]
 	path = bundle/getafe
 	url = https://github.com/larssmit/vim-getafe.git
+[submodule "bundle/xptemplate"]
+	path = bundle/xptemplate
+	url = https://github.com/drmingdrmer/xptemplate.git
