@@ -1,12 +1,12 @@
-let g:molokai_original=0
-colorscheme molokai
-
 set antialias
 set guioptions-=rL                          " no scrollbar
 set guioptions-=T                           " hide toolbar
 set guioptions-=m                           " hide menus
 
 if has('mac')
+  let g:molokai_original=0
+  colorscheme molokai
+
   set guifont=Monaco:h19
   set fuoptions=maxhorz,maxvert             " fullscreen takes up whole screen"
 
@@ -17,8 +17,11 @@ if has('mac')
   "set cursorline 
 
 elseif has("unix")
+  colorscheme solarized
   set guifont=Inconsolata\ 10
-  set lines=30 columns=100                " set window size
+  if &lines < 30 " adjust minimum size on ubuntu
+    set lines=30 columns=100
+  endif
 endif
 
 " other cool ones: molokai, getafe, wombat, solarized, ir_black
