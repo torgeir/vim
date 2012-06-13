@@ -7,6 +7,11 @@ function! s:f.strip_path(pathname)
   return substitute(system("basename " .  shellescape(a:pathname)), "\n", "", 'g')
 endfunction
 
+" camel cases words separated by -
+function! s:f.camelize(str)
+  return substitute(a:str, '-\(\w*\)', '\u\1', 'g')
+endfunction
+
 
 XPT f " js anonymous function
 XSET arg*|post=ExpandIfNotEmpty(', ', 'arg*')
@@ -39,7 +44,7 @@ console.error(`what?^);
 
 
 XPT req " node require module
-var `module^strip_path(V())^ = require('``module^');
+var `module^camelize(strip_path(V()))^ = require('``module^');
 
 
 XPT isnode " js in-node-check
