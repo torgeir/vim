@@ -1,7 +1,7 @@
 " include custom snippets
-"rtp += '/ftplugin/php/your_snippets.xpt.vim'
+set rtp+=~/.vim/snippets/
 
-" avoid key conflict
+" avoid conflict
 let g:SuperTabMappingForward = '<Plug>supertabKey'
 
 " if nothing matched in xpt, try supertab
