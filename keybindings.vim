@@ -130,20 +130,15 @@ vnoremap <leader>. :s/$/./g<cr>.
 " clean up whitespace file wide
 nnoremap <leader>W :%s/\s\+$//e<cr>:%s/ / /e<cr>let @/=''<cr>
 
-" change filetypes
-nnoremap <silent> <leader>fth :set filetype=html<cr>
-nnoremap <silent> <leader>ftj :set filetype=javascript<cr>
-nnoremap <silent> <leader>ftc :set filetype=css<cr>
-
 " clear highligted search
-nnoremap <silent> <leader><space> :set hlsearch!<cr>
+nnoremap <silent> <leader><space> :nohlsearch<cr>
 
 " quickfix window for last search
 nnoremap <silent> <leader>/ :execute 'vimgrep /'.@/.'/g %'<cr>:copen<cr>
 
 " fix regex search
-"noremap ? /\v
-"noremap / /\v
+noremap ? /\v
+noremap / /\v
 
 " sort css properties
 command! SortCSSBraceContents :g#\({\n\)\@<=#.,/}/sort

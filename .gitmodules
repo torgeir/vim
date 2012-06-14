@@ -126,3 +126,9 @@
 [submodule "bundle/xptemplate"]
 	path = bundle/xptemplate
 	url = https://github.com/drmingdrmer/xptemplate.git
+[submodule "bundle/ctrlp-extensions"]
+	path = bundle/ctrlp-extensions
+	url = https://github.com/sgur/ctrlp-extensions.vim.git
+[submodule "bundle/ctrlp-filetype"]
+	path = bundle/ctrlp-filetype
+	url = https://github.com/endel/ctrlp-filetype.vim.git

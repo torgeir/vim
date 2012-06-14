@@ -12,6 +12,7 @@ if has("gui_running")
   autocmd BufWritePost .*imrc so ~/.vim/.gvimrc
   autocmd BufWritePost *.vim so ~/.vim/.vimrc
   autocmd BufWritePost *.vim so ~/.vim/.gvimrc
+
 else
   " reload vimrc on save
   autocmd BufWritePost .vimrc so ~/.vim/.vimrc
@@ -55,50 +56,45 @@ if has('mac')
 else
   colorscheme solarized
 endif
-syntax on			  " highlight
-set background=light		  " adjust colors
-set backspace=indent,eol,start	  " intuitive backspacing in insert mode
-set encoding=utf-8		  " encoding
-set hidden			  " allow unsaved buffer switches
-set history=1000		  " keep longer history
-"set number			  " line numbers
+syntax on                         " highlight
+set background=light              " adjust colors
+set backspace=indent,eol,start    " intuitive backspacing in insert mode
+set encoding=utf-8                " encoding
+set hidden                        " allow unsaved buffer switches
+set history=1000                  " keep longer history
 set relativenumber                " line numbers relative to cursor
-set title			  " adjust window title
-set autoread			  " automatically re-read file on outside change
-set magic			  " set magic on, for regular expressions
+"set title                        " adjust window title
+set autoread                      " automatically re-read file on outside change
 set nocompatible                  " dont bother being compatible with vi
-set modelines=0                   " prevent security exploits in modelines
 set lazyredraw                    " dont redraw until macro is complete
 
-set autoindent			  " keep indent on newline
-set smartindent			  " auto-indent (block/language)
-set shiftround			  " round to whole indents
-set shiftwidth=2		  " indent = 2 chars
-set softtabstop=2		  " 2 tab = 2 spaces
-set expandtab			  " tabs are spaces
-set linebreak			  " break lines
+set autoindent                    " keep indent on newline
+set smartindent                   " auto-indent (block/language)
+set shiftround                    " round to whole indents
+set shiftwidth=2                  " indent = 2 chars
+set softtabstop=2                 " 2 tab = 2 spaces
+set expandtab                     " tabs are spaces
+set linebreak                     " break lines
 set breakat=" "                   " where to insert line breaks
-let &showbreak = " ↪ "            " character to visualize breaks
+let &showbreak="↪ "             " character to visualize breaks
 
 set iskeyword+=-                  " quotes are also keywords, so e.g. vi' works
 
-" set columns=84	            " 84 - 4 = 80 char width
-set numberwidth=6		  " linenumber width
-set ruler			  " show ruler
-set scrolloff=8			  " more context around the cursor as it scrolls
+" set columns=84                   " 84 - 4 = 80 char width
+set numberwidth=6                 " linenumber width
+set ruler                         " show ruler
+set scrolloff=8                   " more context around the cursor as it scrolls
 
-set showmatch			  " show matching chars (,{,..
+set showmatch                     " show matching chars (,{,..
 set matchtime=3                   " blink matching chars for .x seconds
 set matchpairs+=<:>               " add < > to matched pairs
-runtime macros/matchit.vim	  " make % match if/else/..
+runtime macros/matchit.vim        " make % match if/else/..
 
-set ignorecase			  " use smart case searching, only search for \
-set smartcase			  " case sensitive words if search has capital
-set nohlsearch			  " highlight search terms...
-set incsearch			  " ...dynamically as they are typed.
-set wrapscan			  " make search wrap
-set hlsearch                      " turn off search highlights default
-set hlsearch!
+set ignorecase                    " use smart case searching, only search for \
+set smartcase                     " case sensitive words if search has capital
+set incsearch                     " ...dynamically as they are typed.
+set wrapscan                      " make search wrap
+set hlsearch                      " highlight search-terms
 
 " disable all bells
 set noerrorbells
@@ -132,16 +128,12 @@ set statusline+=\ %w
 set statusline+=\ %r
 set statusline+=\ "
 set statusline+=%{CurDir()}
-set statusline+=%=	                              " left-right separator
+set statusline+=%=                " left-right separator
 set statusline+=%h\ \ 
 set statusline+=%c,%l/%L\ %P
 
 " tab labels
 set guitablabel=%{GuiTabLabel()}
-
-" splitting windows in equal sizes below and right
-set equalalways
-set splitbelow splitright
 
 " more tips
 " http://www.rayninfo.co.uk/vimtips.html
