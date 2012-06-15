@@ -27,6 +27,7 @@ noremap <silent> <f7> :TagbarToggle<cr>:wincmd p<cr>
 
 " command-t
 noremap <silent> <leader>t :CtrlP<cr>
+noremap <silent> <leader>b :CtrlPBuffer<cr>
 
 " scratch pad
 noremap <silent> <leader><enter> :Scratch<cr>

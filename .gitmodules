@@ -132,3 +132,15 @@
 [submodule "bundle/ctrlp-filetype"]
 	path = bundle/ctrlp-filetype
 	url = https://github.com/endel/ctrlp-filetype.vim.git
+[submodule "bundle/ctrlp-hackernews"]
+	path = bundle/ctrlp-hackernews
+	url = https://github.com/mattn/ctrlp-hackernews.git
+[submodule "bundle/ctrlp-register"]
+	path = bundle/ctrlp-register
+	url = https://github.com/mattn/ctrlp-register.git
+[submodule "bundle/webapi-vim"]
+	path = bundle/webapi-vim
+	url = https://github.com/mattn/webapi-vim.git
+[submodule "bundle/openbrowser"]
+	path = bundle/openbrowser
+	url = https://github.com/tyru/open-browser.vim.git
