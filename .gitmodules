@@ -135,3 +135,6 @@
 [submodule "bundle/colorscheme-getafe"]
 	path = bundle/colorscheme-getafe
 	url = https://github.com/larssmit/vim-getafe.git
+[submodule "bundle/syntax-handlebars"]
+	path = bundle/syntax-handlebars
+	url = git://github.com/nono/vim-handlebars.git
