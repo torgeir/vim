@@ -1,5 +1,5 @@
-" include custom snippets
-set rtp+=~/.vim/snippets/
+" custom snippets
+set runtimepath+=~/.vim/snippets/
 
 " avoid conflict
 let g:SuperTabMappingForward = '<Plug>supertabKey'

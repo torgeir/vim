@@ -1,4 +1,4 @@
-" 256 colors
+" colors
 set t_Co=256
 
 let mapleader = ","
@@ -20,33 +20,45 @@ else
 endif
 
 " disabled plugins
-let g:pathogen_disabled = ['gundo']
+let g:pathogen_disabled = [ 'gundo' ]
 
 " load plugins
 filetype off
 call pathogen#infect()
 call pathogen#helptags()
 
-" config
-source ~/.vim/keybindings.vim
-source ~/.vim/functions.vim
-
 " plugins
 filetype on
 filetype indent on
 filetype plugin on
 
+" keys and function 
+source ~/.vim/keybindings.vim
+source ~/.vim/functions.vim
+
 " plugin config
 source ~/.vim/config/colorizer.vim
-source ~/.vim/config/nerdtree.vim
-source ~/.vim/config/omnicomplete.vim
 source ~/.vim/config/ctrlp.vim
-source ~/.vim/config/tasklist.vim
+source ~/.vim/config/filebrowser.vim
 source ~/.vim/config/filetypes.vim
-source ~/.vim/config/tagbar.vim
 source ~/.vim/config/gundo.vim
-source ~/.vim/config/yankring.vim
+source ~/.vim/config/omnicomplete.vim
+source ~/.vim/config/rainbow.vim
+source ~/.vim/config/scratch.vim
+source ~/.vim/config/tagbar.vim
+source ~/.vim/config/tasklist.vim
+source ~/.vim/config/togglebg.vim
 source ~/.vim/config/xptemplate.vim
+source ~/.vim/config/yankring.vim
+
+" tags - from driectory of current file, then cwd, then upwards to /
+set tags=./tags,tags;/
+
+" auto tags from nodejs source when in js
+autocmd BufRead,BufNewFile *.js setlocal tags+=~/.vim/tags/nodejs
+
+" tags generation ?
+"autocmd BufWritePost *.js silent! !ctags -R &
 
 """"""""""""""""""""""""""""""""""""""""
 " Settings

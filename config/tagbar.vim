@@ -24,3 +24,6 @@ let g:tagbar_sort = 1
 
 " autmatically close when moving to a tag 
 " let g:tagbar_autoclose = 0
+
+" toggle tagbar
+noremap <silent> <f7> :TagbarToggle<cr>:wincmd p<cr>

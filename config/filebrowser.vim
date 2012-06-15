@@ -22,3 +22,12 @@ let NERDTreeShowHidden = 1
 " don't hijack NETRW
 let NERDTreeHijackNetrw = 1
 let NERDTreeIgnore=['\.$', '\~$']
+
+" toggle nerdtree
+noremap <silent> <f6> :call CustomFileBrowserToggle()<cr>
+
+" project tree
+autocmd VimEnter * call CdIfDirectory(expand("<amatch>"))
+autocmd FocusGained,BufWritePost * call RefreshFileBrowser()
+"autocmd WinEnter * call CloseIfOnlySidebarsLeft()
+

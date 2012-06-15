@@ -1,59 +1,45 @@
-" gvim cant handle the truth!
-source ~/.vim/keybindings.vim.vim
+" move line(s) of text 
+nnoremap <silent> <leader>j mz:m+<cr>`z
+nnoremap <silent> <leader>k mz:m-2<cr>`z
+vnoremap <silent> <leader>j :m'>+<cr>`<my`>mzgv`yo`z
+vnoremap <silent> <leader>k :m'<-2<cr>`>my`<mzgv`yo`z
 
-" project tree
-autocmd VimEnter * call CdIfDirectory(expand("<amatch>"))
-autocmd FocusGained,BufWritePost * call RefreshFileBrowser()
-"autocmd WinEnter * call CloseIfOnlySidebarsLeft()
+" leader-s save
+noremap  <leader>s <esc>:w<cr>
+inoremap <leader>s <esc>:w<cr>
+vnoremap <leader>s <esc>:w<cr>
 
-" toggle yankring 
-noremap <silent> <f2> :YRShow<cr>
+" leader-w to close
+noremap  <silent> <leader>w <esc>:q<cr>:wincmd p<cr>
+vnoremap <silent> <leader>w <esc>:q<cr>:wincmd p<cr>
+inoremap <silent> <leader>w <esc>:q<cr>:wincmd p<cr>
 
-" toggle gundo 
-noremap <silent> <f3> :GundoToggle<cr>
+" tab navigation
+for i in [1,2,3,4,5,6,7,8,9]
+  " os x
+  exec "nnoremap <d-" . i . ">      :silent call GoToTab(" . i . ")<cr>"
+  exec "inoremap <d-" . i . "> <esc>:silent call GoToTab(" . i . ")<cr>a"
 
-" toggle paste
-noremap <silent> <f4> :setlocal paste!<cr>
+  " unix terminal
+  exec "nnoremap <leader>" . i . "  :silent call GoToTab(" . i . ")<cr>"
+endfor
 
-" toggle bg
-"noremap <silent> <f5> :call ToggleMolokaiBg()<cr>
-call togglebg#map("<f5>")
-
-" toggle nerdtree
-noremap <silent> <f6> :call CustomFileBrowserToggle()<cr>
-
-" toggle tagbar
-noremap <silent> <f7> :TagbarToggle<cr>:wincmd p<cr>
-
-" command-t
-noremap <silent> <leader>t :CtrlP<cr>
-noremap <silent> <leader>b :CtrlPBuffer<cr>
-
-" scratch pad
-noremap <silent> <leader><enter> :Scratch<cr>
-
-" Replace word under cursor
-map <leader>r :%s/\<<c-r><c-w>\>//gc
-
-" colorize hex
-noremap <leader>C :ColorToggle<cr>
-
-" rainbow parenthesis
-noremap <leader>R :RainbowParenthesesToggle<cr>
-
-" disable arrows
-nnoremap <up>    <nop>
-nnoremap <down>  <nop>
-nnoremap <left>  <nop>
-nnoremap <right> <nop>
-inoremap <up>    <nop>
-inoremap <down>  <nop>
-inoremap <left>  <nop>
-inoremap <right> <nop>
+" tab next/previous
+noremap  <leader><tab> :tabn<cr>
+inoremap <leader><tab> <esc>:tabn<cr>a
+noremap  <leader><s-tab> :tabp<cr>
+inoremap <leader><s-tab> <esc>:tabp<cr>a
 
 " tab movement
 nnoremap <silent> <c-tab> :tabnext<cr>
 nnoremap <silent> <c-s-tab> :tabprevious<cr>
+
+" don't exit visual mode when shifting
+vnoremap < <gv2h
+vnoremap > >gv2l
+
+" toggle paste
+noremap <silent> <f4> :setlocal paste!<cr>
 
 " moving between windows
 nnoremap <c-k> <c-w>k
@@ -61,13 +47,13 @@ nnoremap <c-j> <c-w>j
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 
-" window size
+" faster window size
 nnoremap <c-w>+ 3<c-w>+
 nnoremap <c-w>- 3<c-w>-
 nnoremap <c-w>> 6<c-w>>
 nnoremap <c-w>< 6<c-w><
 
-" faster scroll - ey du fb
+" faster scroll (ey du fb)
 nnoremap <c-e> 3<c-e>
 nnoremap <c-y> 3<c-y>
 
@@ -79,22 +65,31 @@ nnoremap <leader>hof :%!xxd -r<cr>
 nnoremap <leader>q gqap
 vnoremap <leader>q gq
 
+" fix regex search
+noremap ? /\v
+noremap / /\v
+
+" replace word under cursor
+map <leader>r :%s/\<<c-r><c-w>\>//gc
+
 " keep search matches in window center
 nnoremap * *zzzv 
 nnoremap # #zzzv
 nnoremap n nzzzv
 nnoremap N Nzzzv
 
-" Also center the screen when jumping through the changelist
+" center screen when jumping through the changelist
 nnoremap g; g;zz
 nnoremap g, g,zz
 
+" quickfix window for last search
+nnoremap <silent> <leader>/ :execute 'vimgrep /'.@/.'/g %'<cr>:copen<cr>
+
+" clear highligted search
+nnoremap <silent> <leader><space> :nohlsearch<cr>
+
 " expand blocks on <cr> inside
 inoremap <cr> <c-r>=ExpandBlock(["[]", "{}"])<cr>
-
-" don't exit visual mode when shifting
-vnoremap < <gv2h
-vnoremap > >gv2l
 
 " bash like command line keys 
 cnoremap <c-a> <home>
@@ -105,7 +100,6 @@ cnoremap <c-p> k
 
 " general leader bindings
 nnoremap <leader>m  :make!<cr><cr>:cc<cr>
-nnoremap <leader>mn :cn<cr>
 nnoremap <leader>nn  :! node %<cr>
 nnoremap <leader>nb  :! npm install<cr>
 nnoremap <leader>i  :set list!<cr>
@@ -116,30 +110,8 @@ nnoremap <leader>ef :tabe ~/.vim/functions.vim<cr>
 nnoremap <leader>es :tabe ~/.vim/snippets/<cr>
 nnoremap <leader>c  :Bclose<cr>
 
-" insert semicolon, comma, dot at line end
-nnoremap <leader>} mzA}<esc>`z
-nnoremap <leader>) mzA)<esc>`z
-nnoremap <leader>; mzA;<esc>`z
-nnoremap <leader>, mzA,<esc>`z
-nnoremap <leader>. mzA.<esc>`z
-vnoremap <leader>} :s/$/}/g<cr>;
-vnoremap <leader>) :s/$/)/g<cr>;
-vnoremap <leader>; :s/$/;/g<cr>;
-vnoremap <leader>, :s/$/,/g<cr>,
-vnoremap <leader>. :s/$/./g<cr>.
-
 " clean up whitespace file wide
 nnoremap <leader>W :%s/\s\+$//e<cr>:%s/ / /e<cr>let @/=''<cr>
-
-" clear highligted search
-nnoremap <silent> <leader><space> :nohlsearch<cr>
-
-" quickfix window for last search
-nnoremap <silent> <leader>/ :execute 'vimgrep /'.@/.'/g %'<cr>:copen<cr>
-
-" fix regex search
-noremap ? /\v
-noremap / /\v
 
 " sort css properties
 command! SortCSSBraceContents :g#\({\n\)\@<=#.,/}/sort
