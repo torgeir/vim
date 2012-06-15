@@ -8,7 +8,7 @@ let g:ctrlp_max_height = 12
 let g:ctrlp_prompt_mappings = { 'AcceptSelection("e")': ['<c-t>', '<MiddleMouse>'], 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>']}
 
 " enable extensions
-let g:ctrlp_extensions = ['hackernews', 'register', 'tag', 'buffertag', 'quickfix', 'dir', 'rtscript', 'undo', 'line', 'changes', 'yankring', 'cmdline', 'menu']
+let g:ctrlp_extensions = ['hackernews', 'register', 'tag', 'buffertag', 'quickfix', 'dir', 'rtscript', 'undo', 'line', 'changes']
 
 " directry start an extension
 fu! s:call_ctrlp_extension(ext)
@@ -19,7 +19,8 @@ fu! s:call_ctrlp_extension(ext)
 endf
 
 " ctrlp
-noremap <silent> <leader>t :CtrlP<cr>
+"noremap <silent> <leader>t :CtrlP<cr>
+let g:ctrlp_map = '<leader>t'
 noremap <silent> <leader>b :CtrlPBuffer<cr>
 
 " extension mappings
@@ -32,7 +33,4 @@ nnoremap <silent> <leader>cer  :call <SID>call_ctrlp_extension('register')<cr>
 nnoremap <silent> <leader>cers :call <SID>call_ctrlp_extension('rtscript')<cr>
 nnoremap <silent> <leader>ceu  :call <SID>call_ctrlp_extension('undo')<cr>
 nnoremap <silent> <leader>cel  :call <SID>call_ctrlp_extension('line')<cr>
-nnoremap <silent> <leader>cey  :call <SID>call_ctrlp_extension('yankring')<cr>
-nnoremap <silent> <leader>cec  :call <SID>call_ctrlp_extension('cmdline')<cr>
-nnoremap <silent> <leader>cem  :call <SID>call_ctrlp_extension('menu')<cr>
 nnoremap <silent> <leader>cef  :call <SID>call_ctrlp_extension('filetype')<cr>
