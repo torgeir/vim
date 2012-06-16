@@ -9,7 +9,7 @@ endfunction
 
 " camel cases words separated by -
 function! s:f.camelize(str)
-  return substitute(a:str, '-\(\w*\)', '\u\1', 'g')
+  return substitute(a:str, '[.-]\(\w*\)', '\u\1', 'g')
 endfunction
 
 

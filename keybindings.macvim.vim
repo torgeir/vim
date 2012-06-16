@@ -23,3 +23,7 @@ vnoremap <m-tab> mz>><esc>gv`z2l
 vnoremap <m-s-tab> mz<<<esc>gv`z2h
 inoremap <m-tab> <esc>mzi<c-o>>><esc>`z2la
 inoremap <m-s-tab> <esc>mzi<c-o><<<esc>`z2ha
+
+" go to tag mapping doesnt work on os x
+" so use cmd+alt+9
+nnoremap <d-]> <c-]>
