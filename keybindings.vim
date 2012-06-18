@@ -1,4 +1,19 @@
-" move line(s) of text 
+" highlight lines ending in non-escaped whitespace
+match errormsg /\(\\\)\@<!\s$/ " negative lookbehind for escape char \ before any trailing space(s) (i.e.  don't match if \ preceeds space)
+if has("mac") | match spellbad / / | endif
+
+" clean up whitespace file wide
+nnoremap <leader>W :%s/\s\+$//e<cr>:%s/ / /e<cr>let @/=''<cr>
+
+" make jk do <esc>
+inoremap jk <esc>
+
+" change inside
+onoremap in( :<c-u>normal! f(vi(<cr>
+onoremap in[ :<c-u>normal! f[vi[<cr>
+onoremap in{ :<c-u>normal! f{vi{<cr>
+
+" move line(s) of text
 nnoremap <silent> <leader>j mz:m+<cr>`z
 nnoremap <silent> <leader>k mz:m-2<cr>`z
 vnoremap <silent> <leader>j :m'>+<cr>`<my`>mzgv`yo`z
@@ -21,17 +36,18 @@ for i in [1,2,3,4,5,6,7,8,9]
   exec "inoremap <d-" . i . "> <esc>:silent call GoToTab(" . i . ")<cr>a"
 
   " unix terminal
-  exec "nnoremap <leader>" . i . "  :silent call GoToTab(" . i . ")<cr>"
+  exec "nnoremap <leader>" . i . "      :silent call GoToTab(" . i . ")<cr>"
+  exec "inoremap <leader>" . i . " <esc>:silent call GoToTab(" . i . ")<cr>a"
 endfor
 
 " tab next/previous
-noremap  <leader><tab> :tabn<cr>
-inoremap <leader><tab> <esc>:tabn<cr>a
+noremap  <leader><tab>   :tabn<cr>
+inoremap <leader><tab>   <esc>:tabn<cr>a
 noremap  <leader><s-tab> :tabp<cr>
 inoremap <leader><s-tab> <esc>:tabp<cr>a
 
 " tab movement
-nnoremap <silent> <c-tab> :tabnext<cr>
+nnoremap <silent> <c-tab>   :tabnext<cr>
 nnoremap <silent> <c-s-tab> :tabprevious<cr>
 
 " don't exit visual mode when shifting
@@ -73,7 +89,7 @@ noremap / /\v
 map <leader>r :%s/\<<c-r><c-w>\>//gc
 
 " keep search matches in window center
-nnoremap * *zzzv 
+nnoremap * *zzzv
 nnoremap # #zzzv
 nnoremap n nzzzv
 nnoremap N Nzzzv
@@ -91,7 +107,7 @@ nnoremap <silent> <leader><space> :nohlsearch<cr>
 " expand blocks on <cr> inside
 inoremap <cr> <c-r>=ExpandBlock(["[]", "{}"])<cr>
 
-" bash like command line keys 
+" bash like command line keys
 cnoremap <c-a> <home>
 cnoremap <c-e> <end>
 cnoremap <c-k> <c-u>
@@ -100,17 +116,14 @@ cnoremap <c-p> k
 
 " general leader bindings
 nnoremap <leader>m  :make!<cr><cr>:cc<cr>
-nnoremap <leader>nn  :! node %<cr>
-nnoremap <leader>nb  :! npm install<cr>
+nnoremap <leader>nn :! node %<cr>
+nnoremap <leader>nb :! npm install<cr>
 nnoremap <leader>i  :set list!<cr>
 nnoremap <leader>ev :tabe ~/.vim/.vimrc<cr>
 nnoremap <leader>eg :tabe ~/.vim/.gvimrc<cr>
 nnoremap <leader>ek :tabe ~/.vim/keybindings.vim<cr>
 nnoremap <leader>ef :tabe ~/.vim/functions.vim<cr>
 nnoremap <leader>es :tabe ~/.vim/snippets/<cr>
-
-" clean up whitespace file wide
-nnoremap <leader>W :%s/\s\+$//e<cr>:%s/ / /e<cr>let @/=''<cr>
 
 " sort css properties
 command! SortCSSBraceContents :g#\({\n\)\@<=#.,/}/sort
