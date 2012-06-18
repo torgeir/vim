@@ -108,7 +108,6 @@ nnoremap <leader>eg :tabe ~/.vim/.gvimrc<cr>
 nnoremap <leader>ek :tabe ~/.vim/keybindings.vim<cr>
 nnoremap <leader>ef :tabe ~/.vim/functions.vim<cr>
 nnoremap <leader>es :tabe ~/.vim/snippets/<cr>
-nnoremap <leader>c  :Bclose<cr>
 
 " clean up whitespace file wide
 nnoremap <leader>W :%s/\s\+$//e<cr>:%s/ / /e<cr>let @/=''<cr>

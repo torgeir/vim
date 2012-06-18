@@ -138,3 +138,6 @@
 [submodule "bundle/syntax-handlebars"]
 	path = bundle/syntax-handlebars
 	url = git://github.com/nono/vim-handlebars.git
+[submodule "bundle/bclose"]
+	path = bundle/bclose
+	url = https://github.com/rbgrouleff/bclose.vim.git
