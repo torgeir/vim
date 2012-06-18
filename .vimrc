@@ -5,16 +5,10 @@ let mapleader = ","
 
 augroup vimrc_reload
   autocmd!
-  if has("gui_running")
-    " reload vimrc and gvimrc on save
-    autocmd BufWritePost .*imrc so ~/.vim/.vimrc
-    autocmd BufWritePost .*imrc so ~/.vim/.gvimrc
-    autocmd BufWritePost *.vim so ~/.vim/.vimrc
-    autocmd BufWritePost *.vim so ~/.vim/.gvimrc
-  else
-    " reload vimrc on save
-    autocmd BufWritePost .vimrc so ~/.vim/.vimrc
-    autocmd BufWritePost *.vim so ~/.vim/.vimrc
+  if has("gui_running") " reload vimrc and gvimrc on save
+    autocmd BufWritePost .*imrc,*.vim so $MYVIMRC | so $MYGVIMRC | echo "Reloaded .vimrc & .gvimrc"
+  else " reload vimrc on save
+    autocmd BufWritePost .vimrc,*.vim so $MYVIMRC | echo "Reloaded .vimrc"
   endif
 augroup END
 
@@ -31,7 +25,7 @@ filetype on
 filetype indent on
 filetype plugin on
 
-" keys and function 
+" keys and functions
 source ~/.vim/keybindings.vim
 source ~/.vim/functions.vim
 
@@ -49,11 +43,12 @@ source ~/.vim/config/tasklist.vim
 source ~/.vim/config/togglebg.vim
 source ~/.vim/config/xptemplate.vim
 source ~/.vim/config/yankring.vim
+source ~/.vim/config/syntastic.vim
 
 " tags - from driectory of current file, then cwd, then upwards to /
 set tags=./tags,tags;/
 
-" auto tags from nodejs source when in js
+" auto load tags from nodejs source when in js
 augroup tags_for_nodejs
   autocmd!
   autocmd BufRead,BufNewFile *.js setlocal tags+=~/.vim/tags/nodejs
@@ -63,7 +58,7 @@ augroup END
 "autocmd BufWritePost *.js silent! !ctags -R &
 
 """"""""""""""""""""""""""""""""""""""""
-" Settings
+" settings
 """"""""""""""""""""""""""""""""""""""""
 if has('mac')
   colorscheme molokai
@@ -145,6 +140,9 @@ set statusline+=%{CurDir()}
 set statusline+=%=                " left-right separator
 set statusline+=%h\ \ 
 set statusline+=%c,%l/%L\ %P
+
+" splitting
+set splitright splitbelow
 
 " tab labels
 set guitablabel=%{GuiTabLabel()}
