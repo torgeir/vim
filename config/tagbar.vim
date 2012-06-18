@@ -1,6 +1,3 @@
-" Open on vim open
-" autocmd VimEnter * TagbarOpen
-
 " sets width of tabbar
 let g:tagbar_width = 30
 

@@ -1,8 +1,12 @@
-" load plugin in current dir
-autocmd VimEnter * NERDTree .
+augroup nerd_tree
+  autocmd!
 
-" hide it
-autocmd VimEnter * NERDTreeToggle
+  " load plugin in current dir
+  autocmd VimEnter * NERDTree .
+
+  " hide it
+  autocmd VimEnter * NERDTreeToggle
+augroup END
 
 " update CWD
 let NERDTreeChDirMode = 2
@@ -27,7 +31,15 @@ let NERDTreeIgnore=['\.$', '\~$']
 noremap <silent> <f6> :call CustomFileBrowserToggle()<cr>
 
 " project tree
-autocmd VimEnter * call CdIfDirectory(expand("<amatch>"))
-autocmd FocusGained,BufWritePost * call RefreshFileBrowser()
-"autocmd WinEnter * call CloseIfOnlySidebarsLeft()
+augroup file_browser
+  autocmd!
+
+  " change cwd if directory on opening vim
+  autocmd VimEnter * call CdIfDirectory(expand("<amatch>"))
+
+  " refresh file browser when writing gaining focus/writing files
+  autocmd FocusGained,BufWritePost * call RefreshFileBrowser()
+
+  "autocmd WinEnter * call CloseIfOnlySidebarsLeft()
+augroup END
 

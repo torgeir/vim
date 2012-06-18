@@ -1,4 +1,4 @@
-" tmp files in vim directory 
+" yankring tmp files
 let g:yankring_history_dir = expand('$HOME' . '/tmp/vim')
 
 " toggle yankring 

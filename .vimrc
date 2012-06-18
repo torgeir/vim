@@ -3,21 +3,20 @@ set t_Co=256
 
 let mapleader = ","
 
-" remove all auto commands
-autocmd!
-
-if has("gui_running")
-  " reload vimrc and gvimrc on save
-  autocmd BufWritePost .*imrc so ~/.vim/.vimrc
-  autocmd BufWritePost .*imrc so ~/.vim/.gvimrc
-  autocmd BufWritePost *.vim so ~/.vim/.vimrc
-  autocmd BufWritePost *.vim so ~/.vim/.gvimrc
-
-else
-  " reload vimrc on save
-  autocmd BufWritePost .vimrc so ~/.vim/.vimrc
-  autocmd BufWritePost *.vim so ~/.vim/.vimrc
-endif
+augroup vimrc_reload
+  autocmd!
+  if has("gui_running")
+    " reload vimrc and gvimrc on save
+    autocmd BufWritePost .*imrc so ~/.vim/.vimrc
+    autocmd BufWritePost .*imrc so ~/.vim/.gvimrc
+    autocmd BufWritePost *.vim so ~/.vim/.vimrc
+    autocmd BufWritePost *.vim so ~/.vim/.gvimrc
+  else
+    " reload vimrc on save
+    autocmd BufWritePost .vimrc so ~/.vim/.vimrc
+    autocmd BufWritePost *.vim so ~/.vim/.vimrc
+  endif
+augroup END
 
 " disabled plugins
 let g:pathogen_disabled = [ 'gundo' ]
@@ -55,7 +54,10 @@ source ~/.vim/config/yankring.vim
 set tags=./tags,tags;/
 
 " auto tags from nodejs source when in js
-autocmd BufRead,BufNewFile *.js setlocal tags+=~/.vim/tags/nodejs
+augroup tags_for_nodejs
+  autocmd!
+  autocmd BufRead,BufNewFile *.js setlocal tags+=~/.vim/tags/nodejs
+augroup END
 
 " tags generation ?
 "autocmd BufWritePost *.js silent! !ctags -R &

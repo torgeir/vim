@@ -1,4 +1,4 @@
-" custom snippets
+" custom snippets in path
 set runtimepath+=~/.vim/snippets/
 
 " avoid conflict
