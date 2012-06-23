@@ -24,7 +24,7 @@ let NERDTreeShowBookmarks = 1
 let NERDTreeShowHidden = 1
 
 " don't hijack NETRW
-let NERDTreeHijackNetrw = 1
+let NERDTreeHijackNetrw = 0
 let NERDTreeIgnore=['\.$', '\~$']
 
 " toggle nerdtree
@@ -42,4 +42,3 @@ augroup file_browser
 
   "autocmd WinEnter * call CloseIfOnlySidebarsLeft()
 augroup END
-

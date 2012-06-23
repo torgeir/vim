@@ -1,9 +1,5 @@
-" highlight lines ending in non-escaped whitespace
-match errormsg /\(\\\)\@<!\s$/ " negative lookbehind for escape char \ before any trailing space(s) (i.e.  don't match if \ preceeds space)
-if has("mac") | match spellbad / / | endif
-
 " clean up whitespace file wide
-nnoremap <leader>W :%s/\s\+$//e<cr>:%s/ / /e<cr>let @/=''<cr>
+nnoremap <leader>W :%s/\(\\\)\@<!\s$//e<cr>:%s/ / /e<cr>let @/=''<cr>:nohlsearch<cr>
 
 " make jk do <esc>
 inoremap jk <esc>
@@ -35,20 +31,10 @@ for i in [1,2,3,4,5,6,7,8,9]
   exec "nnoremap <d-" . i . ">      :silent call GoToTab(" . i . ")<cr>"
   exec "inoremap <d-" . i . "> <esc>:silent call GoToTab(" . i . ")<cr>a"
 
-  " unix terminal
+  " general
   exec "nnoremap <leader>" . i . "      :silent call GoToTab(" . i . ")<cr>"
   exec "inoremap <leader>" . i . " <esc>:silent call GoToTab(" . i . ")<cr>a"
 endfor
-
-" tab next/previous
-noremap  <leader><tab>   :tabn<cr>
-inoremap <leader><tab>   <esc>:tabn<cr>a
-noremap  <leader><s-tab> :tabp<cr>
-inoremap <leader><s-tab> <esc>:tabp<cr>a
-
-" tab movement
-nnoremap <silent> <c-tab>   :tabnext<cr>
-nnoremap <silent> <c-s-tab> :tabprevious<cr>
 
 " don't exit visual mode when shifting
 vnoremap < <gv2h
@@ -111,8 +97,7 @@ inoremap <cr> <c-r>=ExpandBlock(["[]", "{}"])<cr>
 cnoremap <c-a> <home>
 cnoremap <c-e> <end>
 cnoremap <c-k> <c-u>
-cnoremap <c-n> j
-cnoremap <c-p> k
+cnoremap <c-y> <down>
 
 " general leader bindings
 nnoremap <leader>m  :make!<cr><cr>:cc<cr>

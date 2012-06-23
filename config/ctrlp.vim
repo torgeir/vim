@@ -19,7 +19,6 @@ fu! s:call_ctrlp_extension(ext)
 endf
 
 " ctrlp
-"noremap <silent> <leader>t :CtrlP<cr>
 let g:ctrlp_map = '<leader>t'
 noremap <silent> <leader>b :CtrlPBuffer<cr>
 
