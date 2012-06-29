@@ -15,7 +15,7 @@ endfunction
 
 XPT f " js anonymous function
 XSET arg*|post=ExpandIfNotEmpty(', ', 'arg*')
-function (`arg*^) {`^}
+function (`arg*^) { `cursor^ }
 
 
 XPT : " js key:value pair
@@ -24,23 +24,23 @@ XPT : " js key:value pair
 
 
 XPT silly " js console.silly
-console.silly(`what?^);
+console.silly(`cursor^);
 
 
 XPT info " js console.info
-console.info(`what?^);
+console.info(`cursor^);
 
 
 XPT log " js console.log
-console.log(`what?^);
+console.log(`cursor^);
 
 
 XPT warn " js console.warn
-console.warn(`what?^);
+console.warn(`cursor^);
 
 
 XPT error " js console.err
-console.error(`what?^);
+console.error(`cursor^);
 
 
 XPT req " node require module
