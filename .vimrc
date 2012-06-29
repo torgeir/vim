@@ -123,7 +123,7 @@ set noswapfile
 
 " improve menu on :e <tab>
 set wildmenu
-set wildmode=longest,full
+set wildmode=list:longest,full
 set wildignore+=.git,node_modules
 
 " dictionary
