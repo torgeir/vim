@@ -23,12 +23,13 @@ let NERDTreeShowBookmarks = 1
 " show hidden files
 let NERDTreeShowHidden = 1
 
-" don't hijack NETRW
-let NERDTreeHijackNetrw = 0
+" hijack NETRW for local files
+let NERDTreeHijackNetrw = 1
 let NERDTreeIgnore=['\.$', '\~$']
 
 " toggle nerdtree
 noremap <silent> <f6> :call CustomFileBrowserToggle()<cr>
+noremap <silent> <leader>nt :NERDTreeFind<cr>
 
 " project tree
 augroup file_browser
