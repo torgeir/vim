@@ -94,7 +94,7 @@ function! CustomFileBrowserToggle()
   if has('gui_running') && has("mac")
     exe "normal \<esc>:maca toggleFileBrowser:\<cr>"
   else
-    exe "normal \<esc>:NERDTreeToggle \| :silent NERDTreeMirror\<cr>"
+    exe "normal \<esc>:NERDTreeToggle \| :silent NERDTreeMirror \<cr>"
   endif
 endfunction
 

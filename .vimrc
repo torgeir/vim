@@ -75,6 +75,7 @@ set relativenumber                " line numbers relative to cursor
 set autoread                      " automatically re-read file on outside change
 set nocompatible                  " dont bother being compatible with vi
 set lazyredraw                    " dont redraw until macro is complete
+set mouse=a                       " enable mouse in all modes
 
 set autoindent                    " keep indent on newline
 set smartindent                   " auto-indent (block/language)
