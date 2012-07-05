@@ -114,8 +114,8 @@ nnoremap <leader>ef :tabe ~/.vim/functions.vim<cr>
 nnoremap <leader>es :tabe ~/.vim/snippets/<cr>
 
 " buster focus rocket
-nnoremap <leader>bf  [{0f'a=> 
-nnoremap <leader>bfc [{0f'ldw
+nnoremap <leader>bf  mb[{0f'a=> `b
+nnoremap <leader>bfc mb[{0f'ldw`b
 
 " sort css properties
 command! SortCSSBraceContents :g#\({\n\)\@<=#.,/}/sort
