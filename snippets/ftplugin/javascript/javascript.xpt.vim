@@ -97,6 +97,8 @@ it('`does what^', function (`done^) {
   `cursor^
 });
 
+XPT itp " js buster bdd pending it
+it('`does what^');
 
 XPT tc " js buster testCase
 buster.testCase('`a piece of functionality^', {
