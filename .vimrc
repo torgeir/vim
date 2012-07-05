@@ -106,6 +106,7 @@ set smartcase                     " case sensitive words if search has capital
 set incsearch                     " ...dynamically as they are typed.
 set wrapscan                      " make search wrap
 set hlsearch                      " highlight search-terms
+set hlsearch!
 
 " disable all bells
 set noerrorbells

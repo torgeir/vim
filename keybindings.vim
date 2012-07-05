@@ -1,8 +1,8 @@
 " clean up whitespace file wide
-nnoremap <leader>W :%s/\(\\\)\@<!\s$//e<cr>:%s/ / /e<cr>let @/=''<cr>:nohlsearch<cr>
+nnoremap <leader>W :%s/\(\\\)\@<!\s$//e<cr>:%s/ / /e<cr>:let @/=''<cr>
 
 " make jk do <esc>
-inoremap jk <esc>
+inoremap jk <esc>l
 
 " change inside
 onoremap in( :<c-u>normal! f(vi(<cr>
@@ -68,11 +68,14 @@ nnoremap <leader>q gqap
 vnoremap <leader>q gq
 
 " fix regex search
-noremap ? /\v
+noremap ? ?\v
 noremap / /\v
 
 " replace word under cursor
 map <leader>r :%s/\<<c-r><c-w>\>//gc
+
+" visually select previously searched word
+noremap <c-n> <esc>//s<cr>v//e+1<cr>
 
 " keep search matches in window center
 nnoremap * *zzzv
@@ -85,10 +88,10 @@ nnoremap g; g;zz
 nnoremap g, g,zz
 
 " quickfix window for last search
-nnoremap <silent> <leader>/ :execute 'vimgrep /'.@/.'/g %'<cr>:copen<cr>
+"nnoremap <silent> <leader>/ :execute 'vimgrep /'.@/.'/g %'<cr>:copen<cr>
 
 " clear highligted search
-nnoremap <silent> <leader><space> :nohlsearch<cr>
+nnoremap <silent> <leader><space> :set hlsearch!<cr>
 
 " expand blocks on <cr> inside
 inoremap <cr> <c-r>=ExpandBlock(["[]", "{}"])<cr>
@@ -109,6 +112,10 @@ nnoremap <leader>eg :tabe ~/.vim/.gvimrc<cr>
 nnoremap <leader>ek :tabe ~/.vim/keybindings.vim<cr>
 nnoremap <leader>ef :tabe ~/.vim/functions.vim<cr>
 nnoremap <leader>es :tabe ~/.vim/snippets/<cr>
+
+" buster focus rocket
+nnoremap <leader>bf  [{0f'a=> 
+nnoremap <leader>bfc [{0f'ldw
 
 " sort css properties
 command! SortCSSBraceContents :g#\({\n\)\@<=#.,/}/sort
