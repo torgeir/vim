@@ -1,5 +1,5 @@
-" clean up whitespace file wide
-nnoremap <leader>W :%s/\(\\\)\@<!\s$//e<cr>:%s/ / /e<cr>:let @/=''<cr>
+" clean up whitespace file wide, sets mark a initially, and jumps back
+nnoremap <leader>W :%s/\(\\\)\@<!\s*$//e<cr>:%s/ / /e<cr>:let @/=''<cr>
 
 " make jk do <esc>
 inoremap jk <esc>l
@@ -116,6 +116,12 @@ nnoremap <leader>es :tabe ~/.vim/snippets/<cr>
 " buster focus rocket
 nnoremap <leader>bf  mb[{0f'a=> `b
 nnoremap <leader>bfc mb[{0f'ldw`b
+
+" go to tests for file
+nnoremap <leader>gt :call GoToTest('tabe')<cr>
+nnoremap <leader>e :call GoToTest('e')<cr>
+nnoremap <leader>gtv :call GoToTest('vs')<cr>
+nnoremap <leader>gts :call GoToTest('sp')<cr>
 
 " sort css properties
 command! SortCSSBraceContents :g#\({\n\)\@<=#.,/}/sort

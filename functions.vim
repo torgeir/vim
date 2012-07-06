@@ -33,6 +33,11 @@ endfunction
 vnoremap ev <esc>:call Extract_variable()<cr>
 vnoremap ei <esc>:call Inline_variable()<cr>
 
+" go to tests for file
+function! GoToTest(split)
+  exe "normal \<esc>:" . a:split . " **/*/" . expand('%:t:r') . '-test.' . expand('%:e') . "\<cr>"
+endfunction
+
 " If the parameter is a directory, cd into it
 function! CdIfDirectory(directory)
   let explicitDirectory = isdirectory(a:directory)
