@@ -138,6 +138,8 @@ set statusline=%y
 set statusline+=\ "
 set statusline+=%#error#%{&paste?'[paste]':''}%*
 set statusline+=\ "
+set statusline+=%{fugitive#statusline()}
+set statusline+=\ "
 set statusline+=%F\ %m\ %r\ %h
 set statusline+=\ %w
 set statusline+=\ %r
@@ -158,8 +160,10 @@ set guitablabel=%{GuiTabLabel()}
 
 " highlight lines ending in non-escaped whitespace
 highlight TrailingWhitespace ctermbg=red guibg=red guifg=red
-autocmd BufWinEnter * match TrailingWhitespace /\(\\\)\@<!\s$/ " negative lookbehind for escape char \ before any trailing space(s) (i.e.  don't match if \ the preceeds space)
 autocmd BufWinLeave * call clearmatches()
+autocmd InsertEnter * call clearmatches()
+"autocmd InsertEnter * match TrailingWhitespace /\s\+\%#\@<!$/
+autocmd BufWinEnter,InsertLeave * match TrailingWhitespace /\(\\\)\@<!\s$/ " negative lookbehind for escape char \ before any trailing space(s) (i.e.  don't match if \ the preceeds space)
 
 " test:
 "   should show this one in red 
