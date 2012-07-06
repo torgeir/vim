@@ -15,7 +15,7 @@ endfunction
 
 XPT f " js anonymous function
 XSET arg*|post=ExpandIfNotEmpty(', ', 'arg*')
-function (`arg*^) { `cursor^ }
+function (`arg*^) {`^}`^
 
 
 XPT : " js key:value pair
