@@ -1,19 +1,19 @@
 " clean up whitespace file wide, sets mark a initially, and jumps back
-nnoremap <leader>W :%s/\(\\\)\@<!\s*$//e<cr>:%s/ / /e<cr>:let @/=''<cr>
+nnoremap <leader>W mw:%s/\(\\\)\@<!\s*$//e<cr>:%s/ / /e<cr>:let @/=''<cr>`w
 
 " make jk do <esc>
 inoremap jk <esc>l
 
 " change inside
-onoremap in( :<c-u>normal! f(vi(<cr>
-onoremap in[ :<c-u>normal! f[vi[<cr>
-onoremap in{ :<c-u>normal! f{vi{<cr>
+onoremap in( :normal! f(vi(<cr>
+onoremap in[ :normal! f[vi[<cr>
+onoremap in{ :normal! f{vi{<cr>
 
 " move line(s) of text
-nnoremap <silent> <leader>j mz:m+<cr>`z
-nnoremap <silent> <leader>k mz:m-2<cr>`z
-vnoremap <silent> <leader>j :m'>+<cr>`<my`>mzgv`yo`z
-vnoremap <silent> <leader>k :m'<-2<cr>`>my`<mzgv`yo`z
+nnoremap <silent> <leader>j mz:m+<cr>`z==
+nnoremap <silent> <leader>k mz:m-2<cr>`z==
+vnoremap <silent> <leader>j :m'>+<cr>`<my`>mzgv`yo`z==
+vnoremap <silent> <leader>k :m'<-2<cr>`>my`<mzgv`yo`z==
 
 " leader-s save
 noremap  <leader>s <esc>:w<cr>
@@ -113,15 +113,25 @@ nnoremap <leader>ek :tabe ~/.vim/keybindings.vim<cr>
 nnoremap <leader>ef :tabe ~/.vim/functions.vim<cr>
 nnoremap <leader>es :tabe ~/.vim/snippets/<cr>
 
+" vim-fugitive
+nnoremap <leader>gs :Gstatus<cr>
+
 " buster focus rocket
 nnoremap <leader>bf  mb[{0f'a=> `b
 nnoremap <leader>bfc mb[{0f'ldw`b
+
+" buster comment
+nnoremap <leader>bc  mb[{0f'a// `b
+nnoremap <leader>bcc mb[{0f'ldw`b
 
 " go to tests for file
 nnoremap <leader>gt :call GoToTest('tabe')<cr>
 nnoremap <leader>e :call GoToTest('e')<cr>
 nnoremap <leader>gtv :call GoToTest('vs')<cr>
 nnoremap <leader>gts :call GoToTest('sp')<cr>
+
+" run tests in "tests" screen tab, name the session with c-a:sessionname dione
+nnoremap <silent> <leader>. :call system("screen -S dione -p tests -X stuff 'clear; make browser-test'$'\012'")<cr>
 
 " sort css properties
 command! SortCSSBraceContents :g#\({\n\)\@<=#.,/}/sort
