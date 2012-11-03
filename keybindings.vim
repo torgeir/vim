@@ -12,8 +12,8 @@ onoremap in{ :normal! f{vi{<cr>
 " move line(s) of text
 nnoremap <silent> <leader>j mz:m+<cr>`z==
 nnoremap <silent> <leader>k mz:m-2<cr>`z==
-vnoremap <silent> <leader>j :m'>+<cr>`<my`>mzgv`yo`z==
-vnoremap <silent> <leader>k :m'<-2<cr>`>my`<mzgv`yo`z==
+vnoremap <silent> <leader>j :m'>+<cr>`<my`>mzgv`yo`z
+vnoremap <silent> <leader>k :m'<-2<cr>`>my`<mzgv`yo`z
 
 " leader-s save
 noremap  <leader>s <esc>:w<cr>
@@ -104,7 +104,6 @@ cnoremap <c-y> <down>
 
 " general leader bindings
 nnoremap <leader>m  :make!<cr><cr>:cc<cr>
-nnoremap <leader>nn :! node %<cr>
 nnoremap <leader>nb :! npm install<cr>
 nnoremap <leader>i  :set list!<cr>
 nnoremap <leader>ev :tabe ~/.vim/.vimrc<cr>

@@ -1,6 +1,3 @@
-" colors
-set t_Co=256
-
 let mapleader = ","
 
 augroup vimrc_reload
@@ -13,7 +10,7 @@ augroup vimrc_reload
 augroup END
 
 " disabled plugins
-let g:pathogen_disabled = [ 'gundo' ]
+let g:pathogen_disabled = []
 
 " load plugins
 filetype off
@@ -34,11 +31,8 @@ source ~/.vim/config/colorizer.vim
 source ~/.vim/config/ctrlp.vim
 source ~/.vim/config/filebrowser.vim
 source ~/.vim/config/filetypes.vim
-source ~/.vim/config/gundo.vim
 source ~/.vim/config/omnicomplete.vim
 source ~/.vim/config/rainbow.vim
-source ~/.vim/config/scratch.vim
-source ~/.vim/config/tagbar.vim
 source ~/.vim/config/tasklist.vim
 source ~/.vim/config/togglebg.vim
 source ~/.vim/config/xptemplate.vim
@@ -60,13 +54,8 @@ augroup END
 """"""""""""""""""""""""""""""""""""""""
 " settings
 """"""""""""""""""""""""""""""""""""""""
-if has('mac')
-  colorscheme molokai
-else
-  colorscheme solarized
-endif
+colorscheme molokai
 syntax on                         " highlight
-set background=light              " adjust colors
 set backspace=indent,eol,start    " intuitive backspacing in insert mode
 set encoding=utf-8                " encoding
 set hidden                        " allow unsaved buffer switches
@@ -158,16 +147,14 @@ set guitablabel=%{GuiTabLabel()}
 " more tips
 " http://www.rayninfo.co.uk/vimtips.html
 
+call matchadd("spellbad", " ")
+
 " highlight lines ending in non-escaped whitespace
 highlight TrailingWhitespace ctermbg=red guibg=red guifg=red
-autocmd BufWinLeave * call clearmatches()
-autocmd InsertEnter * call clearmatches()
-"autocmd InsertEnter * match TrailingWhitespace /\s\+\%#\@<!$/
-autocmd BufWinEnter,InsertLeave * match TrailingWhitespace /\(\\\)\@<!\s$/ " negative lookbehind for escape char \ before any trailing space(s) (i.e.  don't match if \ the preceeds space)
+autocmd BufWinLeave * call clearmatches() | call matchadd("spellbad", " ")
+autocmd InsertEnter * call clearmatches() | call matchadd("spellbad", " ")
+autocmd BufWinEnter,InsertLeave * call clearmatches() | call matchadd("spellbad", " ") | match TrailingWhitespace /\(\\\)\@<!\s$/ " negative lookbehind for escape char \ before any trailing space(s) (i.e.  don't match if \ the preceeds space)
 
 " test:
 "   should show this one in red 
 "   should not show this one in red\ 
-
-if has("mac") | match spellbad / / | endif
-

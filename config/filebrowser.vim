@@ -8,6 +8,9 @@ augroup nerd_tree
   autocmd VimEnter * NERDTreeToggle
 augroup END
 
+" to the right
+let g:NERDTreeWinPos = "right"
+
 " update CWD
 let NERDTreeChDirMode = 2
 

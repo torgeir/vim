@@ -196,7 +196,9 @@ endfunction
 
 " toggle molokai bg
 function! ToggleMolokaiBg()
-  let g:molokai_original = g:molokai_original ? 0 : 1
+  if exists("g:molokai_original")
+    let g:molokai_original = g:molokai_original ? 0 : 1
+  endif
   syntax reset
   syntax on
 endfunction
