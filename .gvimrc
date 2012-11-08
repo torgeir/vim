@@ -15,7 +15,8 @@ if has('mac')
 
 elseif has("unix")
   colorscheme solarized
-  set guifont=Inconsolata\ 20
+  set background=light
+  set guifont=Inconsolata\ 14
   if &lines < 30 " adjust minimum size on ubuntu
     set lines=30 columns=100
   endif
