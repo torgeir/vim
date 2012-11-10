@@ -149,7 +149,7 @@
 	url = https://github.com/felixr/vim-multiedit.git
 [submodule "bundle/autoclose"]
 	path = bundle/autoclose
-	url = https://github.com/Townk/vim-autoclose.git
+	url = git://github.com/Townk/vim-autoclose.git
 [submodule "bundle/typescript"]
 	path = bundle/typescript
 	url = https://github.com/leafgarland/typescript-vim.git
