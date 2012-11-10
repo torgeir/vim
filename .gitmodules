@@ -57,7 +57,7 @@
 	url = https://github.com/scrooloose/syntastic.git
 [submodule "bundle/supertab"]
 	path = bundle/supertab
-	url = https://github.com/ervandew/supertab.git
+	url = git://github.com/tsaleh/vim-supertab.git
 [submodule "bundle/xptemplate"]
 	path = bundle/xptemplate
 	url = https://github.com/drmingdrmer/xptemplate.git
@@ -117,7 +117,7 @@
 	url = https://github.com/kchmck/vim-coffee-script.git
 [submodule "bundle/syntax-scala"]
 	path = bundle/syntax-scala
-	url = https://github.com/derekwyatt/vim-scala.git
+	url = git://github.com/derekwyatt/vim-scala.git
 [submodule "bundle/syntax-nginx"]
 	path = bundle/syntax-nginx
 	url = https://github.com/vim-scripts/nginx.vim.git
