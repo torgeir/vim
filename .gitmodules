@@ -79,6 +79,21 @@
 [submodule "bundle/zencoding"]
 	path = bundle/zencoding
 	url = https://github.com/mattn/zencoding-vim.git
+[submodule "bundle/bclose"]
+	path = bundle/bclose
+	url = https://github.com/rbgrouleff/bclose.vim.git
+[submodule "bundle/vim-fugitive"]
+	path = bundle/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive.git
+[submodule "bundle/vim-jsbeautify"]
+	path = bundle/vim-jsbeautify
+	url = https://github.com/maksimr/vim-jsbeautify.git
+[submodule "bundle/multiedit"]
+	path = bundle/multiedit
+	url = https://github.com/felixr/vim-multiedit.git
+[submodule "bundle/autoclose"]
+	path = bundle/autoclose
+	url = git://github.com/Townk/vim-autoclose.git
 
 
 ; languages
@@ -115,15 +130,18 @@
 [submodule "bundle/syntax-coffescript"]
 	path = bundle/syntax-coffescript
 	url = https://github.com/kchmck/vim-coffee-script.git
-[submodule "bundle/syntax-scala"]
-	path = bundle/syntax-scala
-	url = git://github.com/derekwyatt/vim-scala.git
 [submodule "bundle/syntax-nginx"]
 	path = bundle/syntax-nginx
 	url = https://github.com/vim-scripts/nginx.vim.git
 [submodule "bundle/syntax-io"]
 	path = bundle/syntax-io
 	url = https://github.com/davidbalbert/vim-io.git
+[submodule "bundle/syntax-handlebars"]
+	path = bundle/syntax-handlebars
+	url = git://github.com/nono/vim-handlebars.git
+[submodule "bundle/typescript"]
+	path = bundle/typescript
+	url = https://github.com/leafgarland/typescript-vim.git
 
 ; colors
 [submodule "bundle/colorscheme-inkpot"]
@@ -132,24 +150,6 @@
 [submodule "bundle/colorscheme-getafe"]
 	path = bundle/colorscheme-getafe
 	url = https://github.com/larssmit/vim-getafe.git
-[submodule "bundle/syntax-handlebars"]
-	path = bundle/syntax-handlebars
-	url = git://github.com/nono/vim-handlebars.git
-[submodule "bundle/bclose"]
-	path = bundle/bclose
-	url = https://github.com/rbgrouleff/bclose.vim.git
-[submodule "bundle/vim-fugitive"]
-	path = bundle/vim-fugitive
-	url = https://github.com/tpope/vim-fugitive.git
-[submodule "bundle/vim-jsbeautify"]
-	path = bundle/vim-jsbeautify
-	url = https://github.com/maksimr/vim-jsbeautify.git
-[submodule "bundle/multiedit"]
-	path = bundle/multiedit
-	url = https://github.com/felixr/vim-multiedit.git
-[submodule "bundle/autoclose"]
-	path = bundle/autoclose
-	url = git://github.com/Townk/vim-autoclose.git
-[submodule "bundle/typescript"]
-	path = bundle/typescript
-	url = https://github.com/leafgarland/typescript-vim.git
+[submodule "bundle/syntax-scala"]
+	path = bundle/syntax-scala
+	url = https://github.com/derekwyatt/vim-scala.git
