@@ -4,14 +4,14 @@ set guioptions-=T                           " hide toolbar
 set guioptions-=m                           " hide menus
 
 if has('mac')
-  set guifont=Inconsolata:h21
+  set guifont=Menlo\ Regular:h22
   set fuoptions=maxhorz,maxvert             " fullscreen takes up whole screen"
 
   source ~/.vim/keybindings.macvim.vim
 
   "au WinLeave * set nocursorline
   "au WinEnter * set cursorline
-  "set cursorline 
+  "set cursorline
 
 elseif has("unix")
   colorscheme solarized
