@@ -109,9 +109,6 @@
 [submodule "bundle/syntax-clojure"]
 	path = bundle/syntax-clojure
 	url = https://github.com/jondistad/vimclojure.git
-[submodule "bundle/syntax/handlebars"]
-	path = bundle/syntax/handlebars
-	url = git://github.com/nono/vim-handlebars.git
 [submodule "bundle/syntax-puppet"]
 	path = bundle/syntax-puppet
 	url = https://github.com/ajf/puppet-vim.git
@@ -142,6 +139,9 @@
 [submodule "bundle/typescript"]
 	path = bundle/typescript
 	url = https://github.com/leafgarland/typescript-vim.git
+[submodule "bundle/syntax-scala"]
+	path = bundle/syntax-scala
+	url = https://github.com/derekwyatt/vim-scala.git
 
 ; colors
 [submodule "bundle/colorscheme-inkpot"]
@@ -150,6 +150,3 @@
 [submodule "bundle/colorscheme-getafe"]
 	path = bundle/colorscheme-getafe
 	url = https://github.com/larssmit/vim-getafe.git
-[submodule "bundle/syntax-scala"]
-	path = bundle/syntax-scala
-	url = https://github.com/derekwyatt/vim-scala.git
