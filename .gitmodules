@@ -115,9 +115,6 @@
 [submodule "bundle/syntax-coffescript"]
 	path = bundle/syntax-coffescript
 	url = https://github.com/kchmck/vim-coffee-script.git
-[submodule "bundle/syntax-scala"]
-	path = bundle/syntax-scala
-	url = https://github.com/bdd/vim-scala.git
 [submodule "bundle/syntax-nginx"]
 	path = bundle/syntax-nginx
 	url = https://github.com/vim-scripts/nginx.vim.git
@@ -153,3 +150,6 @@
 [submodule "bundle/typescript"]
 	path = bundle/typescript
 	url = https://github.com/leafgarland/typescript-vim.git
+[submodule "bundle/syntax-scala"]
+	path = bundle/syntax-scala
+	url = https://github.com/derekwyatt/vim-scala.git
