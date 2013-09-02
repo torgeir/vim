@@ -1,0 +1,55 @@
+Vim Script The Hard Way
+=======================
+[v] augroup name
+  aucmd!
+  augroup
+
+  onoremap in()
+
+  statusline padding %4l
+
+  Vim script programming
+  ======================
+  [v] & refers to an option
+  [v] let &tabwidth = 2
+
+  [v] let b:name " buffer local
+  
+  [v] case sensitive ==#
+  
+  [v] case insensitive ==?
+  
+  execute tabe bufname("#") "open previous buffer
+  
+  execute "normal! mqA;\<esc>´q"
+  
+  Plugin
+  ======
+  nnoremap <leader>g :set operatorfunc=GrepOperator<cr>g@
+  function! GrepOperator(type)
+    echom a:type
+    endfunction
+    
+    [v] match Keyword /\clist/
+    
+    Help sections
+    =============
+    :he omap-info
+    :he pattern-overview
+    :he expr-quote
+    :he foldlevelstart
+    :he local-variables
+    :he E124
+    :he helpgrep
+    :he quickfix-window
+    :he foldcolumn
+    :he type()
+    :he globpath()
+    :he usr_28
+    :he section
+    :he <SID>
+    
+    Bclose as plugin
+    ================
+    [v] https://github.com/vadimr/bclose.vim
+    [v] https://github.com/rbgrouleff/bclose.vim""

@@ -97,9 +97,6 @@
 
 
 ; languages
-[submodule "bundle/buster"]
-	path = bundle/buster
-	url = https://github.com/malclocke/vim-buster.git
 [submodule "bundle/js-mask"]
 	path = bundle/js-mask
 	url = https://github.com/tyok/js-mask
@@ -139,9 +136,6 @@
 [submodule "bundle/typescript"]
 	path = bundle/typescript
 	url = https://github.com/leafgarland/typescript-vim.git
-[submodule "bundle/syntax-scala"]
-	path = bundle/syntax-scala
-	url = https://github.com/derekwyatt/vim-scala.git
 
 ; colors
 [submodule "bundle/colorscheme-inkpot"]
@@ -150,3 +144,18 @@
 [submodule "bundle/colorscheme-getafe"]
 	path = bundle/colorscheme-getafe
 	url = https://github.com/larssmit/vim-getafe.git
+[submodule "bundle/syntax-scala"]
+	path = bundle/syntax-scala
+	url = https://github.com/derekwyatt/vim-scala.git
+[submodule "bundle/gitgutter"]
+	path = bundle/gitgutter
+	url = https://github.com/airblade/vim-gitgutter.git
+[submodule "bundle/vim-fireplace"]
+	path = bundle/vim-fireplace
+	url = git://github.com/tpope/vim-fireplace.git
+[submodule "bundle/vim-classpath"]
+	path = bundle/vim-classpath
+	url = git://github.com/tpope/vim-classpath.git
+[submodule "bundle/vim-clojure-static"]
+	path = bundle/vim-clojure-static
+	url = git://github.com/guns/vim-clojure-static.git

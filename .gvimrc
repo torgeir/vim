@@ -4,7 +4,7 @@ set guioptions-=T                           " hide toolbar
 set guioptions-=m                           " hide menus
 
 if has('mac')
-  set guifont=Menlo\ Regular:h22
+  set guifont=Monaco:h20
   set fuoptions=maxhorz,maxvert             " fullscreen takes up whole screen"
 
   source ~/.vim/keybindings.macvim.vim
@@ -16,7 +16,7 @@ if has('mac')
 elseif has("unix")
   colorscheme solarized
   set background=light
-  set guifont=Inconsolata\ 14
+  set guifont=Inconsolata\ 21
   if &lines < 30 " adjust minimum size on ubuntu
     set lines=30 columns=100
   endif

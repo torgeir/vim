@@ -54,7 +54,7 @@ augroup END
 """"""""""""""""""""""""""""""""""""""""
 " settings
 """"""""""""""""""""""""""""""""""""""""
-colorscheme molokai
+colorscheme monokai-refined
 syntax on                         " highlight
 set backspace=indent,eol,start    " intuitive backspacing in insert mode
 set encoding=utf-8                " encoding
