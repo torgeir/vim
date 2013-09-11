@@ -38,6 +38,7 @@ source ~/.vim/config/togglebg.vim
 source ~/.vim/config/xptemplate.vim
 source ~/.vim/config/yankring.vim
 source ~/.vim/config/syntastic.vim
+source ~/.vim/config/evervim.vim
 
 " tags - from driectory of current file, then cwd, then upwards to /
 set tags=./tags,tags;/
