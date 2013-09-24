@@ -111,9 +111,12 @@ nnoremap <leader>eg :tabe ~/.vim/.gvimrc<cr>
 nnoremap <leader>ek :tabe ~/.vim/keybindings.vim<cr>
 nnoremap <leader>ef :tabe ~/.vim/functions.vim<cr>
 nnoremap <leader>es :tabe ~/.vim/snippets/<cr>
+nnoremap <leader>ed :tabe ~/Dropbox/dotfiles/<cr>
 
 " vim-fugitive
 nnoremap <leader>gs :Gstatus<cr>
+nnoremap <leader>gc :Gcommit<cr>
+nnoremap <leader>gd :Gdiff<cr>
 
 " buster focus rocket
 nnoremap <leader>bf  mb[{0f'a=> `b

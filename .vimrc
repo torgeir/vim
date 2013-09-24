@@ -115,7 +115,7 @@ set noswapfile
 " improve menu on :e <tab>
 set wildmenu
 set wildmode=list:longest,full
-set wildignore+=.git,node_modules
+set wildignore+=.git,node_modules,target
 
 " dictionary
 set dictionary+=/usr/share/dict/words
