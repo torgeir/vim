@@ -1,13 +1,3 @@
-augroup nerd_tree
-  autocmd!
-
-  " load plugin in current dir
-  autocmd VimEnter * NERDTree .
-
-  " hide it
-  autocmd VimEnter * NERDTreeToggle
-augroup END
-
 " to the right
 let g:NERDTreeWinPos = "right"
 

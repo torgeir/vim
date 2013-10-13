@@ -43,7 +43,7 @@ function! CdIfDirectory(directory)
   let explicitDirectory = isdirectory(a:directory)
   let directory = explicitDirectory || empty(a:directory)
 
-  if explicitDirectory
+  if directory
     exe "cd " . fnameescape(a:directory)
   endif
 
@@ -53,15 +53,6 @@ function! CdIfDirectory(directory)
     return
   endif
 
-  if directory
-    NERDTree
-    wincmd p
-    bd
-  endif
-
-  if explicitDirectory
-    wincmd p
-  endif
 endfunction
 
 " NERDTree utility function
@@ -97,7 +88,8 @@ endfunction
 " custom nerdtreetoggle ensures only ONE nerd_tree window
 function! CustomFileBrowserToggle()
   if has('gui_running') && has("mac")
-    exe "normal \<esc>:maca toggleFileBrowser:\<cr>"
+    "exe "normal \<esc>:maca toggleFileBrowser:\<cr>"
+    exe "normal \<esc>:NERDTreeToggle \| :silent NERDTreeMirror \<cr>"
   else
     exe "normal \<esc>:NERDTreeToggle \| :silent NERDTreeMirror \<cr>"
   endif

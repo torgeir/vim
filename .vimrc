@@ -39,6 +39,7 @@ source ~/.vim/config/xptemplate.vim
 source ~/.vim/config/yankring.vim
 source ~/.vim/config/syntastic.vim
 source ~/.vim/config/evervim.vim
+source ~/.vim/config/unstack.vim
 
 " tags - from driectory of current file, then cwd, then upwards to /
 set tags=./tags,tags;/

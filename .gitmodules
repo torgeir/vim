@@ -162,3 +162,12 @@
 [submodule "bundle/evervim"]
 	path = bundle/evervim
 	url = https://github.com/kakkyz81/evervim.git
+[submodule "bundle/vim-unstack"]
+	path = bundle/vim-unstack
+	url = https://github.com/mattboehm/vim-unstack.git
+[submodule "bundle/vim-less"]
+	path = bundle/vim-less
+	url = https://github.com/groenewege/vim-less.git
+[submodule "bundle/vim-css-color"]
+	path = bundle/vim-css-color
+	url = https://github.com/skammer/vim-css-color
