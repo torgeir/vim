@@ -171,3 +171,6 @@
 [submodule "bundle/vim-css-color"]
 	path = bundle/vim-css-color
 	url = https://github.com/skammer/vim-css-color
+[submodule "bundle/vim-copy-as-rtf"]
+	path = bundle/vim-copy-as-rtf
+	url = https://github.com/zerowidth/vim-copy-as-rtf.git
