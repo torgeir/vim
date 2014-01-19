@@ -15,7 +15,7 @@ endfunction
 
 XPT f " js anonymous function
 XSET arg*|post=ExpandIfNotEmpty(', ', 'arg*')
-function (`arg*^) {`^}
+function (`arg*^) {`cursor^}
 
 
 XPT : " js key:value pair
@@ -65,7 +65,7 @@ XSET keyword*|post=ExpandIfNotEmpty(', ', 'keyword*')
         "`dependency^": "`version^"`...^,
         "`dependency^": "`version^"`...^^
   }
-  , "engines": { "node": "0.6.x" }
+  , "engines": { "node": "0.10.x" }
   , "main": "index"
 }
 
