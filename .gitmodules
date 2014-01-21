@@ -174,3 +174,6 @@
 [submodule "bundle/vim-copy-as-rtf"]
 	path = bundle/vim-copy-as-rtf
 	url = https://github.com/zerowidth/vim-copy-as-rtf.git
+[submodule "bundle/tabular"]
+	path = bundle/tabular
+	url = https://github.com/godlygeek/tabular.git
