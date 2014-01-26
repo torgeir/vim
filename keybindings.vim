@@ -75,7 +75,7 @@ noremap / /\v
 map <leader>r :%s/\<<c-r><c-w>\>//gc
 
 " visually select previously searched word
-noremap <c-n> <esc>//s<cr>v//e+1<cr>
+"noremap <c-n> <esc>//s<cr>v//e+1<cr>
 
 " keep search matches in window center
 nnoremap * *zzzv

@@ -1,3 +1,8 @@
+augroup vim_filetype
+  autocmd!
+  autocmd BufNewFile,BufRead *.vim set filetype=vim
+augroup END
+
 augroup json_filetype
   autocmd!
   autocmd BufNewFile,BufRead *.json    set filetype=javascript
