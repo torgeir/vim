@@ -103,7 +103,6 @@ cnoremap <c-k> <c-u>
 cnoremap <c-y> <down>
 
 " general leader bindings
-nnoremap <leader>m  :make!<cr><cr>:cc<cr>
 nnoremap <leader>n  "zyiw:exe "!npm install " . @z<cr>
 nnoremap <leader>nb :! npm install<cr>
 nnoremap <leader>i  :set list!<cr>

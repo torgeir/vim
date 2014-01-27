@@ -35,7 +35,7 @@ source ~/.vim/config/omnicomplete.vim
 source ~/.vim/config/rainbow.vim
 source ~/.vim/config/tasklist.vim
 source ~/.vim/config/togglebg.vim
-source ~/.vim/config/multiplecursors.vim
+source ~/.vim/config/multicursor.vim
 source ~/.vim/config/xptemplate.vim
 source ~/.vim/config/yankring.vim
 source ~/.vim/config/syntastic.vim
