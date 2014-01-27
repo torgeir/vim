@@ -70,52 +70,37 @@ XSET keyword*|post=ExpandIfNotEmpty(', ', 'keyword*')
 }
 
 
-XPT ex " js buster bdd expect
+XPT ex " js bdd expect
 expect(`obj^).to`Equal^(`^);
 
 
-XPT after " js buster bdd after
+XPT after " js bdd after
 after(function (`done^) {
   `cursor^
 });
 
 
-XPT before " js buster bdd before
+XPT before " js bdd before
 before(function (`done^) {
   `cursor^
 });
 
 
-XPT describe " js buster bdd describe
+XPT describe " js bdd describe
 describe('`a piece of functionality^', function () {
   `cursor^
 });
 
 
-XPT it " js buster bdd it
+XPT it " js bdd it
 it('`does what^', function (`done^) {
   `cursor^
 });
 
-XPT itp " js buster bdd pending it
+XPT itp " js bdd pending it
 it('`does what^');
 
-XPT tc " js buster testCase
-buster.testCase('`a piece of functionality^', {
-  `cursor^
-});
-
-
-XPT tt " js buster test
+XPT tt " js test
 '`does something^': function (`done^) {
   `cursor^
 }`,^
-
-
-XPT ifbust " js buster in-node-check
-if (typeof require == 'function' && typeof module == 'object') {
-  buster = require('buster');
-}
-
-buster.spec.expose();
-`cursor^
