@@ -1,3 +1,60 @@
+; colors
+[submodule "bundle/colorscheme-inkpot"]
+	path = bundle/colorscheme-inkpot
+	url = https://github.com/ciaranm/inkpot.git
+[submodule "bundle/syntax-scala"]
+	path = bundle/syntax-scala
+	url = https://github.com/derekwyatt/vim-scala.git
+[submodule "bundle/vim-less"]
+	path = bundle/vim-less
+	url = https://github.com/groenewege/vim-less.git
+
+
+; languages
+[submodule "bundle/js-mask"]
+	path = bundle/js-mask
+	url = https://github.com/tyok/js-mask
+        ignore = dirty
+[submodule "bundle/syntax-markdown"]
+	path = bundle/syntax-markdown
+	url = https://github.com/hallison/vim-markdown.git
+[submodule "bundle/syntax-clojure"]
+	path = bundle/syntax-clojure
+	url = https://github.com/jondistad/vimclojure.git
+        ignore = dirty
+[submodule "bundle/syntax-puppet"]
+	path = bundle/syntax-puppet
+	url = https://github.com/ajf/puppet-vim.git
+[submodule "bundle/syntax-node"]
+	path = bundle/syntax-node
+	url = https://github.com/mmalecki/vim-node.js.git
+[submodule "bundle/syntax-stylus"]
+	path = bundle/syntax-stylus
+	url = https://github.com/wavded/vim-stylus.git
+[submodule "bundle/syntax-jade"]
+	path = bundle/syntax-jade
+	url = https://github.com/digitaltoad/vim-jade.git
+[submodule "bundle/syntax-applescript"]
+	path = bundle/syntax-applescript
+	url = git://github.com/vim-scripts/applescript.vim.git
+[submodule "bundle/syntax-coffescript"]
+	path = bundle/syntax-coffescript
+	url = https://github.com/kchmck/vim-coffee-script.git
+[submodule "bundle/syntax-nginx"]
+	path = bundle/syntax-nginx
+	url = https://github.com/vim-scripts/nginx.vim.git
+[submodule "bundle/syntax-io"]
+	path = bundle/syntax-io
+	url = https://github.com/davidbalbert/vim-io.git
+[submodule "bundle/syntax-handlebars"]
+	path = bundle/syntax-handlebars
+	url = git://github.com/nono/vim-handlebars.git
+[submodule "bundle/typescript"]
+	path = bundle/typescript
+	url = https://github.com/leafgarland/typescript-vim.git
+
+
+; plugins
 [submodule "bundle/vim-addon-mw-utils"]
 	path = bundle/vim-addon-mw-utils
 	url = git://github.com/MarcWeber/vim-addon-mw-utils.git
@@ -93,59 +150,7 @@
 	url = git://github.com/Townk/vim-autoclose.git
 
 
-; languages
-[submodule "bundle/js-mask"]
-	path = bundle/js-mask
-	url = https://github.com/tyok/js-mask
-        ignore = dirty
-[submodule "bundle/syntax-markdown"]
-	path = bundle/syntax-markdown
-	url = https://github.com/hallison/vim-markdown.git
-[submodule "bundle/syntax-clojure"]
-	path = bundle/syntax-clojure
-	url = https://github.com/jondistad/vimclojure.git
-        ignore = dirty
-[submodule "bundle/syntax-puppet"]
-	path = bundle/syntax-puppet
-	url = https://github.com/ajf/puppet-vim.git
-[submodule "bundle/syntax-node"]
-	path = bundle/syntax-node
-	url = https://github.com/mmalecki/vim-node.js.git
-[submodule "bundle/syntax-stylus"]
-	path = bundle/syntax-stylus
-	url = https://github.com/wavded/vim-stylus.git
-[submodule "bundle/syntax-jade"]
-	path = bundle/syntax-jade
-	url = https://github.com/digitaltoad/vim-jade.git
-[submodule "bundle/syntax-applescript"]
-	path = bundle/syntax-applescript
-	url = git://github.com/vim-scripts/applescript.vim.git
-[submodule "bundle/syntax-coffescript"]
-	path = bundle/syntax-coffescript
-	url = https://github.com/kchmck/vim-coffee-script.git
-[submodule "bundle/syntax-nginx"]
-	path = bundle/syntax-nginx
-	url = https://github.com/vim-scripts/nginx.vim.git
-[submodule "bundle/syntax-io"]
-	path = bundle/syntax-io
-	url = https://github.com/davidbalbert/vim-io.git
-[submodule "bundle/syntax-handlebars"]
-	path = bundle/syntax-handlebars
-	url = git://github.com/nono/vim-handlebars.git
-[submodule "bundle/typescript"]
-	path = bundle/typescript
-	url = https://github.com/leafgarland/typescript-vim.git
 
-; colors
-[submodule "bundle/colorscheme-inkpot"]
-	path = bundle/colorscheme-inkpot
-	url = https://github.com/ciaranm/inkpot.git
-[submodule "bundle/colorscheme-getafe"]
-	path = bundle/colorscheme-getafe
-	url = https://github.com/larssmit/vim-getafe.git
-[submodule "bundle/syntax-scala"]
-	path = bundle/syntax-scala
-	url = https://github.com/derekwyatt/vim-scala.git
 [submodule "bundle/gitgutter"]
 	path = bundle/gitgutter
 	url = https://github.com/airblade/vim-gitgutter.git
@@ -167,9 +172,6 @@
 	path = bundle/vim-unstack
 	url = https://github.com/mattboehm/vim-unstack.git
         ignore = dirty
-[submodule "bundle/vim-less"]
-	path = bundle/vim-less
-	url = https://github.com/groenewege/vim-less.git
 [submodule "bundle/vim-css-color"]
 	path = bundle/vim-css-color
 	url = https://github.com/skammer/vim-css-color
