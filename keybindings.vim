@@ -1,6 +1,3 @@
-" clean up whitespace file wide, sets mark a initially, and jumps back
-nnoremap <leader>W mw:%s/\(\\\)\@<!\s*$//e<cr>:%s/ / /e<cr>:let @/=''<cr>`w
-
 " make jk do <esc>
 inoremap jk <esc>l
 
@@ -14,16 +11,6 @@ nnoremap <silent> <leader>j mz:m+<cr>`z==
 nnoremap <silent> <leader>k mz:m-2<cr>`z==
 vnoremap <silent> <leader>j :m'>+<cr>`<my`>mzgv`yo`z
 vnoremap <silent> <leader>k :m'<-2<cr>`>my`<mzgv`yo`z
-
-" leader-s save
-noremap  <leader>s <esc>:w<cr>
-inoremap <leader>s <esc>:w<cr>
-vnoremap <leader>s <esc>:w<cr>
-
-" leader-w to close
-noremap  <silent> <leader>w <esc>:q<cr>:wincmd p<cr>
-vnoremap <silent> <leader>w <esc>:q<cr>:wincmd p<cr>
-inoremap <silent> <leader>w <esc>:q<cr>:wincmd p<cr>
 
 " tab navigation
 for i in [1,2,3,4,5,6,7,8,9]
@@ -59,20 +46,9 @@ nnoremap <c-w>< 6<c-w><
 nnoremap <c-e> 3<c-e>
 nnoremap <c-y> 3<c-y>
 
-" hex editor
-nnoremap <leader>hon :%!xxd<cr>
-nnoremap <leader>hof :%!xxd -r<cr>
-
-" textmate like formatting
-nnoremap <leader>q gqap
-vnoremap <leader>q gq
-
 " fix regex search
 noremap ? ?\v
 noremap / /\v
-
-" replace word under cursor
-map <leader>r :%s/\<<c-r><c-w>\>//gc
 
 " visually select previously searched word
 "noremap <c-n> <esc>//s<cr>v//e+1<cr>
@@ -88,7 +64,7 @@ nnoremap g; g;zz
 nnoremap g, g,zz
 
 " quickfix window for last search
-"nnoremap <silent> <leader>/ :execute 'vimgrep /'.@/.'/g %'<cr>:copen<cr>
+nnoremap <silent> <leader>f :execute 'vimgrep /'.@/.'/g %'<cr>:copen<cr>
 
 " clear highligted search
 nnoremap <silent> <leader><space> :set hlsearch!<cr>
@@ -118,13 +94,29 @@ nnoremap <leader>gs :Gstatus<cr>
 nnoremap <leader>gc :Gcommit<cr>
 nnoremap <leader>gd :Gdiff<cr>
 
-" buster focus rocket
-nnoremap <leader>bf  mb[{0f'a=> `b
-nnoremap <leader>bfc mb[{0f'ldw`b
+" clean up whitespace file wide, sets mark a initially, and jumps back
+nnoremap <leader>W mw:%s/\(\\\)\@<!\s*$//e<cr>:%s/ / /e<cr>:let @/=''<cr>`w
 
-" buster comment
-nnoremap <leader>bc  mb[{0f'a// `b
-nnoremap <leader>bcc mb[{0f'ldw`b
+" leader-s save
+noremap  <leader>s <esc>:w<cr>
+inoremap <leader>s <esc>:w<cr>
+vnoremap <leader>s <esc>:w<cr>
+
+" leader-w to close
+noremap  <silent> <leader>w <esc>:q<cr>:wincmd p<cr>
+vnoremap <silent> <leader>w <esc>:q<cr>:wincmd p<cr>
+inoremap <silent> <leader>w <esc>:q<cr>:wincmd p<cr>
+
+" hex editor
+nnoremap <leader>hon :%!xxd<cr>
+nnoremap <leader>hof :%!xxd -r<cr>
+
+" textmate like formatting
+nnoremap <leader>q gqap
+vnoremap <leader>q gq
+
+" replace word under cursor
+nnoremap <leader>r :%s/\<<c-r><c-w>\>//gc
 
 " go to tests for file
 nnoremap <leader>gt :call GoToTest('tabe')<cr>

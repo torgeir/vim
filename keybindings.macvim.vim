@@ -1,12 +1,12 @@
 " textmate like save
 macmenu &File.Save key=<nop>
-noremap <d-s> <esc>:w<cr>
+noremap  <d-s> <esc>:w<cr>
 inoremap <d-s> <esc>:w<cr>
 vnoremap <d-s> <esc>:w<cr>
 
 " cmd-w to close
 macmenu &File.Close key=<nop>
-noremap <silent> <d-w> <esc>:q<cr>
+noremap  <silent> <d-w> <esc>:q<cr>
 inoremap <silent> <d-w> <esc>:q<cr>
 vnoremap <silent> <d-w> <esc>:q<cr>
 
