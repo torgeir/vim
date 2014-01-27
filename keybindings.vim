@@ -1,11 +1,6 @@
 " make jk do <esc>
 inoremap jk <esc>l
 
-" change inside
-onoremap in( :normal! f(vi(<cr>
-onoremap in[ :normal! f[vi[<cr>
-onoremap in{ :normal! f{vi{<cr>
-
 " tab navigation
 for i in [1,2,3,4,5,6,7,8,9]
   " os x
@@ -36,8 +31,6 @@ noremap <leader>l <Plug>TaskList
 
 " rainbow parenthesis and colors
 noremap <leader>R :RainbowParenthesesToggle<cr>
-noremap <leader>C :ColorToggle<cr>
-
 
 " moving between windows
 nnoremap <c-k> <c-w>k
@@ -152,3 +145,19 @@ ab loremm Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusan
 " store sessions on exit, reload on enter
 " autocmd VimEnter * nested :call LoadSession()
 " autocmd VimLeave * :call MakeSession()
+"
+
+" change inside
+onoremap in( :normal! f(vi(<cr>
+onoremap in[ :normal! f[vi[<cr>
+onoremap in{ :normal! f{vi{<cr>
+
+" change numbers. great for CSS
+" TODO: Handle floats.
+onoremap N  :<c-u>call NumberTextObject(0)<cr>
+xnoremap N  :<c-u>call NumberTextObject(0)<cr>
+onoremap aN :<c-u>call NumberTextObject(1)<cr>
+xnoremap aN :<c-u>call NumberTextObject(1)<cr>
+onoremap iN :<c-u>call NumberTextObject(1)<cr>
+xnoremap iN :<c-u>call NumberTextObject(1)<cr>
+

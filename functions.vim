@@ -195,3 +195,24 @@ function! ToggleMolokaiBg()
   syntax on
 endfunction
 
+" text object for numbers, e.g. css
+function! NumberTextObject(whole)
+    normal! v
+
+    while getline('.')[col('.')] =~# '\v[0-9]'
+        normal! l
+    endwhile
+
+    if a:whole
+        normal! o
+
+        while col('.') > 1 && getline('.')[col('.') - 2] =~# '\v[0-9]'
+            normal! h
+        endwhile
+    endif
+endfunction
+
+" show the stack of syntax hilighting classes affecting whatever is under the cursor.
+function! SynStack()
+  echo join(map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")'), " > ")
+endfunc
