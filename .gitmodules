@@ -25,6 +25,7 @@
 [submodule "bundle/yankring"]
 	path = bundle/yankring
 	url = https://github.com/vim-scripts/YankRing.vim.git
+        ignore = dirty
 [submodule "bundle/scratch"]
 	path = bundle/scratch
 	url = https://github.com/duff/vim-scratch.git
@@ -76,6 +77,7 @@
 [submodule "bundle/openbrowser"]
 	path = bundle/openbrowser
 	url = https://github.com/tyru/open-browser.vim.git
+        ignore = dirty
 [submodule "bundle/bclose"]
 	path = bundle/bclose
 	url = https://github.com/rbgrouleff/bclose.vim.git
@@ -85,6 +87,7 @@
 [submodule "bundle/vim-jsbeautify"]
 	path = bundle/vim-jsbeautify
 	url = https://github.com/maksimr/vim-jsbeautify.git
+        ignore = dirty
 [submodule "bundle/autoclose"]
 	path = bundle/autoclose
 	url = git://github.com/Townk/vim-autoclose.git
@@ -94,12 +97,14 @@
 [submodule "bundle/js-mask"]
 	path = bundle/js-mask
 	url = https://github.com/tyok/js-mask
+        ignore = dirty
 [submodule "bundle/syntax-markdown"]
 	path = bundle/syntax-markdown
 	url = https://github.com/hallison/vim-markdown.git
 [submodule "bundle/syntax-clojure"]
 	path = bundle/syntax-clojure
 	url = https://github.com/jondistad/vimclojure.git
+        ignore = dirty
 [submodule "bundle/syntax-puppet"]
 	path = bundle/syntax-puppet
 	url = https://github.com/ajf/puppet-vim.git
@@ -153,12 +158,15 @@
 [submodule "bundle/vim-clojure-static"]
 	path = bundle/vim-clojure-static
 	url = git://github.com/guns/vim-clojure-static.git
+        ignore = dirty
 [submodule "bundle/evervim"]
 	path = bundle/evervim
 	url = https://github.com/kakkyz81/evervim.git
+        ignore = dirty
 [submodule "bundle/vim-unstack"]
 	path = bundle/vim-unstack
 	url = https://github.com/mattboehm/vim-unstack.git
+        ignore = dirty
 [submodule "bundle/vim-less"]
 	path = bundle/vim-less
 	url = https://github.com/groenewege/vim-less.git
@@ -174,3 +182,4 @@
 [submodule "bundle/multicursor"]
 	path = bundle/multicursor
 	url = https://github.com/paradigm/vim-multicursor.git
+        ignore = dirty
