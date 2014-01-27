@@ -76,9 +76,6 @@
 [submodule "bundle/openbrowser"]
 	path = bundle/openbrowser
 	url = https://github.com/tyru/open-browser.vim.git
-[submodule "bundle/zencoding"]
-	path = bundle/zencoding
-	url = https://github.com/mattn/zencoding-vim.git
 [submodule "bundle/bclose"]
 	path = bundle/bclose
 	url = https://github.com/rbgrouleff/bclose.vim.git
@@ -174,3 +171,6 @@
 [submodule "bundle/tabular"]
 	path = bundle/tabular
 	url = https://github.com/godlygeek/tabular.git
+[submodule "bundle/multicursor"]
+	path = bundle/multicursor
+	url = https://github.com/paradigm/vim-multicursor.git
