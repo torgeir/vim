@@ -6,6 +6,3 @@ let g:tagbar_autoshowtag = 1
 
 " use compact style
 let g:tagbar_compact = 1
-
-" toggle tagbar
-noremap <silent> <f7> :TagbarToggle<cr>:wincmd p<cr>

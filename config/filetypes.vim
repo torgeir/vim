@@ -1,6 +1,8 @@
 augroup vim_filetype
   autocmd!
   autocmd BufNewFile,BufRead *.vim set filetype=vim
+  autocmd BufNewFile,BufRead $MYVIMRC set filetype=vim
+  autocmd BufNewFile,BufRead $MYGVIMRC set filetype=vim
 augroup END
 
 augroup json_filetype

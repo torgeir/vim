@@ -32,7 +32,6 @@ source ~/.vim/config/ctrlp.vim
 source ~/.vim/config/filebrowser.vim
 source ~/.vim/config/filetypes.vim
 source ~/.vim/config/omnicomplete.vim
-source ~/.vim/config/rainbow.vim
 source ~/.vim/config/tasklist.vim
 source ~/.vim/config/togglebg.vim
 source ~/.vim/config/multicursor.vim

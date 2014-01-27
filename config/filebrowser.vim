@@ -20,10 +20,6 @@ let NERDTreeShowHidden = 1
 let NERDTreeHijackNetrw = 1
 let NERDTreeIgnore=['\.$', '\~$']
 
-" toggle nerdtree
-noremap <silent> <f6> :call CustomFileBrowserToggle()<cr>
-noremap <silent> <leader>nt :NERDTreeFind<cr>
-
 " project tree
 augroup file_browser
   autocmd!

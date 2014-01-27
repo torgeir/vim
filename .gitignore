@@ -7,3 +7,4 @@ doc/*
 __Scratch__
 tags
 .evervim-token.vim
+npm-debug.log

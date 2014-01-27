@@ -6,12 +6,6 @@ onoremap in( :normal! f(vi(<cr>
 onoremap in[ :normal! f[vi[<cr>
 onoremap in{ :normal! f{vi{<cr>
 
-" move line(s) of text
-nnoremap <silent> <leader>j mz:m+<cr>`z==
-nnoremap <silent> <leader>k mz:m-2<cr>`z==
-vnoremap <silent> <leader>j :m'>+<cr>`<my`>mzgv`yo`z
-vnoremap <silent> <leader>k :m'<-2<cr>`>my`<mzgv`yo`z
-
 " tab navigation
 for i in [1,2,3,4,5,6,7,8,9]
   " os x
@@ -27,8 +21,23 @@ endfor
 vnoremap < <gv2h
 vnoremap > >gv2l
 
-" toggle paste
+" toggles
+noremap <silent> <f2> :YRShow<cr>
+noremap <silent> <f3> :GundoToggle<cr>
 noremap <silent> <f4> :setlocal paste!<cr>
+noremap <silent> <f6> :call CustomFileBrowserToggle()<cr>
+noremap <silent> <f7> :TagbarToggle<cr>:wincmd p<cr>
+
+" nerdtree
+noremap <silent> <leader>nt :NERDTreeFind<cr>
+
+" tasklist
+noremap <leader>l <Plug>TaskList
+
+" rainbow parenthesis and colors
+noremap <leader>R :RainbowParenthesesToggle<cr>
+noremap <leader>C :ColorToggle<cr>
+
 
 " moving between windows
 nnoremap <c-k> <c-w>k
@@ -82,12 +91,20 @@ cnoremap <c-y> <down>
 nnoremap <leader>n  "zyiw:exe "!npm install " . @z<cr>
 nnoremap <leader>nb :! npm install<cr>
 nnoremap <leader>i  :set list!<cr>
+
+" vim edits
 nnoremap <leader>ev :tabe ~/.vim/.vimrc<cr>
 nnoremap <leader>eg :tabe ~/.vim/.gvimrc<cr>
 nnoremap <leader>ek :tabe ~/.vim/keybindings.vim<cr>
 nnoremap <leader>ef :tabe ~/.vim/functions.vim<cr>
 nnoremap <leader>es :tabe ~/.vim/snippets/<cr>
 nnoremap <leader>ed :tabe ~/Dropbox/dotfiles/<cr>
+
+" move line(s) of text
+nnoremap <silent> <leader>j mz:m+<cr>`z==
+nnoremap <silent> <leader>k mz:m-2<cr>`z==
+vnoremap <silent> <leader>j :m'>+<cr>`<my`>mzgv`yo`z
+vnoremap <silent> <leader>k :m'<-2<cr>`>my`<mzgv`yo`z
 
 " vim-fugitive
 nnoremap <leader>gs :Gstatus<cr>

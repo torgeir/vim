@@ -3,8 +3,8 @@ set omnifunc=syntaxcomplete#Complete
 
 augroup onmi_complete_filetypes
   autocmd!
-  autocmd FileType css set omnifunc=csscomplete#CompleteCSS
-  autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
+  autocmd FileType css  set omnifunc=csscomplete#CompleteCSS
+  autocmd FileType xml  set omnifunc=xmlcomplete#CompleteTags
   autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 
   autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
