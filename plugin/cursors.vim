@@ -12,7 +12,7 @@ function! s:GotoMark(n)
 endfunction
 
 function! s:PerformCommandAtAllMarks(command)
-  for mark in s:marks
+  for mark in reverse(s:marks)
     call s:PerformCommand(mark, a:command)
   endfor
 endfunction
@@ -47,11 +47,11 @@ function! s:Log(...)
 endfunction
 
 " :scriptnames
-noremap <leader>cm  :call <SNR>239_PerformCommandAtAllMarks(input(""))<cr>
-noremap <leader>cn  :call <SNR>239_SetMark()<cr>
-noremap <leader>cl  :call <SNR>239_LogMarks()<cr>
-noremap <leader>cd  :call <SNR>239_ClearMarks()<cr>
-noremap <leader>cg1 :call <SNR>239_GotoMark(0)<cr>
-noremap <leader>cg2 :call <SNR>239_GotoMark(1)<cr>
-noremap <leader>cg3 :call <SNR>239_GotoMark(2)<cr>
+noremap <leader>cm  :call <SID>PerformCommandAtAllMarks(input(""))<cr>
+noremap <leader>cn  :call <SID>SetMark()<cr>
+noremap <leader>cl  :call <SID>LogMarks()<cr>
+noremap <leader>cd  :call <SID>ClearMarks()<cr>
+noremap <leader>cg1 :call <SID>GotoMark(0)<cr>
+noremap <leader>cg2 :call <SID>GotoMark(1)<cr>
+noremap <leader>cg3 :call <SID>GotoMark(2)<cr>
 
