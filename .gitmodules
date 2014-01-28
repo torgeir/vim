@@ -185,3 +185,6 @@
 	path = bundle/multicursor
 	url = https://github.com/paradigm/vim-multicursor.git
         ignore = dirty
+[submodule "bundle/goyo"]
+	path = bundle/goyo
+	url = https://github.com/junegunn/goyo.vim.git
