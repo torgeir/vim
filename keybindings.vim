@@ -121,6 +121,16 @@ inoremap <silent> <leader>w <esc>:q<cr>:wincmd p<cr>
 nnoremap <leader>hon :%!xxd<cr>
 nnoremap <leader>hof :%!xxd -r<cr>
 
+" highlight interresting words in pretty colors
+nnoremap <silent> <leader>h1 :call HiInterestingWord(1)<cr>
+nnoremap <silent> <leader>h2 :call HiInterestingWord(2)<cr>
+nnoremap <silent> <leader>h3 :call HiInterestingWord(3)<cr>
+nnoremap <silent> <leader>h4 :call HiInterestingWord(4)<cr>
+nnoremap <silent> <leader>h5 :call HiInterestingWord(5)<cr>
+nnoremap <silent> <leader>h6 :call HiInterestingWord(6)<cr>
+nnoremap <silent> <leader>hc :call HiInterestingClear()<cr>
+
+
 " textmate like formatting
 nnoremap <leader>q gqap
 vnoremap <leader>q gq

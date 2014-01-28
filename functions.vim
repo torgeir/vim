@@ -216,3 +216,39 @@ endfunction
 function! SynStack()
   echo join(map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")'), " > ")
 endfunc
+
+" highlight interresting words in code
+let s:matchids = []
+function! HiInterestingWord(n)
+    " Save our location.
+    normal! mz
+
+    " Yank the current word into the z register.
+    normal! "zyiw
+
+    " Calculate an arbitrary match ID
+    let mid = 87640 + a:n
+
+    " keep it
+    call add(s:matchids, mid)
+
+    " Clear existing matches, but don't worry if they don't exist.
+    silent! call matchdelete(mid)
+
+    " Construct a literal pattern that has to match at boundaries.
+    let pat = '\V\<' . escape(@z, '\') . '\>'
+
+    " Actually match the words.
+    call matchadd("InterestingWord" . a:n, pat, 1, mid)
+
+    " Move back to our original location.
+    normal! `z
+endfunction
+
+function! HiInterestingClear()
+  for mid in s:matchids
+    call matchdelete(mid)
+  endfor
+  let s:matchids = []
+endfunction
+
