@@ -226,20 +226,14 @@ function! HiInterestingWord(n)
     " Yank the current word into the z register.
     normal! "zyiw
 
-    " Calculate an arbitrary match ID
-    let mid = 87640 + a:n
-
-    " keep it
-    call add(s:matchids, mid)
-
-    " Clear existing matches, but don't worry if they don't exist.
-    silent! call matchdelete(mid)
-
     " Construct a literal pattern that has to match at boundaries.
     let pat = '\V\<' . escape(@z, '\') . '\>'
 
     " Actually match the words.
-    call matchadd("InterestingWord" . a:n, pat, 1, mid)
+    let matchid = matchadd("InterestingWord" . a:n, pat, 1)
+
+    " keep it
+    call add(s:matchids, matchid)
 
     " Move back to our original location.
     normal! `z

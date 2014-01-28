@@ -128,8 +128,7 @@ nnoremap <silent> <leader>h3 :call HiInterestingWord(3)<cr>
 nnoremap <silent> <leader>h4 :call HiInterestingWord(4)<cr>
 nnoremap <silent> <leader>h5 :call HiInterestingWord(5)<cr>
 nnoremap <silent> <leader>h6 :call HiInterestingWord(6)<cr>
-nnoremap <silent> <leader>hc :call HiInterestingClear()<cr>
-
+nnoremap <silent> <leader>hd :call HiInterestingClear()<cr>
 
 " textmate like formatting
 nnoremap <leader>q gqap
