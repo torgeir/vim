@@ -16,6 +16,10 @@ endfor
 vnoremap < <gv2h
 vnoremap > >gv2l
 
+" sane line movements
+nnoremap j gj
+nnoremap k gk
+
 " toggles
 noremap <silent> <f2> :YRShow<cr>
 noremap <silent> <f3> :GundoToggle<cr>
