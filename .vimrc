@@ -3,9 +3,9 @@ let mapleader = ","
 augroup vimrc_reload
   autocmd!
   if has("gui_running") " reload vimrc and gvimrc on save
-    autocmd BufWritePost .*imrc,*.vim so $MYVIMRC | so $MYGVIMRC
+    autocmd BufWritePost .*imrc,*.vim so $MYVIMRC | so $MYGVIMRC | echo "sourced .*imrc,*.vim"
   else " reload vimrc on save
-    autocmd BufWritePost .vimrc,*.vim so $MYVIMRC
+    autocmd BufWritePost .vimrc,*.vim so $MYVIMRC | echo "sourced .vimrc,*.vim"
   endif
 augroup END
 
