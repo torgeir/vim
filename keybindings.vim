@@ -70,7 +70,7 @@ nnoremap g; g;zz
 nnoremap g, g,zz
 
 " quickfix window for last search
-nnoremap <silent> <leader>f :execute 'vimgrep /'.@/.'/g %'<cr>:copen<cr>
+nnoremap <silent> <leader><space>q :execute 'vimgrep /'.@/.'/g %'<cr>:copen<cr>
 
 " clear highligted search
 nnoremap <silent> <leader><space> :set hlsearch!<cr>
@@ -146,6 +146,12 @@ nnoremap <leader>gt :call GoToTest('tabe')<cr>
 nnoremap <leader>e :call GoToTest('e')<cr>
 nnoremap <leader>gtv :call GoToTest('vs')<cr>
 nnoremap <leader>gts :call GoToTest('sp')<cr>
+
+" align lines on = or :
+noremap  <leader>a= :Tabularize /=<cr>
+vnoremap <leader>a= :Tabularize /=<cr>
+noremap  <leader>a: :Tabularize /:\zs<cr>
+noremap  <leader>a: :Tabularize /:\zs<cr>
 
 " run tests in "tests" screen tab, name the session with c-a:sessionname dione
 nnoremap <silent> <leader>. :call system("screen -S dione -p tests -X stuff 'clear; make browser-test'$'\012'")<cr>
