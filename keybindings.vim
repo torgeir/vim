@@ -151,10 +151,10 @@ nnoremap <leader>gtv :call GoToTest('vs')<cr>
 nnoremap <leader>gts :call GoToTest('sp')<cr>
 
 " align lines on = or :
-noremap  <leader>a= :Tabularize /=<cr>
-vnoremap <leader>a= :Tabularize /=<cr>
-noremap  <leader>a: :Tabularize /:\zs<cr>
-noremap  <leader>a: :Tabularize /:\zs<cr>
+noremap   <leader>a= :Tabularize /=<cr>
+vnoremap  <leader>a= :Tabularize /=<cr>
+noremap   <leader>a: :Tabularize /:\zs<cr>
+vnoremap  <leader>a: :Tabularize /:\zs<cr>
 
 " run tests in "tests" screen tab, name the session with c-a:sessionname dione
 nnoremap <silent> <leader>. :call system("screen -S dione -p tests -X stuff 'clear; make browser-test'$'\012'")<cr>

@@ -199,9 +199,6 @@
 [submodule "bundle/abolish"]
 	path = bundle/abolish
 	url = https://github.com/tpope/vim-abolish.git
-[submodule "vim-vspec"]
-	path = vim-vspec
-	url = https://github.com/kana/vim-vspec.git
 [submodule "bundle/expand-region"]
 	path = bundle/expand-region
 	url = https://github.com/terryma/vim-expand-region.git
@@ -209,3 +206,6 @@
 [submodule "bundle/dispatch"]
 	path = bundle/dispatch
 	url = https://github.com/tpope/vim-dispatch.git
+[submodule "bundle/syntax-javascript"]
+	path = bundle/syntax-javascript
+	url = https://github.com/pangloss/vim-javascript.git

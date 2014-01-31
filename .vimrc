@@ -10,12 +10,12 @@ augroup vimrc_reload
 augroup END
 
 " disabled plugins
-let g:pathogen_disabled = []
+"let g:pathogen_disabled = []
 
 " load plugins
-filetype off
-call pathogen#infect()
-call pathogen#helptags()
+"filetype off
+"call pathogen#infect()
+"call pathogen#helptags()
 
 " plugins
 filetype on
