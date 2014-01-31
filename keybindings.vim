@@ -108,6 +108,9 @@ nnoremap <leader>gs :Gstatus<cr>
 nnoremap <leader>gc :Gcommit<cr>
 nnoremap <leader>gd :Gdiff<cr>
 
+" open folds
+nnoremap <space> za
+
 " clean up whitespace file wide, sets mark a initially, and jumps back
 nnoremap <leader>W mw:%s/\(\\\)\@<!\s*$//e<cr>:%s/ / /e<cr>:let @/=''<cr>`w
 

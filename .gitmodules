@@ -76,6 +76,7 @@
 [submodule "bundle/gundo"]
 	path = bundle/gundo
 	url = https://github.com/sjl/gundo.vim.git
+        ignore = dirty
 [submodule "bundle/repeat"]
 	path = bundle/repeat
 	url = https://github.com/tpope/vim-repeat.git
@@ -131,6 +132,7 @@
 [submodule "bundle/webapi-vim"]
 	path = bundle/webapi-vim
 	url = https://github.com/mattn/webapi-vim.git
+        ignore = dirty
 [submodule "bundle/openbrowser"]
 	path = bundle/openbrowser
 	url = https://github.com/tyru/open-browser.vim.git
