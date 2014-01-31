@@ -1,3 +1,6 @@
+" bundle install
+nnoremap ,bi :BundleInstall<cr>
+
 " make jk do <esc>
 inoremap jk <esc>l
 
