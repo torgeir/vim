@@ -30,9 +30,6 @@ function! Inline_variable()
   exe 'normal "kp'
 endfunction
 
-vnoremap ev <esc>:call Extract_variable()<cr>
-vnoremap ei <esc>:call Inline_variable()<cr>
-
 " go to tests for file
 function! GoToTest(split)
   exe "normal \<esc>:" . a:split . " test/**/*/" . expand('%:t:r') . '-test.' . expand('%:e') . "\<cr>"

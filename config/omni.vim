@@ -1,4 +1,4 @@
-" omni completion 
+" omni completion
 set omnifunc=syntaxcomplete#Complete
 
 augroup onmi_complete_filetypes

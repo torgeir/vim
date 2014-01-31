@@ -1,5 +1,5 @@
 " bundle install
-nnoremap ,bi :BundleInstall<cr>
+noremap ,bi :BundleInstall<cr>
 
 " make jk do <esc>
 inoremap jk <esc>l
@@ -31,7 +31,7 @@ noremap <silent> <f6> :call CustomFileBrowserToggle()<cr>
 noremap <silent> <f7> :TagbarToggle<cr>:wincmd p<cr>
 
 " nerdtree
-noremap <silent> <leader>nt :NERDTreeFind<cr>
+noremap <silent> <leader>nf :NERDTreeFind<cr>
 
 " tasklist
 noremap <leader>l <Plug>TaskList
@@ -44,16 +44,6 @@ nnoremap <c-k> <c-w>k
 nnoremap <c-j> <c-w>j
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
-
-" faster window size
-nnoremap <c-w>+ 3<c-w>+
-nnoremap <c-w>- 3<c-w>-
-nnoremap <c-w>> 6<c-w>>
-nnoremap <c-w>< 6<c-w><
-
-" faster scroll (ey du fb)
-nnoremap <c-e> 3<c-e>
-nnoremap <c-y> 3<c-y>
 
 " fix regex search
 noremap ? ?\v
@@ -149,7 +139,7 @@ nnoremap <leader>r :%s/\<<c-r><c-w>\>//gc
 
 " go to tests for file
 nnoremap <leader>gt :call GoToTest('tabe')<cr>
-nnoremap <leader>e :call GoToTest('e')<cr>
+nnoremap <leader>ge :call GoToTest('e')<cr>
 nnoremap <leader>gtv :call GoToTest('vs')<cr>
 nnoremap <leader>gts :call GoToTest('sp')<cr>
 
@@ -170,19 +160,20 @@ ab lorem Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusant
 " store sessions on exit, reload on enter
 " autocmd VimEnter * nested :call LoadSession()
 " autocmd VimLeave * :call MakeSession()
-"
+
+" variable refactorings
+vnoremap ev <esc>:call Extract_variable()<cr>
+vnoremap ei <esc>:call Inline_variable()<cr>
 
 " change inside
 onoremap in( :normal! f(vi(<cr>
 onoremap in[ :normal! f[vi[<cr>
 onoremap in{ :normal! f{vi{<cr>
 
-" change numbers. great for CSS
-" TODO: Handle floats.
+" change numbers
 onoremap N  :<c-u>call NumberTextObject(0)<cr>
 xnoremap N  :<c-u>call NumberTextObject(0)<cr>
 onoremap aN :<c-u>call NumberTextObject(1)<cr>
 xnoremap aN :<c-u>call NumberTextObject(1)<cr>
 onoremap iN :<c-u>call NumberTextObject(1)<cr>
 xnoremap iN :<c-u>call NumberTextObject(1)<cr>
-

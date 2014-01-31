@@ -17,19 +17,16 @@ source ~/.vim/keybindings.vim
 source ~/.vim/functions.vim
 
 " plugin config
-source ~/.vim/config/colorizer.vim
 source ~/.vim/config/ctrlp.vim
+source ~/.vim/config/evervim.vim
 source ~/.vim/config/filebrowser.vim
-source ~/.vim/config/augroups.vim
-source ~/.vim/config/omnicomplete.vim
-source ~/.vim/config/tasklist.vim
-source ~/.vim/config/togglebg.vim
 source ~/.vim/config/multicursor.vim
+source ~/.vim/config/omni.vim
+source ~/.vim/config/tasklist.vim
+source ~/.vim/config/trailingwhitespace.vim
+source ~/.vim/config/unstack.vim
 source ~/.vim/config/xptemplate.vim
 source ~/.vim/config/yankring.vim
-source ~/.vim/config/syntastic.vim
-source ~/.vim/config/evervim.vim
-source ~/.vim/config/unstack.vim
 
 " tags - from driectory of current file, then cwd, then upwards to /
 set tags=./tags,tags;/

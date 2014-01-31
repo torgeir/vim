@@ -52,7 +52,7 @@ Bundle "tpope/vim-unimpaired.git"
 Bundle "Townk/vim-autoclose.git"
 Bundle "tsaleh/vim-supertab.git"
 Bundle "tyru/open-browser.vim.git"
-Bundle "tyok/js-mask"
+Bundle "torgeir/js-mask.git"
 Bundle "vim-scripts/TaskList.vim.git"
 Bundle "vim-scripts/YankRing.vim.git"
 
