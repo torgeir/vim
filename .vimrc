@@ -9,6 +9,73 @@ augroup vimrc_reload
   endif
 augroup END
 
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" ciaranm/inkpot.git
+" derekwyatt/vim-scala.git
+" groenewege/vim-less.git
+" tyok/js-mask
+" hallison/vim-markdown.git
+" jondistad/vimclojure.git
+" ajf/puppet-vim.git
+" mmalecki/vim-node.js.git
+" wavded/vim-stylus.git
+" digitaltoad/vim-jade.git
+" vim-scripts/applescript.vim.git
+" kchmck/vim-coffee-script.git
+" vim-scripts/nginx.vim.git
+" davidbalbert/vim-io.git
+" nono/vim-handlebars.git
+" leafgarland/typescript-vim.git
+" MarcWeber/vim-addon-mw-utils.git
+" tomtom/tlib_vim.git
+" vim-scripts/TaskList.vim.git
+" majutsushi/tagbar.git
+" scrooloose/nerdtree.git
+" scrooloose/nerdcommenter.git
+" sjl/gundo.vim.git
+" tpope/vim-repeat.git
+" vim-scripts/YankRing.vim.git
+" duff/vim-scratch.git
+" greyblake/vim-preview.git
+" lilydjwg/colorizer.git
+" tpope/vim-surround.git
+" vim-scripts/Tail-Bundle.git
+" jpalardy/vim-slime
+" mattn/gist-vim
+" kien/rainbow_parentheses.vim
+" kien/ctrlp.vim.git
+" scrooloose/syntastic.git
+" tsaleh/vim-supertab.git
+" drmingdrmer/xptemplate.git
+" endel/ctrlp-filetype.vim.git
+" mattn/ctrlp-hackernews.git
+" mattn/ctrlp-register.git
+" mattn/webapi-vim.git
+" tyru/open-browser.vim.git
+" rbgrouleff/bclose.vim.git
+" tpope/vim-fugitive.git
+" maksimr/vim-jsbeautify.git
+" Townk/vim-autoclose.git
+" airblade/vim-gitgutter.git
+" tpope/vim-fireplace.git
+" tpope/vim-classpath.git
+" guns/vim-clojure-static.git
+" kakkyz81/evervim.git
+" mattboehm/vim-unstack.git
+" skammer/vim-css-color
+" zerowidth/vim-copy-as-rtf.git
+" godlygeek/tabular.git
+" paradigm/vim-multicursor.git
+" junegunn/goyo.vim.git
+" tpope/vim-unimpaired.git
+" nelstrom/vim-visual-star-search.git
+" tpope/vim-abolish.git
+" terryma/vim-expand-region.git
+" tpope/vim-dispatch.git
+" pangloss/vim-javascript.git
+
 " disabled plugins
 "let g:pathogen_disabled = []
 
