@@ -206,3 +206,6 @@
 	path = bundle/expand-region
 	url = https://github.com/terryma/vim-expand-region.git
         ignore = dirty
+[submodule "bundle/dispatch"]
+	path = bundle/dispatch
+	url = https://github.com/tpope/vim-dispatch.git
