@@ -143,7 +143,7 @@ nnoremap <leader>q gqap
 vnoremap <leader>q gq
 
 " replace word under cursor
-nnoremap <leader>r :%s/\<<c-r><c-w>\>//gc
+nnoremap <leader>r :%s/\<<c-r><c-w>\>//gc<left><left><left>
 
 " go to tests for file
 nnoremap <leader>gt :call GoToTest('tabe')<cr>
