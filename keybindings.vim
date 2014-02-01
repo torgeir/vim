@@ -23,6 +23,8 @@ endfor
 " don't exit visual mode when shifting
 vnoremap < <gv2h
 vnoremap > >gv2l
+vnoremap <c-h> <gv2h
+vnoremap <c-l> >gv2l
 
 " toggles
 noremap <silent> <f2> :YRShow<cr>
