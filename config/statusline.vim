@@ -3,10 +3,11 @@
 
 let g:lightline = {
       \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ], [ 'fugitive', 'filename' ], ['ctrlpmark'] ],
+      \   'left': [ [ 'mode', 'paste' ], [ 'fugitive', 'dir', 'filename' ], ['ctrlpmark'] ],
       \   'right': [ [ 'syntastic', 'lineinfo' ], ['percent'], [ 'fileformat', 'fileencoding', 'filetype' ] ]
       \ },
       \ 'component_function': {
+      \   'dir': 'CurDir',
       \   'fugitive': 'MyFugitive',
       \   'filename': 'MyFilename',
       \   'fileformat': 'MyFileformat',
@@ -118,25 +119,3 @@ function! s:syntastic()
   SyntasticCheck
   call lightline#update()
 endfunction
-
-" status line
-"set laststatus=2
-
- "format the status line
-"set statusline=%y
-"set statusline+=\ "
-"set statusline+=%#error#%{&paste?'[paste]':''}%*
-"set statusline+=\ "
-"if exists("g:loaded_fugitive")
-  "set statusline+=%{fugitive#statusline()}
-"endif
-"set statusline+=\ "
-"set statusline+=%F\ %m\ %r\ %h
-"set statusline+=\ %w
-"set statusline+=\ %r
-"set statusline+=\ "
-"set statusline+=%{CurDir()}
-"set statusline+=%=                " left-right separator
-"set statusline+=%h\ \ 
-"set statusline+=%c,%l/%L\ %P
-

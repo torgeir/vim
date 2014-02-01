@@ -66,7 +66,7 @@ nnoremap g; g;zz
 nnoremap g, g,zz
 
 " quickfix window for last search
-nnoremap <silent> <leader><space>q :execute 'vimgrep /'.@/.'/g %'<cr>:copen<cr>
+"nnoremap <silent> <leader><space>q :execute 'vimgrep /'.@/.'/g %'<cr>:copen<cr>
 
 " clear highligted search
 nnoremap <silent> <leader><space> :set hlsearch!<cr>
@@ -86,6 +86,7 @@ nnoremap <leader>nb :! npm install<cr>
 nnoremap <leader>i  :set list!<cr>
 
 " vim edits
+nnoremap <leader>e  :e <c-r>=expand("%:p:h") . '/'<cr>
 nnoremap <leader>ev :e ~/.vim/.vimrc<cr>
 nnoremap <leader>eg :e ~/.vim/.gvimrc<cr>
 nnoremap <leader>ek :e ~/.vim/keybindings.vim<cr>
@@ -112,6 +113,9 @@ nnoremap [h :GitGutterPrevHunk<cr>
 nnoremap <leader>ghs :GitGutterStageHunk<cr>
 nnoremap <leader>ghr :GitGutterRevertHunk<cr>
 nnoremap <leader>gu  :GitGutterAll<cr>
+nnoremap <leader>ge  :Gedit<cr>
+nnoremap <leader>gl :Glog -20 --<cr>
+nnoremap <leader>glf :Glog -20 -- %<cr>
 
 " open folds
 nnoremap <space> za
