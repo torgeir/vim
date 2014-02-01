@@ -1,5 +1,5 @@
-!bundle/vundle
 bundle/*
+!bundle/vundle
 .DS_Store
 *.swp
 .netrwhist
