@@ -11,6 +11,9 @@ nnoremap <c-h> :he <c-r><c-w><cr>
 nnoremap j gj
 nnoremap k gk
 
+" tab traverces autocomplete
+inoremap <tab> <c-p>
+
 " tab navigation
 for i in [1,2,3,4,5,6,7,8,9]
   " os x
@@ -86,7 +89,8 @@ nnoremap <leader>nb :! npm install<cr>
 nnoremap <leader>i  :set list!<cr>
 
 " vim edits
-nnoremap <leader>e  :e <c-r>=expand("%:p:h") . '/'<cr>
+nnoremap <leader>e  :e  <c-r>=expand("%:p:h") . '/'<cr>
+nnoremap <leader>v  :vs <c-r>=expand("%:p:h") . '/'<cr>
 nnoremap <leader>ev :e ~/.vim/.vimrc<cr>
 nnoremap <leader>eg :e ~/.vim/.gvimrc<cr>
 nnoremap <leader>ek :e ~/.vim/keybindings.vim<cr>

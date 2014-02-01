@@ -110,3 +110,9 @@ set splitright splitbelow
 
 " tab labels
 set guitablabel=%{GuiTabLabel()}
+
+" restore cursor position
+autocmd BufReadPost *
+  \ if line("'\"") > 0 && line("'\"") <= line("$") |
+  \   exe "normal g`\"" |
+  \ endif

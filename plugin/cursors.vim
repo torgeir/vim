@@ -161,7 +161,7 @@ function! s:Log(...)
   echo "marks: " . join(a:000, " ")
 endfunction
 
-function! s:Search(str)
+function! s:SetMarksForSearch(str)
   normal mc
   normal gg
   while search(a:str, "W") > 0
@@ -178,4 +178,4 @@ nnoremap <silent> <c-c><c-m> :call <SID>PerformCommand(input(":normal "))<cr>
 nnoremap <silent> <c-c><c-n> :call <SID>CycleMarks(1)<cr>
 nnoremap <silent> <c-c><c-p> :call <SID>CycleMarks(0)<cr>
 nnoremap <silent> <c-c><c-x> :call <SID>SetMark()<cr>
-nnoremap <silent> <c-c><c-w> :silent call <SID>Search("<c-r><c-w>")<cr>
+nnoremap <silent> <c-c><c-w> :silent call <SID>SetMarksForSearch("<c-r><c-w>")<cr>
