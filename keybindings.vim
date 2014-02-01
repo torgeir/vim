@@ -33,7 +33,6 @@ noremap <silent> <leader>nf :NERDTreeFind<cr>
 " tasklist
 noremap <leader>l :TaskList<cr>
 
-" todo
 " rainbow parenthesis and colors
 noremap <leader>R :RainbowParenthesesToggle<cr>
 
@@ -48,7 +47,7 @@ noremap ? ?\v
 noremap / /\v
 
 " visually select previously searched word
-"noremap <c-n> <esc>//s<cr>v//e+1<cr>
+nnoremap \ <esc>//s<cr>v//e+1<cr>
 
 " keep search matches in window center
 nnoremap * *zzzv
@@ -95,12 +94,16 @@ vnoremap <silent> <leader>j :m'>+<cr>`<my`>mzgv`yo`z
 vnoremap <silent> <leader>k :m'<-2<cr>`>my`<mzgv`yo`z
 
 " vim-fugitive
-nnoremap <leader>gs :Gstatus<cr>
-nnoremap <leader>gc :Gcommit<cr>
+nnoremap <leader>gac :Gcommit -m -a ""<LEFT>
+vnoremap <leader>gb :<c-u>!git blame <c-r>=expand("%:p") <cr> \| sed -n <c-r>=line("'<") <cr>,<c-r>=line("'>") <cr>p <cr>
+nnoremap <leader>gc :Gcommit -m ""<LEFT>
 nnoremap <leader>gd :Gdiff<cr>
-
-" git blame
-nnoremap <leader>gb :<c-u>!git blame <c-r>=expand("%:p") <cr> \| sed -n <c-r>=line("'<") <cr>,<c-r>=line("'>") <cr>p <cr>
+nnoremap <leader>gs :Gstatus<cr>
+nnoremap <silent> <leader>gr :if confirm('Gread?', "&Yes\n&No", 1)==1 <bar> :Gread <bar> endif<cr><cr>
+nnoremap ]h :GitGutterNextHunk<cr>
+nnoremap [h :GitGutterPrevHunk<cr>
+nnoremap <leader>ghs :GitGutterStageHunk<cr>
+nnoremap <leader>ghr :GitGutterRevertHunk<cr>
 
 " open folds
 nnoremap <space> za

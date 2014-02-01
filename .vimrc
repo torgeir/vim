@@ -30,7 +30,6 @@ source ~/.vim/config/yankring.vim
 source ~/.vim/config/tagbar.vim
 
 " tags - from driectory of current file, then cwd, then upwards to /
-let g:tagbar_autoclose = 1
 set tags=./tags,tags;/
 
 """"""""""""""""""""""""""""""""""""""""
