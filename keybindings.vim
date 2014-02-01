@@ -11,9 +11,6 @@ nnoremap <c-h> :he <c-r><c-w><cr>
 nnoremap j gj
 nnoremap k gk
 
-" tab traverces autocomplete
-inoremap <tab> <c-p>
-
 " tab navigation
 for i in [1,2,3,4,5,6,7,8,9]
   " os x
@@ -97,6 +94,7 @@ nnoremap <leader>ek :e ~/.vim/keybindings.vim<cr>
 nnoremap <leader>ef :e ~/.vim/functions.vim<cr>
 nnoremap <leader>es :e ~/.vim/snippets/<cr>
 nnoremap <leader>ed :e ~/Dropbox/dotfiles/<cr>
+nnoremap <leader>x :exec getline(".")<cr>
 
 " move line(s) of text
 nnoremap <silent> <leader>j mz:m+<cr>`z==
