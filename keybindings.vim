@@ -4,6 +4,9 @@ nnoremap ,bi :BundleInstall<cr>
 " make jk do <esc>
 inoremap jk <esc>l
 
+" look up :help <word-under-cursor>
+nnoremap <c-h> :he <c-r><c-w><cr>
+
 " sane line movements
 nnoremap j gj
 nnoremap k gk
