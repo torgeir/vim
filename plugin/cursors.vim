@@ -18,6 +18,7 @@ endfunction
 
 " clears out all marks and their highlight
 function! s:ClearMarks()
+  let s:current = 0
   let s:marks = []
   call s:RemoveHighlights()
   call s:Log("cleared")
@@ -79,9 +80,13 @@ endfunction
 
 " cycle through all marks, jumping to each one
 let s:current = 0
-function! s:CycleMarks()
+function! s:CycleMarks(next)
+  if a:next
+    let s:current = (s:current + 1) % len(s:marks)
+  else
+    let s:current = (s:current - 1) % len(s:marks)
+  endif
   call s:GotoMark(s:current)
-  let s:current = (s:current + 1) % len(s:marks)
 endfunction
 
 " move the cursor to a mark
@@ -156,10 +161,21 @@ function! s:Log(...)
   echo "marks: " . join(a:000, " ")
 endfunction
 
-nnoremap <c-c><c-m> :call <SID>PerformCommand(input(":normal "))<cr>
-nnoremap <c-c><c-n> :call <SID>SetMark()<cr>
-nnoremap <c-c><c-k> :call <SID>KillMark()<cr>
-nnoremap <c-c><c-h> :call <SID>HighlightMarks()<cr>
-nnoremap <c-c><c-l> :call <SID>LogMarks()<cr>
-nnoremap <c-c><c-d> :call <SID>ClearMarks()<cr>
-nnoremap <c-c><c-x> :call <SID>CycleMarks()<cr>
+function! s:Search(str)
+  normal mc
+  normal gg
+  while search(a:str, "W") > 0
+    call s:SetMark()
+  endwhile
+  normal `c
+endfunction
+
+nnoremap <silent> <c-c><c-d> :call <SID>ClearMarks()<cr>
+nnoremap <silent> <c-c><c-h> :call <SID>HighlightMarks()<cr>
+nnoremap <silent> <c-c><c-k> :call <SID>KillMark()<cr>
+nnoremap <silent> <c-c><c-l> :call <SID>LogMarks()<cr>
+nnoremap <silent> <c-c><c-m> :call <SID>PerformCommand(input(":normal "))<cr>
+nnoremap <silent> <c-c><c-n> :call <SID>CycleMarks(1)<cr>
+nnoremap <silent> <c-c><c-p> :call <SID>CycleMarks(0)<cr>
+nnoremap <silent> <c-c><c-x> :call <SID>SetMark()<cr>
+nnoremap <silent> <c-c><c-w> :silent call <SID>Search("<c-r><c-w>")<cr>
