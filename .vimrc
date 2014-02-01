@@ -58,6 +58,8 @@ set wrap linebreak nolist         " soft wrap lines
 set breakat=" "                   " where to insert line breaks
 let &showbreak="↪ "               " character to visualize breaks
 
+set noesckeys                     " don't wait for esc!
+
 set iskeyword+=-                  " quotes are also keywords, so e.g. vi' works
 
 " set columns=84                   " 84 - 4 = 80 char width
