@@ -31,7 +31,7 @@ noremap <silent> <f6> :call CustomFileBrowserToggle()<cr>
 noremap <silent> <leader>nf :NERDTreeFind<cr>
 
 " tasklist
-noremap <leader>l :TaskList<cr>
+noremap <leader>l <Plug>TaskList<cr>
 
 " rainbow parenthesis and colors
 noremap <leader>R :RainbowParenthesesToggle<cr>

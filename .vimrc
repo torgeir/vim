@@ -28,6 +28,7 @@ source ~/.vim/config/unstack.vim
 source ~/.vim/config/xptemplate.vim
 source ~/.vim/config/yankring.vim
 source ~/.vim/config/tagbar.vim
+source ~/.vim/config/statusline.vim
 
 " tags - from driectory of current file, then cwd, then upwards to /
 set tags=./tags,tags;/
@@ -100,26 +101,8 @@ set wildignore+=.git,node_modules,target
 " dictionary
 set dictionary+=/usr/share/dict/words
 
-" status line
+" statusline
 set laststatus=2
-
-" format the status line
-set statusline=%y
-set statusline+=\ "
-set statusline+=%#error#%{&paste?'[paste]':''}%*
-set statusline+=\ "
-if exists("g:loaded_fugitive")
-  set statusline+=%{fugitive#statusline()}
-endif
-set statusline+=\ "
-set statusline+=%F\ %m\ %r\ %h
-set statusline+=\ %w
-set statusline+=\ %r
-set statusline+=\ "
-set statusline+=%{CurDir()}
-set statusline+=%=                " left-right separator
-set statusline+=%h\ \ 
-set statusline+=%c,%l/%L\ %P
 
 " splitting
 set splitright splitbelow

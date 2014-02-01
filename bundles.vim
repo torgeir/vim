@@ -55,6 +55,7 @@ Bundle "tyru/open-browser.vim.git"
 Bundle "torgeir/js-mask.git"
 Bundle "vim-scripts/TaskList.vim.git"
 Bundle "vim-scripts/YankRing.vim.git"
+Bundle "itchyny/lightline.vim"
 
 " colors
 "ciaranm/inkpot.git
