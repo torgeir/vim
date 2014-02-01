@@ -1,3 +1,6 @@
+" autoclose after selection
+let g:tagbar_autoclose = 1
+
 " sets width of tabbar
 let g:tagbar_width = 30
 
