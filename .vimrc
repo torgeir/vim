@@ -107,7 +107,9 @@ set statusline=%y
 set statusline+=\ "
 set statusline+=%#error#%{&paste?'[paste]':''}%*
 set statusline+=\ "
-set statusline+=%{fugitive#statusline()}
+if exists("g:loaded_fugitive")
+  set statusline+=%{fugitive#statusline()}
+endif
 set statusline+=\ "
 set statusline+=%F\ %m\ %r\ %h
 set statusline+=\ %w
