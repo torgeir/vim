@@ -108,6 +108,7 @@ nnoremap ]h :GitGutterNextHunk<cr>
 nnoremap [h :GitGutterPrevHunk<cr>
 nnoremap <leader>ghs :GitGutterStageHunk<cr>
 nnoremap <leader>ghr :GitGutterRevertHunk<cr>
+nnoremap <leader>gu  :GitGutterAll<cr>
 
 " open folds
 nnoremap <space> za
