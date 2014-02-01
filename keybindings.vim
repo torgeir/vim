@@ -146,8 +146,8 @@ vnoremap <leader>q gq
 nnoremap <leader>r :%s/\<<c-r><c-w>\>//gc<left><left><left>
 
 " go to tests for file
-nnoremap <leader>gt :call GoToTest('tabe')<cr>
-nnoremap <leader>ge :call GoToTest('e')<cr>
+nnoremap <leader>gtt :call GoToTest('tabe')<cr>
+nnoremap <leader>gte :call GoToTest('e')<cr>
 nnoremap <leader>gtv :call GoToTest('vs')<cr>
 nnoremap <leader>gts :call GoToTest('sp')<cr>
 
