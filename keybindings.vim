@@ -97,9 +97,10 @@ vnoremap <silent> <leader>j :m'>+<cr>`<my`>mzgv`yo`z
 vnoremap <silent> <leader>k :m'<-2<cr>`>my`<mzgv`yo`z
 
 " vim-fugitive
-nnoremap <leader>gac :Gcommit -m -a ""<LEFT>
 vnoremap <leader>gb :<c-u>!git blame <c-r>=expand("%:p") <cr> \| sed -n <c-r>=line("'<") <cr>,<c-r>=line("'>") <cr>p <cr>
-nnoremap <leader>gc :Gcommit -m ""<LEFT>
+nnoremap <leader>gc :Gcommit -m ""<left>
+nnoremap <leader>gcf :Gwrite<cr>:Gcommit -m ""<left>
+nnoremap <leader>gca :Gcommit -m -a ""<left>
 nnoremap <leader>gd :Gdiff<cr>
 nnoremap <leader>gs :Gstatus<cr>
 nnoremap <silent> <leader>gr :if confirm('Gread?', "&Yes\n&No", 1)==1 <bar> :Gread <bar> endif<cr><cr>
