@@ -21,7 +21,8 @@ for i in [1,2,3,4,5,6,7,8,9]
 endfor
 
 " don't exit visual mode when shifting
-vnoremap < <i> >gv2l
+vnoremap < <gv2h
+vnoremap > >gv2l
 
 " toggles
 noremap <silent> <f2> :YRShow<cr>
