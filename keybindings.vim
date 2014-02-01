@@ -86,12 +86,12 @@ nnoremap <leader>nb :! npm install<cr>
 nnoremap <leader>i  :set list!<cr>
 
 " vim edits
-nnoremap <leader>ev :tabe ~/.vim/.vimrc<cr>
-nnoremap <leader>eg :tabe ~/.vim/.gvimrc<cr>
-nnoremap <leader>ek :tabe ~/.vim/keybindings.vim<cr>
-nnoremap <leader>ef :tabe ~/.vim/functions.vim<cr>
-nnoremap <leader>es :tabe ~/.vim/snippets/<cr>
-nnoremap <leader>ed :tabe ~/Dropbox/dotfiles/<cr>
+nnoremap <leader>ev :e ~/.vim/.vimrc<cr>
+nnoremap <leader>eg :e ~/.vim/.gvimrc<cr>
+nnoremap <leader>ek :e ~/.vim/keybindings.vim<cr>
+nnoremap <leader>ef :e ~/.vim/functions.vim<cr>
+nnoremap <leader>es :e ~/.vim/snippets/<cr>
+nnoremap <leader>ed :e ~/Dropbox/dotfiles/<cr>
 
 " move line(s) of text
 nnoremap <silent> <leader>j mz:m+<cr>`z==
