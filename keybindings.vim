@@ -1,41 +1,39 @@
 " bundle install
-noremap ,bi :BundleInstall<cr>
+nnoremap ,bi :BundleInstall<cr>
 
 " make jk do <esc>
 inoremap jk <esc>l
-
-" tab navigation
-for i in [1,2,3,4,5,6,7,8,9]
-  " os x
-  exec "nnoremap <d-" . i . ">      :silent call GoToTab(" . i . ")<cr>"
-  exec "inoremap <d-" . i . "> <esc>:silent call GoToTab(" . i . ")<cr>a"
-
-  " general
-  exec "nnoremap <leader>" . i . "      :silent call GoToTab(" . i . ")<cr>"
-  exec "inoremap <leader>" . i . " <esc>:silent call GoToTab(" . i . ")<cr>a"
-endfor
-
-" don't exit visual mode when shifting
-vnoremap < <gv2h
-vnoremap > >gv2l
 
 " sane line movements
 nnoremap j gj
 nnoremap k gk
 
+" tab navigation
+for i in [1,2,3,4,5,6,7,8,9]
+  " os x
+  exec "nnoremap <d-" . i . "> :silent :normal " . i . "gt<cr>"
+
+  " general
+  exec "nnoremap <leader>" . i . " :silent :normal " . i . "gt<cr>"
+endfor
+
+" don't exit visual mode when shifting
+vnoremap < <i> >gv2l
+
 " toggles
 noremap <silent> <f2> :YRShow<cr>
 noremap <silent> <f3> :GundoToggle<cr>
 noremap <silent> <f4> :setlocal paste!<cr>
+noremap <silent> <f5> :TagbarOpen c<cr>:wincmd p<cr>
 noremap <silent> <f6> :call CustomFileBrowserToggle()<cr>
-noremap <silent> <f7> :TagbarToggle<cr>:wincmd p<cr>
 
 " nerdtree
 noremap <silent> <leader>nf :NERDTreeFind<cr>
 
 " tasklist
-noremap <leader>l <Plug>TaskList
+noremap <leader>l :TaskList<cr>
 
+" todo
 " rainbow parenthesis and colors
 noremap <leader>R :RainbowParenthesesToggle<cr>
 
@@ -101,6 +99,9 @@ nnoremap <leader>gs :Gstatus<cr>
 nnoremap <leader>gc :Gcommit<cr>
 nnoremap <leader>gd :Gdiff<cr>
 
+" git blame
+nnoremap <leader>gb :<c-u>!git blame <c-r>=expand("%:p") <cr> \| sed -n <c-r>=line("'<") <cr>,<c-r>=line("'>") <cr>p <cr>
+
 " open folds
 nnoremap <space> za
 
@@ -110,11 +111,9 @@ nnoremap <leader>W mw:%s/\(\\\)\@<!\s*$//e<cr>:%s/ / /e<cr>:let @/=''<cr>`w
 " leader-s save
 noremap  <leader>s <esc>:w<cr>
 inoremap <leader>s <esc>:w<cr>
-vnoremap <leader>s <esc>:w<cr>
 
 " leader-w to close
 noremap  <silent> <leader>w <esc>:q<cr>:wincmd p<cr>
-vnoremap <silent> <leader>w <esc>:q<cr>:wincmd p<cr>
 inoremap <silent> <leader>w <esc>:q<cr>:wincmd p<cr>
 
 " hex editor
@@ -144,10 +143,10 @@ nnoremap <leader>gtv :call GoToTest('vs')<cr>
 nnoremap <leader>gts :call GoToTest('sp')<cr>
 
 " align lines on = or :
-noremap   <leader>a= :Tabularize /=<cr>
-vnoremap  <leader>a= :Tabularize /=<cr>
-noremap   <leader>a: :Tabularize /:\zs<cr>
-vnoremap  <leader>a: :Tabularize /:\zs<cr>
+nnoremap <leader>a= :Tabularize /=<cr>
+vnoremap <leader>a= :Tabularize /=<cr>
+nnoremap <leader>a: :Tabularize /:\zs<cr>
+vnoremap <leader>a: :Tabularize /:\zs<cr>
 
 " run tests in "tests" screen tab, name the session with c-a:sessionname dione
 nnoremap <silent> <leader>. :call system("screen -S dione -p tests -X stuff 'clear; make browser-test'$'\012'")<cr>

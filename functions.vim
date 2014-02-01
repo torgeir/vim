@@ -92,32 +92,6 @@ function! CustomFileBrowserToggle()
   endif
 endfunction
 
-" changes tab
-function! GoToTab(tab)
-  let tagbarwinnr = bufwinnr("__Tagbar__")
-  if tagbarwinnr != -1
-    exe "normal \<esc>:TagbarClose\<cr>"
-  endif
-
-  let nerdtreewinnr = bufwinnr("NERD_tree_1")
-  if nerdtreewinnr != -1
-    exe "normal \<esc>:NERDTreeToggle\<cr>"
-  endif
-
-  exe "normal " . a:tab . "gt"
-
-  if tagbarwinnr != -1
-    exe "normal \<esc>:TagbarOpen\<cr>"
-  endif
-
-  if nerdtreewinnr != -1
-    call CustomFileBrowserToggle()
-  endif
-
-  wincmd p
-
-endfunction
-
 " expands a block on enter inside
 function! ExpandBlock(blocks)
   let col = col('.') - 1
