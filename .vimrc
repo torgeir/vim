@@ -54,9 +54,9 @@ set shiftround                    " round to whole indents
 set shiftwidth=2                  " indent = 2 chars
 set softtabstop=2                 " 2 tab = 2 spaces
 set expandtab                     " tabs are spaces
-set linebreak                     " break lines
+set wrap linebreak nolist         " soft wrap lines
 set breakat=" "                   " where to insert line breaks
-let &showbreak="↪ "             " character to visualize breaks
+let &showbreak="↪ "               " character to visualize breaks
 
 set iskeyword+=-                  " quotes are also keywords, so e.g. vi' works
 
@@ -79,6 +79,8 @@ set wrapscan                      " make search wrap
 set hlsearch                      " highlight search-terms
 set hlsearch!
 
+set formatoptions-=t              " don't hard wrap
+
 " disable all bells
 set noerrorbells
 set visualbell
@@ -86,7 +88,6 @@ set t_vb=
 
 " custom invisibles
 set listchars=tab:▸\ ,eol:¬
-set nolist
 
 " turn backup off (.swp)
 set nobackup
@@ -109,6 +110,3 @@ set splitright splitbelow
 
 " tab labels
 set guitablabel=%{GuiTabLabel()}
-
-" more tips
-" http://www.rayninfo.co.uk/vimtips.html
