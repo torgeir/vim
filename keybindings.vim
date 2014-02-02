@@ -90,6 +90,7 @@ nnoremap <leader>e  :e  <c-r>=expand("%:p:h") . '/'<cr>
 nnoremap <leader>v  :vs <c-r>=expand("%:p:h") . '/'<cr>
 nnoremap <leader>ev :e ~/.vim/.vimrc<cr>
 nnoremap <leader>eg :e ~/.vim/.gvimrc<cr>
+nnoremap <leader>eb :e ~/.vim/bundles.vim<cr>
 nnoremap <leader>ek :e ~/.vim/keybindings.vim<cr>
 nnoremap <leader>ef :e ~/.vim/functions.vim<cr>
 nnoremap <leader>es :e ~/.vim/snippets/<cr>
