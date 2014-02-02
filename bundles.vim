@@ -14,6 +14,7 @@ Bundle "derekwyatt/vim-scala.git"
 Bundle "digitaltoad/vim-jade.git"
 Bundle "wavded/vim-stylus.git"
 Bundle "groenewege/vim-less.git"
+Bundle "ingydotnet/yaml-vim"
 
 " awesome plugins
 Bundle "airblade/vim-gitgutter.git"
