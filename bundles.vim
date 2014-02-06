@@ -54,9 +54,12 @@ Bundle "Townk/vim-autoclose.git"
 Bundle "tsaleh/vim-supertab.git"
 Bundle "tyru/open-browser.vim.git"
 Bundle "torgeir/js-mask.git"
+Bundle "torgeir/vim-cursors.git"
+Bundle "chrisbra/Replay.git"
 Bundle "vim-scripts/TaskList.vim.git"
 Bundle "vim-scripts/YankRing.vim.git"
 Bundle "itchyny/lightline.vim"
+Bundle "benmills/vimux"
 
 " colors
 "ciaranm/inkpot.git

@@ -37,7 +37,7 @@ noremap <silent> <f6> :call CustomFileBrowserToggle()<cr>
 noremap <silent> <leader>nf :NERDTreeFind<cr>
 
 " tasklist
-noremap <leader>l <Plug>TaskList<cr>
+nmap <leader>l <Plug>TaskList<cr>
 
 " rainbow parenthesis and colors
 noremap <leader>R :RainbowParenthesesToggle<cr>
@@ -138,6 +138,18 @@ inoremap <silent> <leader>w <esc>:q<cr>:wincmd p<cr>
 nnoremap <leader>hon :%!xxd<cr>
 nnoremap <leader>hof :%!xxd -r<cr>
 
+" multiple cursors (cursors.vim)
+" nmap to expand <plug>s
+nmap <c-c><c-d> <Plug>CursorsClearMarks
+nmap <c-c><c-h> <Plug>CursorsHighlightMarks
+nmap <c-c><c-k> <Plug>CursorsKillMark
+nmap <c-c><c-l> <Plug>CursorsLogMarks
+nmap <c-c><c-m> <Plug>CursorsPerformCommand
+nmap <c-c><c-n> <Plug>CursorsCycleMarksNext
+nmap <c-c><c-p> <Plug>CursorsCycleMarksPrev
+nmap <c-c><c-x> <Plug>CursorsSetMark
+nmap <c-c><c-w> <Plug>CursorsSetMarksForSearch
+
 " highlight interresting words in pretty colors
 nnoremap <silent> <leader>h1 :call HiInterestingWord(1)<cr>
 nnoremap <silent> <leader>h2 :call HiInterestingWord(2)<cr>
@@ -167,7 +179,7 @@ nnoremap <leader>a: :Tabularize /:\zs<cr>
 vnoremap <leader>a: :Tabularize /:\zs<cr>
 
 " run tests in "tests" screen tab, name the session with c-a:sessionname dione
-nnoremap <silent> <leader>. :call system("screen -S dione -p tests -X stuff 'clear; make browser-test'$'\012'")<cr>
+nnoremap <silent> <leader>. :call system("screen -S mimas -p tests -X stuff 'clear; rake test'$'\012'")<cr>
 
 " sort css properties
 command! SortCSSBraceContents :g#\({\n\)\@<=#.,/}/sort

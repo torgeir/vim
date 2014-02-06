@@ -5,7 +5,7 @@ set guioptions-=m                           " hide menus
 
 if has('mac')
   colorscheme badwolf
-  set guifont=Monaco:h16
+  set guifont=Monaco:h17
   set fuoptions=maxhorz,maxvert             " fullscreen takes up whole screen"
 
   source ~/.vim/keybindings.macvim.vim

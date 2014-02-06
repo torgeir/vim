@@ -99,7 +99,12 @@ set noswapfile
 " improve menu on :e <tab>
 set wildmenu
 set wildmode=list:longest,full
-set wildignore+=.git,node_modules,target
+set wildignore+=.git,.svn
+set wildignore+=node_modules
+set wildignore+=target,classes
+set wildignore+=*.jpg,*.bmp,*.gif,*.png,*.jpeg
+set wildignore+=*.DS_Store
+set wildignore+=*.orig
 
 " dictionary
 set dictionary+=/usr/share/dict/words
