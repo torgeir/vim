@@ -204,3 +204,10 @@ onoremap aN :<c-u>call NumberTextObject(1)<cr>
 xnoremap aN :<c-u>call NumberTextObject(1)<cr>
 onoremap iN :<c-u>call NumberTextObject(1)<cr>
 xnoremap iN :<c-u>call NumberTextObject(1)<cr>
+
+" fast filetypes
+noremap _ht :set ft=html<cr>
+noremap _js :set ft=javascript<cr>
+noremap _ls :set ft=less<cr>
+noremap _cs :set ft=css<cr>
+noremap _vi :set ft=vim<cr>

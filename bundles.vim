@@ -60,6 +60,7 @@ Bundle "vim-scripts/TaskList.vim.git"
 Bundle "vim-scripts/YankRing.vim.git"
 Bundle "itchyny/lightline.vim"
 Bundle "benmills/vimux"
+Bundle "vim-scripts/ShowMarks"
 
 " colors
 "ciaranm/inkpot.git

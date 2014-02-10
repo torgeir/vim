@@ -1,8 +1,8 @@
 augroup vim_filetype
   autocmd!
   autocmd BufNewFile,BufRead *.vim set filetype=vim
-  autocmd BufNewFile,BufRead $MYVIMRC set filetype=vim
-  autocmd BufNewFile,BufRead $MYGVIMRC set filetype=vim
+  autocmd BufNewFile,BufRead .vimrc set filetype=vim
+  autocmd BufNewFile,BufRead .gvimrc set filetype=vim
 augroup END
 
 augroup vimrc_and_gvimrc_reload
