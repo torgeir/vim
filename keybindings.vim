@@ -26,6 +26,10 @@ vnoremap > >gv2l
 vnoremap <c-h> <gv2h
 vnoremap <c-l> >gv2l
 
+" move line(s) of text
+vnoremap <silent> <c-j> :m'>+<cr>`<my`>mzgv`yo`z
+vnoremap <silent> <c-k> :m'<-2<cr>`>my`<mzgv`yo`z
+
 " toggles
 noremap <silent> <f2> :YRShow<cr>
 noremap <silent> <f3> :GundoToggle<cr>
@@ -96,12 +100,6 @@ nnoremap <leader>ef :e ~/.vim/functions.vim<cr>
 nnoremap <leader>es :e ~/.vim/snippets/<cr>
 nnoremap <leader>ed :e ~/Dropbox/dotfiles/<cr>
 nnoremap <leader>x :exec getline(".")<cr>
-
-" move line(s) of text
-nnoremap <silent> <leader>j mz:m+<cr>`z==
-nnoremap <silent> <leader>k mz:m-2<cr>`z==
-vnoremap <silent> <leader>j :m'>+<cr>`<my`>mzgv`yo`z
-vnoremap <silent> <leader>k :m'<-2<cr>`>my`<mzgv`yo`z
 
 " vim-fugitive
 vnoremap <leader>gb :<c-u>!git blame <c-r>=expand("%:p") <cr> \| sed -n <c-r>=line("'<") <cr>,<c-r>=line("'>") <cr>p <cr>
@@ -179,7 +177,7 @@ nnoremap <leader>a: :Tabularize /:\zs<cr>
 vnoremap <leader>a: :Tabularize /:\zs<cr>
 
 " run tests in "tests" screen tab, name the session with c-a:sessionname dione
-nnoremap <silent> <leader>. :call system("screen -S mimas -p tests -X stuff 'clear; rake test'$'\012'")<cr>
+nnoremap <silent> <leader>. :call system("screen -S mimas -p tests -X stuff 'clear; node %'$'\012'")<cr>
 
 " sort css properties
 command! SortCSSBraceContents :g#\({\n\)\@<=#.,/}/sort

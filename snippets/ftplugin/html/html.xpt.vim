@@ -5,3 +5,11 @@ XPT minhtml
 <meta charset=utf-8>
 <title>`title^</title>
 `cursor^
+
+XPT scriptsrc
+<script src="`cursor^"></script>
+
+XPT script
+<script>
+  `cursor^
+</script>
