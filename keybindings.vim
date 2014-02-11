@@ -177,7 +177,7 @@ nnoremap <leader>a: :Tabularize /:\zs<cr>
 vnoremap <leader>a: :Tabularize /:\zs<cr>
 
 " run tests in "tests" screen tab, name the session with c-a:sessionname dione
-nnoremap <silent> <leader>. :call system("screen -S mimas -p tests -X stuff 'clear; node %'$'\012'")<cr>
+" nnoremap <silent> <leader>. :call system("screen -S mimas -p tests -X stuff 'clear; node %'$'\012'")<cr>
 
 " sort css properties
 command! SortCSSBraceContents :g#\({\n\)\@<=#.,/}/sort
