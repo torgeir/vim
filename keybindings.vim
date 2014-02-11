@@ -82,6 +82,8 @@ inoremap <cr> <c-r>=ExpandBlock(["[]", "{}"])<cr>
 cnoremap <c-a> <home>
 cnoremap <c-e> <end>
 cnoremap <c-y> <down>
+cnoremap <c-h> <left>
+cnoremap <c-l> <right>
 
 " general leader bindings
 nnoremap <leader>n  "zyiw:exe "!npm install " . @z<cr>
