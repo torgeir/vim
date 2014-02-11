@@ -81,7 +81,6 @@ inoremap <cr> <c-r>=ExpandBlock(["[]", "{}"])<cr>
 " bash like command line keys
 cnoremap <c-a> <home>
 cnoremap <c-e> <end>
-cnoremap <c-k> <c-u>
 cnoremap <c-y> <down>
 
 " general leader bindings

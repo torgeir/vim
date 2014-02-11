@@ -65,6 +65,7 @@ Bundle "vim-scripts/YankRing.vim.git"
 Bundle "itchyny/lightline.vim"
 Bundle "benmills/vimux"
 Bundle "mattn/emmet-vim"
+Bundle "mhinz/vim-startify"
 
 "Bundle "FredKSchott/CoVim"
 
