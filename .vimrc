@@ -26,7 +26,7 @@ source ~/.vim/config/tasklist.vim
 source ~/.vim/config/trailingwhitespace.vim
 source ~/.vim/config/unstack.vim
 source ~/.vim/config/xptemplate.vim
-source ~/.vim/config/yankring.vim
+source ~/.vim/config/yankstack.vim
 source ~/.vim/config/tagbar.vim
 source ~/.vim/config/statusline.vim
 
