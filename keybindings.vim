@@ -208,6 +208,9 @@ xnoremap iN :<c-u>call NumberTextObject(1)<cr>
 " fast filetypes
 noremap _ht :set ft=html<cr>
 noremap _js :set ft=javascript<cr>
-noremap _ls :set ft=less<cr>
+noremap _le :set ft=less<cr>
 noremap _cs :set ft=css<cr>
 noremap _vi :set ft=vim<cr>
+
+" show highlight group under cursor
+noremap <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<' . synIDattr(synID(line("."),col("."),0),"name") . "> lo<" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>

@@ -36,7 +36,7 @@ set tags=./tags,tags;/
 """"""""""""""""""""""""""""""""""""""""
 " settings
 """"""""""""""""""""""""""""""""""""""""
-colorscheme badwolf
+colorscheme muon
 syntax on                         " highlight
 set backspace=indent,eol,start    " intuitive backspacing in insert mode
 set encoding=utf-8                " encoding

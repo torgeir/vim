@@ -14,6 +14,9 @@ Bundle "derekwyatt/vim-scala.git"
 Bundle "digitaltoad/vim-jade.git"
 Bundle "wavded/vim-stylus.git"
 Bundle "groenewege/vim-less.git"
+Bundle "torgeir/vim-css-color"
+Bundle "hail2u/vim-css3-syntax"
+Bundle "kien/rainbow_parentheses.vim"
 Bundle "ingydotnet/yaml-vim"
 
 " awesome plugins
@@ -21,13 +24,14 @@ Bundle "airblade/vim-gitgutter.git"
 Bundle "drmingdrmer/xptemplate.git"
 Bundle "godlygeek/tabular.git"
 Bundle "jpalardy/vim-slime"
+Bundle "vim-scripts/JSON.vim"
 Bundle "junegunn/goyo.vim.git"
 Bundle "kakkyz81/evervim.git"
 Bundle "kien/ctrlp.vim.git"
 Bundle "endel/ctrlp-filetype.vim.git"
 Bundle "mattn/ctrlp-hackernews.git"
 Bundle "mattn/ctrlp-register.git"
-"Bundle "kien/rainbow_parentheses.vim"
+Bundle "kien/rainbow_parentheses.vim"
 Bundle "MarcWeber/vim-addon-mw-utils.git"
 Bundle "majutsushi/tagbar.git"
 Bundle "maksimr/vim-jsbeautify.git"
@@ -40,7 +44,6 @@ Bundle "rbgrouleff/bclose.vim.git"
 Bundle "scrooloose/nerdtree.git"
 Bundle "scrooloose/syntastic.git"
 Bundle "sjl/gundo.vim.git"
-Bundle "skammer/vim-css-color"
 Bundle "terryma/vim-expand-region.git"
 Bundle "tomtom/tlib_vim.git"
 Bundle "tpope/vim-fugitive.git"
@@ -54,9 +57,9 @@ Bundle "Townk/vim-autoclose.git"
 Bundle "tsaleh/vim-supertab.git"
 Bundle "tyru/open-browser.vim.git"
 Bundle "torgeir/js-mask.git"
-"Bundle "torgeir/vim-cursors.git"
+Bundle "torgeir/vim-cursors.git"
 Bundle "terryma/vim-multiple-cursors"
-"Bundle "chrisbra/Replay.git"
+Bundle "chrisbra/Replay.git"
 Bundle "vim-scripts/TaskList.vim.git"
 Bundle "vim-scripts/YankRing.vim.git"
 Bundle "itchyny/lightline.vim"
@@ -68,13 +71,13 @@ Bundle "mattn/emmet-vim"
 " colors
 "ciaranm/inkpot.git
 Bundle "gregsexton/Muon"
-"Bundle "guns/xterm-color-table.vim"
+Bundle "guns/xterm-color-table.vim"
 
 " other
 "tpope/vim-classpath.git
 "tpope/vim-fireplace.git
 "duff/vim-scratch.git
-"greyblake/vim-preview.git
+Bundle "greyblake/vim-preview.git"
 "guns/vim-clojure-static.git
 "vim-scripts/Tail-Bundle.git
 "zerowidth/vim-copy-as-rtf.git
