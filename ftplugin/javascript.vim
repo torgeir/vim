@@ -2,4 +2,4 @@
 setlocal tags+=~/.vim/tags/nodejs
 
 " create tags
-silent! !ctags %
+" silent! !ctags %
