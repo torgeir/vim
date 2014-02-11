@@ -36,7 +36,7 @@ set tags=./tags,tags;/
 """"""""""""""""""""""""""""""""""""""""
 " settings
 """"""""""""""""""""""""""""""""""""""""
-colorscheme muon
+colorscheme badwolf
 syntax on                         " highlight
 set backspace=indent,eol,start    " intuitive backspacing in insert mode
 set encoding=utf-8                " encoding
@@ -102,6 +102,7 @@ set wildmode=list:longest,full
 set wildignore+=.git,.svn
 set wildignore+=node_modules
 set wildignore+=target,classes
+set wildignore+=www
 set wildignore+=*.jpg,*.bmp,*.gif,*.png,*.jpeg
 set wildignore+=*.DS_Store
 set wildignore+=*.orig

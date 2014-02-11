@@ -14,7 +14,6 @@ if has('mac')
   "set cursorline
 
 elseif has("unix")
-  set background=light
   set guifont=Inconsolata\ 21
   if &lines < 30 " adjust minimum size on ubuntu
     set lines=30 columns=100
