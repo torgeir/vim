@@ -55,15 +55,21 @@ Bundle "tsaleh/vim-supertab.git"
 Bundle "tyru/open-browser.vim.git"
 Bundle "torgeir/js-mask.git"
 Bundle "torgeir/vim-cursors.git"
+Bundle "terryma/vim-multiple-cursors"
+Bundle "vim-scripts/JSON.vim"
 Bundle "chrisbra/Replay.git"
 Bundle "vim-scripts/TaskList.vim.git"
 Bundle "vim-scripts/YankRing.vim.git"
 Bundle "itchyny/lightline.vim"
 Bundle "benmills/vimux"
-Bundle "vim-scripts/ShowMarks"
+Bundle "mattn/emmet-vim"
+
+"Bundle "FredKSchott/CoVim"
 
 " colors
 "ciaranm/inkpot.git
+Bundle "gregsexton/Muon"
+Bundle "guns/xterm-color-table.vim"
 
 " other
 "tpope/vim-classpath.git

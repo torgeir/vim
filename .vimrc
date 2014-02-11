@@ -36,7 +36,7 @@ set tags=./tags,tags;/
 """"""""""""""""""""""""""""""""""""""""
 " settings
 """"""""""""""""""""""""""""""""""""""""
-colorscheme badwolf
+colorscheme muon
 syntax on                         " highlight
 set backspace=indent,eol,start    " intuitive backspacing in insert mode
 set encoding=utf-8                " encoding
@@ -72,7 +72,7 @@ set showmatch                     " show matching chars (,{,..
 set matchtime=3                   " blink matching chars for .x seconds
 set matchpairs+=<:>               " add < > to matched pairs
 runtime macros/matchit.vim        " make % match if/else/..
-runtime ftplugin/man.vim          " enable viewing manpages with :Man <smtn>
+" runtime ftplugin/man.vim          " enable viewing manpages with :Man <smtn>
 
 set ignorecase                    " use smart case searching, only search for \
 set smartcase                     " case sensitive words if search has capital

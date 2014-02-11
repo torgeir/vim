@@ -4,7 +4,6 @@ set guioptions-=T                           " hide toolbar
 set guioptions-=m                           " hide menus
 
 if has('mac')
-  colorscheme badwolf
   set guifont=Monaco:h17
   set fuoptions=maxhorz,maxvert             " fullscreen takes up whole screen"
 
@@ -15,7 +14,6 @@ if has('mac')
   "set cursorline
 
 elseif has("unix")
-  colorscheme solarized
   set background=light
   set guifont=Inconsolata\ 21
   if &lines < 30 " adjust minimum size on ubuntu
