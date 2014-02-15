@@ -6,7 +6,7 @@ XPT minhtml
 <title>`title^</title>
 `cursor^
 
-XPT scriptsrc
+XPT scripts
 <script src="`cursor^"></script>
 
 XPT script
@@ -15,6 +15,9 @@ XPT script
 </script>
 
 XPT scriptt
+<script src="//rawgithub.com/es-shims/es5-shim/master/es5-shim.js"></script>
+<script src="//rawgithub.com/es-shims/es5-shim/master/es5-sham.js"></script>
+
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 <script src="//cdnjs.cloudflare.com/ajax/libs/react/0.8.0/react.min.js"></script>

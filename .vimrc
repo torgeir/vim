@@ -23,7 +23,6 @@ source ~/.vim/config/filebrowser.vim
 source ~/.vim/config/multicursor.vim
 source ~/.vim/config/omni.vim
 source ~/.vim/config/tasklist.vim
-"source ~/.vim/config/trailingwhitespace.vim
 source ~/.vim/config/unstack.vim
 source ~/.vim/config/xptemplate.vim
 source ~/.vim/config/yankstack.vim
@@ -124,3 +123,5 @@ autocmd BufReadPost *
   \ if line("'\"") > 0 && line("'\"") <= line("$") |
   \   exe "normal g`\"" |
   \ endif
+
+source ~/.vim/config/trailingwhitespace.vim
