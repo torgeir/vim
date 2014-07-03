@@ -11,15 +11,6 @@ nnoremap <c-h> :he <c-r><c-w><cr>
 nnoremap j gj
 nnoremap k gk
 
-" tab navigation
-for i in [1,2,3,4,5,6,7,8,9]
-  " os x
-  exec "nnoremap <d-" . i . "> :silent :normal " . i . "gt<cr>"
-
-  " general
-  exec "nnoremap <leader>" . i . " :silent :normal " . i . "gt<cr>"
-endfor
-
 " don't exit visual mode when shifting
 vnoremap < <gv2h
 vnoremap > >gv2l
@@ -122,7 +113,7 @@ nnoremap <leader>glf :Glog -20 -- %<cr>
 " open folds
 nnoremap <space> za
 
-" clean up whitespace file wide, sets mark a initially, and jumps back
+" clean up non-escaped whitespace file wide, sets mark a initially, and jumps back, removes wierd os x spaces
 nnoremap <leader>W mw:%s/\(\\\)\@<!\s*$//e<cr>:%s/ / /e<cr>:let @/=''<cr>`w
 
 " leader-s save
@@ -172,13 +163,15 @@ nnoremap <leader>gtv :call GoToTest('vs')<cr>
 nnoremap <leader>gts :call GoToTest('sp')<cr>
 
 " align lines on = or :
-nnoremap <leader>a= :Tabularize /=<cr>
-vnoremap <leader>a= :Tabularize /=<cr>
-nnoremap <leader>a: :Tabularize /:\zs<cr>
-vnoremap <leader>a: :Tabularize /:\zs<cr>
+nnoremap a= :Tabularize /=<cr>
+vnoremap a= :Tabularize /=<cr>
+nnoremap a: :Tabularize /:\zs<cr>
+vnoremap a: :Tabularize /:\zs<cr>
 
 " run tests in "tests" screen tab, name the session with c-a:sessionname dione
 " nnoremap <silent> <leader>. :call system("screen -S mimas -p tests -X stuff 'clear; node %'$'\012'")<cr>
+" nnoremap <silent> ,. :VimuxRunLastCommand<cr>
+nnoremap <silent> <leader>. :execute ":Dispatch echo " . shellescape(join(getline(1, "$"), "\n")) . " \| ~/.sweetjs-macros/load-macros.js"<cr>
 
 " sort css properties
 command! SortCSSBraceContents :g#\({\n\)\@<=#.,/}/sort
@@ -212,6 +205,14 @@ noremap _js :set ft=javascript<cr>
 noremap _le :set ft=less<cr>
 noremap _cs :set ft=css<cr>
 noremap _vi :set ft=vim<cr>
+noremap _md :set ft=markdown<cr>
+
+" extra unimpaired like mappings
+noremap ]s /---<cr>
+noremap [s ?---<cr>
 
 " show highlight group under cursor
 noremap <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<' . synIDattr(synID(line("."),col("."),0),"name") . "> lo<" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
+
+" Allow saving of files as sudo when I forgot to start vim using sudo.
+cmap w!! w !sudo tee > /dev/null %

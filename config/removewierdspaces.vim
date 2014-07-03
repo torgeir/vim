@@ -1,6 +1,6 @@
 augroup show_whitespaces
   autocmd!
-  autocmd BufEnter * call NotifyWhitespace()
+  autocmd BufEnter    * call NotifyWhitespace()
   autocmd InsertEnter * call ClearNotifiedWhitespace()
   autocmd InsertLeave * call NotifyWhitespace()
 augroup END

@@ -27,6 +27,7 @@ source ~/.vim/config/unstack.vim
 source ~/.vim/config/xptemplate.vim
 source ~/.vim/config/yankstack.vim
 source ~/.vim/config/tagbar.vim
+source ~/.vim/config/syntastic.vim
 source ~/.vim/config/statusline.vim
 
 " tags - from driectory of current file, then cwd, then upwards to /
@@ -101,7 +102,7 @@ set wildmode=list:longest,full
 set wildignore+=.git,.svn
 set wildignore+=node_modules
 set wildignore+=target,classes
-set wildignore+=www
+set wildignore+=dist
 set wildignore+=*.jpg,*.bmp,*.gif,*.png,*.jpeg
 set wildignore+=*.DS_Store
 set wildignore+=*.orig
@@ -118,10 +119,14 @@ set splitright splitbelow
 " tab labels
 set guitablabel=%{GuiTabLabel()}
 
+" wrap lines in diff
+autocmd FilterWritePre * if &diff | setlocal wrap< | endif
+
 " restore cursor position
 autocmd BufReadPost *
   \ if line("'\"") > 0 && line("'\"") <= line("$") |
   \   exe "normal g`\"" |
   \ endif
 
-source ~/.vim/config/trailingwhitespace.vim
+" needs to happen last
+source ~/.vim/config/removewierdspaces.vim

@@ -32,13 +32,18 @@ endfunction
 
 " go to tests for file
 function! GoToTest(split)
-  exe "normal \<esc>:" . a:split . " test/**/*/" . expand('%:t:r') . '-test.' . expand('%:e') . "\<cr>"
+  exe "normal \<esc>:" . a:split . " test/**/" . expand('%:t:r') . '-test.' . expand('%:e') . "\<cr>"
 endfunction
 
 " If the parameter is a directory, cd into it
 function! CdIfDirectory(directory)
   let explicitDirectory = isdirectory(a:directory)
-  let directory = explicitDirectory || empty(a:directory)
+
+  if (empty(a:directory))
+    let directory = "."
+  else
+    let directory = explicitDirectory
+  endif
 
   if directory
     exe "cd " . fnameescape(a:directory)
@@ -85,7 +90,6 @@ endfunction
 " custom nerdtreetoggle ensures only ONE nerd_tree window
 function! CustomFileBrowserToggle()
   if has('gui_running') && has("mac")
-    "exe "normal \<esc>:maca toggleFileBrowser:\<cr>"
     exe "normal \<esc>:NERDTreeToggle \| :silent NERDTreeMirror \<cr>"
   else
     exe "normal \<esc>:NERDTreeToggle \| :silent NERDTreeMirror \<cr>"
@@ -189,6 +193,12 @@ function! SynStack()
 endfunc
 
 " highlight interresting words in code
+hi def InterestingWord1 guifg=#000000 ctermfg=16 guibg=#ffa724 ctermbg=214
+hi def InterestingWord2 guifg=#000000 ctermfg=16 guibg=#aeee00 ctermbg=154
+hi def InterestingWord3 guifg=#000000 ctermfg=16 guibg=#8cffba ctermbg=121
+hi def InterestingWord4 guifg=#000000 ctermfg=16 guibg=#b88853 ctermbg=137
+hi def InterestingWord5 guifg=#000000 ctermfg=16 guibg=#ff9eb8 ctermbg=211
+hi def InterestingWord6 guifg=#000000 ctermfg=16 guibg=#ff2c4b ctermbg=195
 let s:matchids = []
 function! HiInterestingWord(n)
     " Save our location.
