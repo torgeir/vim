@@ -162,16 +162,20 @@ nnoremap <leader>gte :call GoToTest('e')<cr>
 nnoremap <leader>gtv :call GoToTest('vs')<cr>
 nnoremap <leader>gts :call GoToTest('sp')<cr>
 
+" start of line, multiple no =, set mark, followed by =
+AddTabularPattern! before_first_equals /\v^[^=]+\zs\=/l1
+AddTabularPattern! after_color /:\zs
+
 " align lines on = or :
-nnoremap a= :Tabularize /=<cr>
-vnoremap a= :Tabularize /=<cr>
-nnoremap a: :Tabularize /:\zs<cr>
-vnoremap a: :Tabularize /:\zs<cr>
+nnoremap a= :Tabularize before_first_equals<cr>
+vnoremap a= :Tabularize before_first_equals<cr>
+nnoremap a: :Tabularize after_colon<cr>
+vnoremap a: :Tabularize after_colon<cr>
 
 " run tests in "tests" screen tab, name the session with c-a:sessionname dione
 " nnoremap <silent> <leader>. :call system("screen -S mimas -p tests -X stuff 'clear; node %'$'\012'")<cr>
 " nnoremap <silent> ,. :VimuxRunLastCommand<cr>
-nnoremap <silent> <leader>. :execute ":Dispatch echo " . shellescape(join(getline(1, "$"), "\n")) . " \| ~/.sweetjs-macros/load-macros.js"<cr>
+nnoremap <silent> <leader>. :execute ":Dispatch echo " . shellescape(join(getline(1, "$"), " ")) . " \| ~/.sweetjs-macros/load-macros.js"<cr>
 
 " sort css properties
 command! SortCSSBraceContents :g#\({\n\)\@<=#.,/}/sort
