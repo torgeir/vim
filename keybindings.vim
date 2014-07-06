@@ -7,10 +7,6 @@ inoremap jk <esc>l
 " look up :help <word-under-cursor>
 nnoremap <c-h> :he <c-r><c-w><cr>
 
-" sane line movements
-nnoremap j gj
-nnoremap k gk
-
 " don't exit visual mode when shifting
 vnoremap < <gv2h
 vnoremap > >gv2l
@@ -78,6 +74,7 @@ cnoremap <c-l> <right>
 
 " general leader bindings
 nnoremap <leader>n  "zyiw:exe "!npm install " . @z<cr>
+nnoremap <leader>js :call RunLinesWithJsMacros(getline(1, "$"), "")<cr>
 nnoremap <leader>nb :! npm install<cr>
 nnoremap <leader>i  :set list!<cr>
 
@@ -139,6 +136,7 @@ nmap <c-c><c-n> <Plug>CursorsCycleMarksNext
 nmap <c-c><c-p> <Plug>CursorsCycleMarksPrev
 nmap <c-c><c-x> <Plug>CursorsSetMark
 nmap <c-c><c-w> <Plug>CursorsSetMarksForSearch
+nmap <c-c><c-g> <Plug>CursorsSetMarkForNextSearch
 
 " highlight interresting words in pretty colors
 nnoremap <silent> <leader>h1 :call HiInterestingWord(1)<cr>
@@ -160,22 +158,14 @@ nnoremap <leader>r :%s/\<<c-r><c-w>\>//gc<left><left><left>
 nnoremap <leader>gtt :call GoToTest('tabe')<cr>
 nnoremap <leader>gte :call GoToTest('e')<cr>
 nnoremap <leader>gtv :call GoToTest('vs')<cr>
-nnoremap <leader>gts :call GoToTest('sp')<cr>
+nnoremap <leader>gts :call gototest('sp')<cr>
 
-" start of line, multiple no =, set mark, followed by =
-AddTabularPattern! before_first_equals /\v^[^=]+\zs\=/l1
-AddTabularPattern! after_color /:\zs
-
-" align lines on = or :
-nnoremap a= :Tabularize before_first_equals<cr>
-vnoremap a= :Tabularize before_first_equals<cr>
-nnoremap a: :Tabularize after_colon<cr>
-vnoremap a: :Tabularize after_colon<cr>
+" align paragraph by entered char
+nnoremap gl :call AlignOnFirstChar()<cr>
 
 " run tests in "tests" screen tab, name the session with c-a:sessionname dione
 " nnoremap <silent> <leader>. :call system("screen -S mimas -p tests -X stuff 'clear; node %'$'\012'")<cr>
 " nnoremap <silent> ,. :VimuxRunLastCommand<cr>
-nnoremap <silent> <leader>. :execute ":Dispatch echo " . shellescape(join(getline(1, "$"), " ")) . " \| ~/.sweetjs-macros/load-macros.js"<cr>
 
 " sort css properties
 command! SortCSSBraceContents :g#\({\n\)\@<=#.,/}/sort

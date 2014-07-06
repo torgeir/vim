@@ -231,14 +231,87 @@ endfunction
 command! CloseHiddenBuffers call s:CloseHiddenBuffers()
 function! s:CloseHiddenBuffers()
   let open_buffers = []
- 
+
   for i in range(tabpagenr('$'))
     call extend(open_buffers, tabpagebuflist(i + 1))
   endfor
- 
+
   for num in range(1, bufnr("$") + 1)
     if buflisted(num) && index(open_buffers, num) == -1
       exec "bdelete ".num
     endif
   endfor
+endfunction
+
+" Run text object with js macros
+" function! RunJs(vt, ...)
+"   let s = InputChar()
+"   if s =~ "\<esc>" || s =~ "\<c-c>"
+"     return
+"   endif
+"
+"   " get start line and char
+"   let [sl, sc] = getpos(a:0 ? "'<" : "'[")[1:2]
+"   " get end line and char
+"   let [el, ec] = getpos(a:0 ? "'>" : "']")[1:2]
+"   if a:vt == 'line' || a:vt == 'V'
+"     let currentbuffer = bufname("%")
+"     let contentlines = getbufline(currentbuffer, sl, el)
+"     call RunLinesWithJsMacros(contentlines, s)
+"   else
+"     echo "no such mode for vt"
+"   endif
+" endfunction
+
+function! RunLinesWithJsMacros(lines, input)
+  let showCompiled = 0
+  if (a:input == 'l')
+    let showCompiled = 1
+  endif
+
+  execute ":Dispatch "
+        \ . "echo "
+        \ . shellescape(join(a:lines, "\n"))
+        \ . " \| ~/.sweetjs-macros/load-macros.js "
+        \ . showCompiled
+endfunction
+
+function! AlignOnFirstChar()
+
+  let char = InputChar()
+  if char =~ "\<esc>" || char =~ "\<c-c>"
+    return
+  endif
+
+  let escapeChars = ['|']
+  let escape = ""
+  if (index(escapeChars, char) != -1)
+    let escape = "\\"
+  endif
+
+  let beforeChars = ['=', '|']
+  if (index(beforeChars, char) != -1)
+    " before
+    let pos = "\\zs".escape.char
+  else
+    " after
+    let pos = escape.char."\\zs"
+  endif
+
+  let nopadChars = ['|']
+  let padding = "1"
+  if (index(nopadChars, char) != -1)
+    let padding = "0"
+  endif
+
+  " start of line, multiple no char, set mark, followed by char=
+  " e.g. before_first_equals /\v^[^=]+\zs\=/l1
+  let cmd = "Tabularize /\\v^[^".escape.char."]+".pos."/l".padding
+  execute cmd
+endfunction
+
+" get the typed char
+function! InputChar()
+  let c = getchar()
+  return type(c) == type(0) ? nr2char(c) : c
 endfunction
