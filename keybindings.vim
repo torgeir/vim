@@ -73,10 +73,9 @@ cnoremap <c-h> <left>
 cnoremap <c-l> <right>
 
 " general leader bindings
-nnoremap <leader>n  "zyiw:exe "!npm install " . @z<cr>
+nnoremap <leader>jn  "zyiw:exe "!npm install " . @z<cr>
 nnoremap <leader>je :call RunLinesWithJsMacros(getline(1, "$"), "l")<cr>
 nnoremap <leader>js :call RunLinesWithJsMacros(getline(1, "$"), "")<cr>
-nnoremap <leader>nb :! npm install<cr>
 nnoremap <leader>i  :set list!<cr>
 
 " vim edits
@@ -103,6 +102,8 @@ nnoremap ]h :GitGutterNextHunk<cr>
 nnoremap [h :GitGutterPrevHunk<cr>
 nnoremap <leader>ghs :GitGutterStageHunk<cr>
 nnoremap <leader>ghr :GitGutterRevertHunk<cr>
+nnoremap <leader>ghp :GitGutterPrevHunk<cr>
+nnoremap <leader>ghn :GitGutterNextHunk<cr>
 nnoremap <leader>gu  :GitGutterAll<cr>
 nnoremap <leader>ge  :Gedit<cr>
 nnoremap <leader>gl :Glog -20 --<cr>
