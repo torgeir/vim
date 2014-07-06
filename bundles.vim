@@ -81,7 +81,7 @@ Bundle "guns/xterm-color-table.vim"
 "tpope/vim-classpath.git
 "tpope/vim-fireplace.git
 "duff/vim-scratch.git
-Bundle "greyblake/vim-preview.git"
+" Bundle "greyblake/vim-preview.git"
 "guns/vim-clojure-static.git
 "vim-scripts/Tail-Bundle.git
 "zerowidth/vim-copy-as-rtf.git
