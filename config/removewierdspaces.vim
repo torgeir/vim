@@ -9,6 +9,7 @@ augroup END
 "   should not show in red\ 
 "   should show in red 
 
+let b:funky_whitespace_matches = []
 function! NotifyWhitespace()
   let b:funky_whitespace_matches = []
 
