@@ -8,8 +8,8 @@ augroup END
 augroup vimrc_and_gvimrc_reload
   autocmd!
   if has("gui_running")
-    autocmd BufWritePost .*imrc,*.vim so $MYVIMRC | so $MYGVIMRC
+    autocmd BufWritePost .*imrc,*.vim so $MYVIMRC | so $MYGVIMRC | call lightline#init()
   else
-    autocmd BufWritePost .vimrc,*.vim so $MYVIMRC
+    autocmd BufWritePost .vimrc,*.vim so $MYVIMRC | call lightline#init()
   endif
 augroup END

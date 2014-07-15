@@ -20,6 +20,7 @@ endf
 
 " ctrlp
 let g:ctrlp_map = '<leader>t'
+noremap <silent> <leader>T :CtrlPClearAllCaches<cr>
 noremap <silent> <leader>b :CtrlPBuffer<cr>
 
 " extension mappings

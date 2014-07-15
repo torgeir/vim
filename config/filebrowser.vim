@@ -1,5 +1,5 @@
 " to the right
-let g:NERDTreeWinPos = "right"
+let g:NERDTreeWinPos = "left"
 
 " update CWD
 let NERDTreeChDirMode = 2

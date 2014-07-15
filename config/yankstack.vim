@@ -1,3 +1,4 @@
+call yankstack#setup()
 let g:yankstack_map_keys = 0
 
 " work like yankring

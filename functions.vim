@@ -269,11 +269,12 @@ function! RunLinesWithJsMacros(lines, input)
     let showCompiled = 1
   endif
 
-  execute ":Dispatch "
-        \ . "echo "
-        \ . shellescape(join(a:lines, "\n"))
-        \ . " \| ~/.sweetjs-macros/load-macros.js "
-        \ . showCompiled
+  let code = shellescape(join(a:lines, "\n"))
+
+  " write to tmp file
+  execute "w ~/tmp/js-macro-from-vim-buffer.js"
+  let command = ":Dispatch ~/.sweetjs-macros/load-macros.js " . showCompiled
+  execute command
 endfunction
 
 function! AlignOnFirstChar()
