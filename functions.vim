@@ -1,35 +1,3 @@
-" Extract variable refactoring
-function! Extract_variable()
-  let name = input('Enter variable name: ')
-  exe 'normal gv'
-  exe 'normal c' . name
-  exe 'normal Ovar ' . name . ' = ;'
-  exe 'normal P'
-endfunction
-
-" Extract variable refactoring
-function! Inline_variable()
-  exe 'normal \<esc>'
-  let name = expand('<cword>')
-  exe 'normal k$'
-  " go to end of previous line
-  call search('\<' . name . '\>', 'b')
-  " step over 'var variable = '
-  exe 'normal 2f w'
-  " select everything to ;
-  exe 'normal vt;'
-  " delete to register k
-  exe 'normal "kd'
-  " delete line
-  exe 'normal dd'
-  " move back to variable
-  call search(name)
-  " select the variable
-  exe 'normal viw'
-  " replace it with the contents from register k
-  exe 'normal "kp'
-endfunction
-
 " go to tests for file
 function! GoToTest(split)
   exe "normal \<esc>:" . a:split . " test/**/" . expand('%:t:r') . '-test.' . expand('%:e') . "\<cr>"
@@ -94,24 +62,6 @@ function! CustomFileBrowserToggle()
   else
     exe "normal \<esc>:NERDTreeToggle \| :silent NERDTreeMirror \<cr>"
   endif
-endfunction
-
-" expands a block on enter inside
-function! ExpandBlock(blocks)
-  let col = col('.') - 1
-  let charBeforeCol = getline('.')[col-1]
-  let charAtCol = getline('.')[col]
-
-  for block in a:blocks
-    let openingChar = block[0]
-    let closingChar = block[1]
-
-    if openingChar == charBeforeCol && closingChar == charAtCol
-      return "\<del>\<cr>" . closingChar . "\<esc>O"
-    endif
-  endfor
-
-  return "\<cr>"
 endfunction
 
 " shows +, number of windows, and file name in each tab
@@ -275,40 +225,6 @@ function! RunLinesWithJsMacros(lines, input)
   execute "w! ~/tmp/js-macro-from-vim-buffer.js"
   let command = ":Dispatch ~/.sweetjs-macros/load-macros.js " . showCompiled
   execute command
-endfunction
-
-function! AlignOnFirstChar()
-
-  let char = InputChar()
-  if char =~ "\<esc>" || char =~ "\<c-c>"
-    return
-  endif
-
-  let escapeChars = ['|']
-  let escape = ""
-  if (index(escapeChars, char) != -1)
-    let escape = "\\"
-  endif
-
-  let beforeChars = ['=', '|']
-  if (index(beforeChars, char) != -1)
-    " before
-    let pos = "\\zs".escape.char
-  else
-    " after
-    let pos = escape.char."\\zs"
-  endif
-
-  let nopadChars = ['|']
-  let padding = "1"
-  if (index(nopadChars, char) != -1)
-    let padding = "0"
-  endif
-
-  " start of line, multiple no char, set mark, followed by char=
-  " e.g. before_first_equals /\v^[^=]+\zs\=/l1
-  let cmd = "Tabularize /\\v^[^".escape.char."]+".pos."/l".padding
-  execute cmd
 endfunction
 
 " get the typed char

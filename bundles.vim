@@ -1,88 +1,87 @@
-Bundle "pangloss/vim-javascript.git"
-" Bundle "vim-scripts/nginx.vim.git"
-" Bundle "jondistad/vimclojure.git"
-" Bundle "vim-scripts/applescript.vim.git"
-" Bundle "kchmck/vim-coffee-script.git"
-" Bundle "davidbalbert/vim-io.git"
-Bundle "nono/vim-handlebars.git"
-Bundle "mustache/vim-mustache-handlebars"
-Bundle "leafgarland/typescript-vim.git"
-Bundle "mmalecki/vim-node.js.git"
-Bundle "hallison/vim-markdown.git"
-Bundle "ajf/puppet-vim.git"
-" Bundle "derekwyatt/vim-scala.git"
-Bundle "digitaltoad/vim-jade.git"
-" Bundle "wavded/vim-stylus.git"
-Bundle "groenewege/vim-less.git"
-Bundle "ap/vim-css-color"
-Bundle "hail2u/vim-css3-syntax"
-Bundle "kien/rainbow_parentheses.vim"
-" Bundle "ingydotnet/yaml-vim"
-Bundle "vim-scripts/JSON.vim"
+Plugin 'pangloss/vim-javascript'
+" Plugin 'vim-scripts/nginx.vim'
+" Plugin 'jondistad/vimclojure'
+" Plugin 'vim-scripts/applescript.vim'
+" Plugin 'kchmck/vim-coffee-script'
+" Plugin 'davidbalbert/vim-io'
+Plugin 'nono/vim-handlebars'
+Plugin 'mustache/vim-mustache-handlebars'
+Plugin 'leafgarland/typescript-vim'
+Plugin 'mmalecki/vim-node.js'
+Plugin 'hallison/vim-markdown'
+Plugin 'ajf/puppet-vim'
+" Plugin 'derekwyatt/vim-scala'
+Plugin 'digitaltoad/vim-jade'
+" Plugin 'wavded/vim-stylus'
+Plugin 'groenewege/vim-less'
+Plugin 'ap/vim-css-color'
+Plugin 'hail2u/vim-css3-syntax'
+Plugin 'kien/rainbow_parentheses.vim'
+" Plugin 'ingydotnet/yaml-vim'
+Plugin 'vim-scripts/JSON.vim'
 
 " awesome plugins
-Bundle "airblade/vim-gitgutter.git"
-Bundle "drmingdrmer/xptemplate.git"
-Bundle "godlygeek/tabular.git"
-" Bundle "junegunn/goyo.vim.git"
-Bundle "kakkyz81/evervim.git"
-Bundle "kien/ctrlp.vim.git"
-Bundle "endel/ctrlp-filetype.vim.git"
-Bundle "mattn/ctrlp-hackernews.git"
-Bundle "mattn/ctrlp-register.git"
-Bundle "MarcWeber/vim-addon-mw-utils.git"
-Bundle "majutsushi/tagbar.git"
-Bundle "maksimr/vim-jsbeautify.git"
-Bundle "mattboehm/vim-unstack.git"
-Bundle "mattn/gist-vim"
-Bundle "mattn/webapi-vim.git"
-Bundle "nelstrom/vim-visual-star-search.git"
-Bundle "rbgrouleff/bclose.vim.git"
-Bundle "scrooloose/nerdtree.git"
-Bundle "scrooloose/syntastic.git"
-Bundle "mbbill/undotree.git"
-" Bundle "gcmt/wildfire.vim.git"
-" Bundle "terryma/vim-expand-region.git"
-" Bundle "kana/vim-textobj-user.git"
-" Bundle "kana/vim-textobj-line.git"
-" Bundle "kana/vim-textobj-entire.git"
-Bundle "tomtom/tlib_vim.git"
-Bundle "tpope/vim-fugitive.git"
-Bundle "tpope/vim-abolish.git"
-Bundle "tpope/vim-dispatch.git"
-Bundle "tpope/vim-repeat.git"
-Bundle "tpope/vim-surround.git"
-Bundle "tpope/vim-unimpaired.git"
-Bundle "tpope/vim-commentary.git"
-Bundle "Townk/vim-autoclose.git"
-Bundle "tyru/open-browser.vim.git"
-" Bundle "tsaleh/vim-supertab.git"
-" Bundle "torgeir/js-mask.git"
-" Bundle "torgeir/vim-cursors.git"
-Bundle "terryma/vim-multiple-cursors"
-Bundle "vim-scripts/TaskList.vim.git"
-Bundle "maxbrunsfeld/vim-yankstack"
-Bundle "itchyny/lightline.vim"
-Bundle "benmills/vimux"
-Bundle "mattn/emmet-vim"
-Bundle "vim-scripts/BufOnly.vim"
-"Bundle "vim-scripts/YankRing.vim.git"
-" Bundle "mhinz/vim-startify"
-
-" Bundle "FredKSchott/CoVim"
+Plugin 'airblade/vim-gitgutter'
+Plugin 'drmingdrmer/xptemplate'
+Plugin 'junegunn/vim-easy-align'
+Plugin 'kakkyz81/evervim'
+Plugin 'kien/ctrlp.vim'
+Plugin 'endel/ctrlp-filetype.vim'
+Plugin 'mattn/ctrlp-hackernews'
+Plugin 'mattn/ctrlp-register'
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'majutsushi/tagbar'
+Plugin 'maksimr/vim-jsbeautify'
+Plugin 'mattboehm/vim-unstack'
+Plugin 'mattn/gist-vim'
+Plugin 'mattn/webapi-vim'
+Plugin 'nelstrom/vim-visual-star-search'
+Plugin 'rbgrouleff/bclose.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/syntastic'
+Plugin 'mbbill/undotree'
+Plugin 'tomtom/tlib_vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-abolish'
+Plugin 'tpope/vim-dispatch'
+Plugin 'tpope/vim-repeat'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-unimpaired'
+Plugin 'tpope/vim-commentary'
+Plugin 'Townk/vim-autoclose'
+Plugin 'tyru/open-browser.vim'
+" Plugin 'tsaleh/vim-supertab'
+" Plugin 'torgeir/js-mask'
+Plugin 'torgeir/vim-cursors'
+Plugin 'terryma/vim-multiple-cursors'
+Plugin 'vim-scripts/TaskList.vim'
+Plugin 'maxbrunsfeld/vim-yankstack'
+Plugin 'itchyny/lightline.vim'
+Plugin 'benmills/vimux'
+Plugin 'mattn/emmet-vim'
+Plugin 'vim-scripts/BufOnly.vim'
+Plugin 'jiangmiao/auto-pairs'
 
 " colors
 Plugin 'w0ng/vim-hybrid'
-Plugin 'nanotech/jellybeans.vim'
-Bundle "gregsexton/Muon"
-Bundle "guns/xterm-color-table.vim"
-" Bundle "ciaranm/inkpot.git"
+" Plugin 'nanotech/jellybeans.vim'
+" Plugin 'gregsexton/Muon'
+" Plugin 'guns/xterm-color-table.vim'
+" Plugin 'ciaranm/inkpot'
 
 " other
-" Bundle "tpope/vim-classpath.git"
-" Bundle "tpope/vim-fireplace.git"
-" Bundle "duff/vim-scratch.git"
-" Bundle "greyblake/vim-preview.git"
-" Bundle "guns/vim-clojure-static.git"
-" Bundle "vim-scripts/Tail-Bundle.git"
-" Bundle "zerowidth/vim-copy-as-rtf.git"
+" Plugin 'tpope/vim-classpath'
+" Plugin 'tpope/vim-fireplace'
+" Plugin 'duff/vim-scratch'
+" Plugin 'greyblake/vim-preview'
+" Plugin 'guns/vim-clojure-static'
+" Plugin 'vim-scripts/Tail-Bundle'
+" Plugin 'zerowidth/vim-copy-as-rtf'
+" Plugin 'junegunn/goyo.vim'
+" Plugin 'gcmt/wildfire.vim'
+" Plugin 'terryma/vim-expand-region'
+" Plugin 'kana/vim-textobj-user'
+" Plugin 'kana/vim-textobj-line'
+" Plugin 'kana/vim-textobj-entire'
+" Plugin 'mhinz/vim-startify'
+" Plugin 'FredKSchott/CoVim'

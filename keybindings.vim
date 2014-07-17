@@ -59,9 +59,6 @@ nnoremap g, g,zz
 " clear highligted search
 nnoremap <silent> <leader><space> :set hlsearch!<cr>
 
-" expand blocks on <cr> inside
-inoremap <cr> <c-r>=ExpandBlock(["[]", "{}"])<cr>
-
 " bash like command line keys
 cnoremap <c-a> <home>
 cnoremap <c-e> <end>
@@ -91,17 +88,14 @@ nnoremap <leader>x :exec getline(".")<cr>
 " vim-fugitive
 vnoremap <leader>gb :<c-u>!git blame <c-r>=expand("%:p") <cr> \| sed -n <c-r>=line("'<") <cr>,<c-r>=line("'>") <cr>p <cr>
 nnoremap <leader>gc :Gcommit -m ""<left>
-nnoremap <leader>gcf :Gwrite<cr>:Gcommit -m ""<left>
 nnoremap <leader>gca :Gcommit -m -a ""<left>
 nnoremap <leader>gd :Gdiff<cr>
 nnoremap <leader>gs :Gstatus<cr>
 nnoremap <silent> <leader>gr :if confirm('Gread?', "&Yes\n&No", 1)==1 <bar> :Gread <bar> endif<cr><cr>
-nnoremap ]h :GitGutterNextHunk<cr>
-nnoremap [h :GitGutterPrevHunk<cr>
 nnoremap <leader>ghs :GitGutterStageHunk<cr>
 nnoremap <leader>ghr :GitGutterRevertHunk<cr>
-nnoremap ]h <Plug>GitGutterNextHunk
-nnoremap [h <Plug>GitGutterPrevHunk
+nmap ]h <Plug>GitGutterNextHunk
+nmap [h <Plug>GitGutterPrevHunk
 nnoremap <leader>gu  :GitGutterAll<cr>
 nnoremap <leader>ge  :Gedit<cr>
 nnoremap <leader>gl :Glog -20 --<cr>
@@ -160,11 +154,10 @@ nnoremap <leader>gte :call GoToTest('e')<cr>
 nnoremap <leader>gtv :call GoToTest('vs')<cr>
 nnoremap <leader>gts :call gototest('sp')<cr>
 
-" align paragraph by entered char
-nnoremap gl :call AlignOnFirstChar()<cr>
+" align text
+vmap <Enter>   <Plug>(LiveEasyAlign)
+nmap <leader>a <Plug>(LiveEasyAlign)
 
-" run tests in "tests" screen tab, name the session with c-a:sessionname dione
-" nnoremap <silent> <leader>. :call system("screen -S mimas -p tests -X stuff 'clear; node %'$'\012'")<cr>
 " nnoremap <silent> ,. :VimuxRunLastCommand<cr>
 
 " sort css properties
