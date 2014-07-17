@@ -127,6 +127,3 @@ autocmd BufReadPost *
   \ if line("'\"") > 0 && line("'\"") <= line("$") |
   \   exe "normal g`\"" |
   \ endif
-
-" needs to happen last
-source ~/.vim/config/removewierdspaces.vim

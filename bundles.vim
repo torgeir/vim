@@ -61,6 +61,7 @@ Plugin 'benmills/vimux'
 Plugin 'mattn/emmet-vim'
 Plugin 'vim-scripts/BufOnly.vim'
 Plugin 'jiangmiao/auto-pairs'
+Plugin 'ntpeters/vim-better-whitespace'
 
 " colors
 Plugin 'w0ng/vim-hybrid'
