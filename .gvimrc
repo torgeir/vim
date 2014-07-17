@@ -9,6 +9,8 @@ if has('mac')
 
   source ~/.vim/keybindings.macvim.vim
 
+  let g:hybrid_use_iTerm_colors = 1
+
   "au WinLeave * set nocursorline
   "au WinEnter * set cursorline
   "set cursorline
