@@ -34,3 +34,6 @@ nnoremap <silent> <leader>cers :call <SID>call_ctrlp_extension('rtscript')<cr>
 nnoremap <silent> <leader>ceu  :call <SID>call_ctrlp_extension('undo')<cr>
 nnoremap <silent> <leader>cel  :call <SID>call_ctrlp_extension('line')<cr>
 nnoremap <silent> <leader>cef  :call <SID>call_ctrlp_extension('filetype')<cr>
+
+" support delete from buffer view
+call ctrlp_bdelete#init()
