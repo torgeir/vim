@@ -269,10 +269,10 @@ function! RunLinesWithJsMacros(lines, input)
     let showCompiled = 1
   endif
 
-  let code = shellescape(join(a:lines, "\n"))
+  " let code = shellescape(join(a:lines, "\n"))
 
   " write to tmp file
-  execute "w ~/tmp/js-macro-from-vim-buffer.js"
+  execute "w! ~/tmp/js-macro-from-vim-buffer.js"
   let command = ":Dispatch ~/.sweetjs-macros/load-macros.js " . showCompiled
   execute command
 endfunction

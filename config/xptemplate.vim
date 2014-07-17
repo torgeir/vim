@@ -2,10 +2,10 @@
 set runtimepath+=~/.vim/snippets/
 
 " avoid conflict
-let g:SuperTabMappingForward = '<Plug>supertabKey'
+"let g:SuperTabMappingForward = '<Plug>supertabKey'
 
 " if nothing matched in xpt, try supertab
-let g:xptemplate_fallback = '<Plug>supertabKey'
+let g:xptemplate_fallback = '<Tab>'
 
 " xpt uses <Tab> as trigger key
 let g:xptemplate_key = '<Tab>'

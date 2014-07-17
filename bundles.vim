@@ -72,6 +72,8 @@ Bundle "vim-scripts/BufOnly.vim"
 " Bundle "FredKSchott/CoVim"
 
 " colors
+Plugin 'w0ng/vim-hybrid'
+Plugin 'nanotech/jellybeans.vim'
 Bundle "gregsexton/Muon"
 Bundle "guns/xterm-color-table.vim"
 " Bundle "ciaranm/inkpot.git"
