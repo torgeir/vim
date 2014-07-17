@@ -154,6 +154,8 @@ nnoremap <leader>gte :call GoToTest('e')<cr>
 nnoremap <leader>gtv :call GoToTest('vs')<cr>
 nnoremap <leader>gts :call gototest('sp')<cr>
 
+map <silent> <leader>d <Plug>DashSearch
+
 " align text
 vmap <Enter>   <Plug>(LiveEasyAlign)
 nmap <leader>a <Plug>(LiveEasyAlign)
