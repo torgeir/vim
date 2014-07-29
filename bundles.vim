@@ -69,6 +69,10 @@ Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'rizzatti/dash.vim'
 Plugin 'osyo-manga/vim-over'
 
+" clj
+Plugin 'tpope/vim-fireplace'
+Plugin 'guns/vim-clojure-static'
+
 " colors
 Plugin 'w0ng/vim-hybrid'
 " Plugin 'nanotech/jellybeans.vim'
