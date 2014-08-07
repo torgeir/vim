@@ -2,7 +2,6 @@
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'pangloss/vim-javascript'
 Plugin 'vim-scripts/nginx.vim'
-Plugin 'jondistad/vimclojure'
 Plugin 'vim-scripts/applescript.vim'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'davidbalbert/vim-io'
@@ -71,7 +70,9 @@ Plugin 'osyo-manga/vim-over'
 
 " clj
 Plugin 'tpope/vim-fireplace'
+Plugin 'tpope/vim-classpath'
 Plugin 'guns/vim-clojure-static'
+Plugin 'guns/vim-clojure-highlight'
 
 " colors
 Plugin 'w0ng/vim-hybrid'
@@ -81,11 +82,8 @@ Plugin 'w0ng/vim-hybrid'
 " Plugin 'guns/xterm-color-table.vim'
 
 " other
-" Plugin 'tpope/vim-classpath'
-" Plugin 'tpope/vim-fireplace'
 " Plugin 'duff/vim-scratch'
 " Plugin 'greyblake/vim-preview'
-" Plugin 'guns/vim-clojure-static'
 " Plugin 'vim-scripts/Tail-Bundle'
 " Plugin 'zerowidth/vim-copy-as-rtf'
 " Plugin 'junegunn/goyo.vim'
