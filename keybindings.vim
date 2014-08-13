@@ -13,7 +13,7 @@ vnoremap <c-l> >gv2l
 " skip buffers
 nnoremap gb :bn<cr>
 nnoremap gB :bp<cr>
-nnoremap ,bd :bd<cr>
+nnoremap gbd :bd<cr>
 
 " move line(s) of text
 vnoremap <silent> <c-j> :m'>+<cr>`<my`>mzgv`yo`z
