@@ -159,7 +159,7 @@ nnoremap <leader>gte :call GoToTest('e')<cr>
 nnoremap <leader>gtv :call GoToTest('vs')<cr>
 nnoremap <leader>gts :call gototest('sp')<cr>
 
-map <silent> <leader>d <Plug>DashSearch
+map <silent> <leader>k <Plug>DashSearch
 
 " align text
 vmap <Enter>   <Plug>(LiveEasyAlign)
@@ -197,6 +197,7 @@ xnoremap iN :<c-u>call NumberTextObject(1)<cr>
 noremap _ht :set ft=html<cr>
 noremap _js :set ft=javascript<cr>
 noremap _le :set ft=less<cr>
+noremap _cj :set ft=clojure<cr>
 noremap _cs :set ft=css<cr>
 noremap _vi :set ft=vim<cr>
 noremap _md :set ft=markdown<cr>
