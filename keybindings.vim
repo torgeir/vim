@@ -73,7 +73,7 @@ cnoremap <c-l> <right>
 
 " general leader bindings
 nnoremap <leader>jng  "zyiw:exe "!npm install -g " . @z<cr>
-nnoremap <leader>jn  "zyiw:exe "!npm install " . @z<cr>
+nnoremap <leader>jn  "zyiw:exe "!npm install --save-dev " . @z<cr>
 nnoremap <leader>je :call RunLinesWithJsMacros(getline(1, "$"), "l")<cr>
 nnoremap <leader>js :call RunLinesWithJsMacros(getline(1, "$"), "")<cr>
 nnoremap <leader>i  :set list!<cr>
