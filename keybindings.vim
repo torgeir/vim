@@ -29,7 +29,6 @@ vnoremap <silent> <c-j> :m'>+<cr>`<my`>mzgv`yo`z
 vnoremap <silent> <c-k> :m'<-2<cr>`>my`<mzgv`yo`z
 
 " toggles
-noremap <silent> <f2> :YRShow<cr>
 noremap <silent> <f3> :GundoToggle<cr>
 noremap <silent> <f5> :TagbarToggle<cr>
 noremap <silent> <f6> :NERDTreeToggle<cr>
