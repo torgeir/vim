@@ -1,3 +1,12 @@
+" expand [ and {
+inoremap <cr> <c-r>=ExpandBlock(["[]", "{}"])<cr>
+
+" skip to { and }
+map [[ ?\{<CR>w99[{
+map ][ /\}<CR>b99]}
+map ]] j0[[%/\{<CR>
+map [] k$][%?\}<CR>
+
 " make jk do <esc>
 inoremap jk <esc>l
 
@@ -73,7 +82,7 @@ cnoremap <c-l> <right>
 
 " general leader bindings
 nnoremap <leader>jng  "zyiw:exe "!npm install -g " . @z<cr>
-nnoremap <leader>jn  "zyiw:exe "!npm install --save-dev " . @z<cr>
+nnoremap <leader>jn  "zyiw:exe "!npm install --save " . @z<cr>
 nnoremap <leader>je :call RunLinesWithJsMacros(getline(1, "$"), "l")<cr>
 nnoremap <leader>js :call RunLinesWithJsMacros(getline(1, "$"), "")<cr>
 nnoremap <leader>i  :set list!<cr>
