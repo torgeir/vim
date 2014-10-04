@@ -36,7 +36,7 @@ noremap <silent> <f6> :NERDTreeToggle<cr>
 " nerdtree
 noremap <silent> <leader>nf :NERDTreeFind<cr>
 
-" tasklist
+" TODO tasklist
 nmap <leader>l <Plug>TaskList<cr>
 
 " rainbow parenthesis and colors
@@ -79,7 +79,6 @@ cnoremap <c-h> <left>
 cnoremap <c-l> <right>
 
 " general leader bindings
-nnoremap <leader>jng  "zyiw:exe "!npm install -g " . @z<cr>
 nnoremap <leader>jn  "zyiw:exe "!npm install --save " . @z<cr>
 nnoremap <leader>je :call RunLinesWithJsMacros(getline(1, "$"), "l")<cr>
 nnoremap <leader>js :call RunLinesWithJsMacros(getline(1, "$"), "")<cr>
