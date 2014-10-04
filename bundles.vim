@@ -21,6 +21,7 @@ Plugin 'hail2u/vim-css3-syntax'
 Plugin 'kien/rainbow_parentheses.vim'
 Plugin 'ingydotnet/yaml-vim'
 Plugin 'vim-scripts/JSON.vim'
+Plugin 'Arduino-syntax-file'
 
 " awesome plugins
 Plugin 'airblade/vim-gitgutter'
