@@ -73,15 +73,6 @@ function! CurDir()
   return curdir
 endfunction
 
-" custom nerdtreetoggle ensures only ONE nerd_tree window
-function! CustomFileBrowserToggle()
-  if has('gui_running') && has("mac")
-    exe "normal \<esc>:NERDTreeToggle \| :silent NERDTreeMirror \<cr>"
-  else
-    exe "normal \<esc>:NERDTreeToggle \| :silent NERDTreeMirror \<cr>"
-  endif
-endfunction
-
 " shows +, number of windows, and file name in each tab
 function! GuiTabLabel()
   let label = ''

@@ -33,7 +33,7 @@ noremap <silent> <f2> :YRShow<cr>
 noremap <silent> <f3> :GundoToggle<cr>
 noremap <silent> <f4> :setlocal paste!<cr>
 noremap <silent> <f5> :TagbarToggle<cr>
-noremap <silent> <f6> :call CustomFileBrowserToggle()<cr>
+noremap <silent> <f6> :NERDTreeToggle<cr>
 
 " nerdtree
 noremap <silent> <leader>nf :NERDTreeFind<cr>
