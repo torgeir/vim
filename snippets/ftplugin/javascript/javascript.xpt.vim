@@ -43,9 +43,11 @@ XPT error " js console.err
 console.error(`cursor^);
 
 
+XPT reqi " node require module
+`module^camelize(strip_path(V()))^ = require('``module^'),
+
 XPT req " node require module
 var `module^camelize(strip_path(V()))^ = require('``module^');
-
 
 XPT isnode " js in-node-check
 if (typeof module !== 'undefined' && "exports" in module) {
