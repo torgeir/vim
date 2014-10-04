@@ -1,3 +1,21 @@
+" expands a block on enter inside
+function! ExpandBlock(blocks)
+  let col = col('.') - 1
+  let charBeforeCol = getline('.')[col-1]
+  let charAtCol = getline('.')[col]
+
+  for block in a:blocks
+    let openingChar = block[0]
+    let closingChar = block[1]
+
+    if openingChar == charBeforeCol && closingChar == charAtCol
+      return "\<del>\<cr>" . closingChar . "\<esc>O"
+    endif
+  endfor
+
+  return "\<cr>"
+endfunction
+
 " go to tests for file
 function! GoToTest(split)
   exe "normal \<esc>:" . a:split . " test/**/" . expand('%:t:r') . '-test.' . expand('%:e') . "\<cr>"
