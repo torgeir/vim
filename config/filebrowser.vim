@@ -2,7 +2,7 @@
 let g:NERDTreeWinPos = "left"
 
 " update CWD
-let NERDTreeChDirMode = 2
+let NERDTreeChDirMode = 1
 
 " enable nice colors
 let NERDChristmasTree = 1
@@ -32,3 +32,7 @@ augroup file_browser
 
   "autocmd WinEnter * call CloseIfOnlySidebarsLeft()
 augroup END
+
+" mappings
+let NERDTreeMapOpenVSplit = "<c-v>"
+let NERDTreeMapOpenSplit  = "<c-s>"
