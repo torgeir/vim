@@ -61,4 +61,13 @@ Install
       ln -s vim/.vimrc                            && \
       ln -s vim/.gvimrc
 
+
+Install dependencies
+
+    $ cd vim && git submodule update --init --recursive
+    
+Open vim
+
+    :BundleInstall
+
 Done!
