@@ -20,6 +20,9 @@ elseif has("unix")
   if &lines < 30 " adjust minimum size on ubuntu
     set lines=30 columns=100
   endif
+  
+elseif has("win32")
+  set guifont=Inconsolata:h14
 endif
 
 " other cool ones: molokai, getafe, wombat, solarized, ir_black
