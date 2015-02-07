@@ -153,7 +153,7 @@ nnoremap <leader>r :%s/\<<c-r><c-w>\>//gc<left><left><left>
 nnoremap <leader>gtt :call GoToTest('tabe')<cr>
 nnoremap <leader>gte :call GoToTest('e')<cr>
 nnoremap <leader>gtv :call GoToTest('vs')<cr>
-nnoremap <leader>gts :call gototest('sp')<cr>
+nnoremap <leader>gts :call GoToTest('sp')<cr>
 
 map <silent> <leader>k <Plug>DashSearch
 
