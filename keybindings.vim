@@ -10,9 +10,6 @@ map [] k$][%?\}<CR>
 " make jk do <esc>
 inoremap jk <esc>l
 
-" look up :help <word-under-cursor>
-nnoremap <c-h> :he <c-r><c-w><cr>
-
 " don't exit visual mode when shifting
 vnoremap < <gv2h
 vnoremap > >gv2l
