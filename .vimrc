@@ -36,7 +36,8 @@ set tags=./tags,tags;/
 """"""""""""""""""""""""""""""""""""""""
 " settings
 """"""""""""""""""""""""""""""""""""""""
-colorscheme hybrid
+colorscheme gruvbox
+set background=dark
 syntax on                         " highlight
 set backspace=indent,eol,start    " intuitive backspacing in insert mode
 set encoding=utf-8                " encoding

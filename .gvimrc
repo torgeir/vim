@@ -5,7 +5,7 @@ set guioptions-=m                           " hide menus
 
 if has('mac')
   set guifont=Monaco:h17
-  set fuoptions=maxhorz,maxvert             " fullscreen takes up whole screen"
+  set fuoptions=maxhorz,maxvert             " fullscreen takes up whole screen
 
   source ~/.vim/keybindings.macvim.vim
 
@@ -24,10 +24,3 @@ elseif has("unix")
 elseif has("win32")
   set guifont=Inconsolata:h14
 endif
-
-" other cool ones: molokai, getafe, wombat, solarized, ir_black
-" cool default ones: macvim, slate, desert
-
-" hightlight current word
-" highlight flicker gui=bold
-" au CursorMoved <buffer> exe 'match flicker /\V\<'.escape(expand('<cword>'), '/').'\>/'

@@ -120,15 +120,6 @@ function! LoadSession()
   endif
 endfunction
 
-" toggle molokai bg
-function! ToggleMolokaiBg()
-  if exists("g:molokai_original")
-    let g:molokai_original = g:molokai_original ? 0 : 1
-  endif
-  syntax reset
-  syntax on
-endfunction
-
 " text object for numbers, e.g. css
 function! NumberTextObject(whole)
     normal! v
@@ -150,41 +141,6 @@ endfunction
 function! SynStack()
   echo join(map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")'), " > ")
 endfunc
-
-" highlight interresting words in code
-hi def InterestingWord1 guifg=#000000 ctermfg=16 guibg=#ffa724 ctermbg=214
-hi def InterestingWord2 guifg=#000000 ctermfg=16 guibg=#aeee00 ctermbg=154
-hi def InterestingWord3 guifg=#000000 ctermfg=16 guibg=#8cffba ctermbg=121
-hi def InterestingWord4 guifg=#000000 ctermfg=16 guibg=#b88853 ctermbg=137
-hi def InterestingWord5 guifg=#000000 ctermfg=16 guibg=#ff9eb8 ctermbg=211
-hi def InterestingWord6 guifg=#000000 ctermfg=16 guibg=#ff2c4b ctermbg=195
-let s:matchids = []
-function! HiInterestingWord(n)
-    " Save our location.
-    normal! mz
-
-    " Yank the current word into the z register.
-    normal! "zyiw
-
-    " Construct a literal pattern that has to match at boundaries.
-    let pat = '\V\<' . escape(@z, '\') . '\>'
-
-    " Actually match the words.
-    let matchid = matchadd("InterestingWord" . a:n, pat, 1)
-
-    " keep it
-    call add(s:matchids, matchid)
-
-    " Move back to our original location.
-    normal! `z
-endfunction
-
-function! HiInterestingClear()
-  for mid in s:matchids
-    call matchdelete(mid)
-  endfor
-  let s:matchids = []
-endfunction
 
 " close hidden buffers
 command! CloseHiddenBuffers call s:CloseHiddenBuffers()

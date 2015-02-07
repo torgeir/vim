@@ -34,5 +34,5 @@ augroup file_browser
 augroup END
 
 " mappings
-let NERDTreeMapOpenVSplit = "<c-v>"
-let NERDTreeMapOpenSplit  = "<c-s>"
+let NERDTreeMapOpenVSplit = "v"
+let NERDTreeMapOpenSplit  = "s"

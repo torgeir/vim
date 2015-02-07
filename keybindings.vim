@@ -36,11 +36,8 @@ noremap <silent> <f6> :NERDTreeToggle<cr>
 " nerdtree
 noremap <silent> <leader>nf :NERDTreeFind<cr>
 
-" TODO tasklist
-nmap <leader>l <Plug>TaskList<cr>
-
-" rainbow parenthesis and colors
-noremap <leader>R :RainbowParenthesesToggle<cr>
+" tasklist
+nmap <leader>l <Plug>TaskList
 
 " moving between windows
 nnoremap <c-k> <c-w>k
@@ -52,18 +49,11 @@ nnoremap <c-l> <c-w>l
 noremap ? ?\v
 noremap / /\v
 
-" visually select previously searched word
-nnoremap \ <esc>//s<cr>v//e+1<cr>
-
 " keep search matches in window center
 nnoremap * *zzzv
 nnoremap # #zzzv
 nnoremap n nzzzv
 nnoremap N Nzzzv
-
-" center screen when jumping through the changelist
-nnoremap g; g;zz
-nnoremap g, g,zz
 
 " quickfix window for last search
 "nnoremap <silent> <leader><space>q :execute 'vimgrep /'.@/.'/g %'<cr>:copen<cr>
