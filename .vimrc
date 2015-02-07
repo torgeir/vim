@@ -128,3 +128,6 @@ autocmd BufReadPost *
   \ if line("'\"") > 0 && line("'\"") <= line("$") |
   \   exe "normal g`\"" |
   \ endif
+
+" tweak vim comment color for gruvbox
+hi Comment term=bold cterm=italic ctermfg=235 ctermbg=237 gui=italic guifg=#3c3836 guibg=bg
